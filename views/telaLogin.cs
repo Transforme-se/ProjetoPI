@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoPI
+namespace ProjetoPI.Views
 {
-    public partial class Form1: Form
+    public partial class telaLogin: Form
     {
-        public Form1()
+        public telaLogin()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
