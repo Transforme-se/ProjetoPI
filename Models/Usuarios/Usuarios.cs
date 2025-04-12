@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoPI.Models.Usuarios
 {
-    public class UsuariosModel
+    public class Usuarios
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -16,10 +16,10 @@ namespace ProjetoPI.Models.Usuarios
         public DateTime dataCriacao { get; set; }
 
         // Contrutor para pegar os dados que vieram do banco de dados e transformar em um objeto UsuariosModel
-        public static UsuariosModel UserFromDataReader(MySqlDataReader reader)
+        public static Usuarios UserFromDataReader(MySqlDataReader reader)
         {
 
-            return new UsuariosModel
+            return new Usuarios
             {
                 Id = Convert.ToInt32(reader["Id"]),
                 Nome =  Convert.ToString(reader["Nome"]),
