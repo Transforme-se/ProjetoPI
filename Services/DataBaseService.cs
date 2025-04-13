@@ -10,7 +10,7 @@ namespace ProjetoPI.Services
 {
 
     //IDisposable é uma interface que permite liberar recursos não gerenciados (como conexões de banco de dados)
-    class DataBaseService : IDisposable
+    public class DataBaseService : IDisposable
     {
 
         //MySqlConnection é uma classe que representa uma conexão com um banco de dados MySQL
