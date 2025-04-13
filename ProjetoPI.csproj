@@ -115,6 +115,7 @@
     <Compile Include="Services\AutenticacaoService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\SessaoUsuario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
