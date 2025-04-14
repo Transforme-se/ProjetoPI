@@ -15,7 +15,7 @@ namespace ProjetoPI.Models.Usuarios
         public string SenhaHash { get; set; }
         public DateTime dataCriacao { get; set; }
 
-        // Contrutor para pegar os dados que vieram do banco de dados e transformar em um objeto UsuariosModel
+        // Contrutor para pegar os dados que vieram do banco de dados e transformar em um objeto Usuarios
         public static Usuarios UserFromDataReader(MySqlDataReader reader)
         {
 

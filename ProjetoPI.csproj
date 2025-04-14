@@ -108,6 +108,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Metas\Metas.cs" />
     <Compile Include="Models\Usuarios\Usuarios.cs" />
     <Compile Include="Models\Usuarios\UsuariosRepository.cs" />
     <Compile Include="Program.cs" />
