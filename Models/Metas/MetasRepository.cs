@@ -107,5 +107,29 @@ namespace ProjetoPI.Models.Metas
                 _databaseService.CloseConnection();
             }
         }
+
+        public bool DeletarMetas(int id)
+        {
+            try
+            {
+                // Deleta os dados da meta no banco de dados
+                string query = "DELETE FROM metas WHERE Id = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@id", id)
+                };
+                // Executa a consulta de deleção
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao deletar metas: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
     }
 }
