@@ -13,6 +13,7 @@ namespace ProjetoPI.Models.Metas
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public bool status { get; set; }
+        public int IdUsuario { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataConclusao { get; set; }
 

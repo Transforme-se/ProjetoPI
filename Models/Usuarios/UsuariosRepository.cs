@@ -39,6 +39,10 @@ namespace ProjetoPI.Models.Usuarios
             {
                 throw new Exception("Erro ao registrar usuário: " + ex.Message);
             }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
         }
 
     }
