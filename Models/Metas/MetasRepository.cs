@@ -25,7 +25,7 @@ namespace ProjetoPI.Models.Metas
 
             try
             {
-                string query = "SELECT * FROM metas";
+                string query = "SELECT titulo, descricao, status, dataCriacao, dataConclusao FROM metas";
                 MySqlDataReader resultadoBanco = _databaseService.ExecuteQuery(query);
 
                 // Lê os dados do banco de dados e adiciona à lista de metas
