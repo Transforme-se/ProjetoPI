@@ -81,13 +81,12 @@ namespace ProjetoPI.Models.Metas
             try
             {
                 // Atualiza os dados da meta no banco de dados
-                string query = "@UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataCriacao = @dataCriacao, DataConclusao = @dataConclusao WHERE Id = @id";
+                string query = "@UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataConclusao = @dataConclusao WHERE Id = @id";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
-                    new MySqlParameter("@dataCriacao", DateTime.Now),
                     new MySqlParameter("@dataConclusao", metas.DataConclusao),
                     new MySqlParameter("@id", metas.Id)
                 };
