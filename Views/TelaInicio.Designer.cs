@@ -140,7 +140,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.DarkSalmon;
             this.panel2.Controls.Add(this.btnCadastrar);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
