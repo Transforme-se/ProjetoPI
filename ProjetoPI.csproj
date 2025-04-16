@@ -118,6 +118,12 @@
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessaoUsuario.cs" />
+    <Compile Include="Views\TelaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TelaInicio.Designer.cs">
+      <DependentUpon>TelaInicio.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -127,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\TelaInicio.resx">
+      <DependentUpon>TelaInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
