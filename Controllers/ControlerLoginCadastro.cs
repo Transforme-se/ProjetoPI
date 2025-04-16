@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoPI.Models.Usuarios;
 using ProjetoPI.Services;
 
 namespace ProjetoPI.Controllers
@@ -20,6 +21,16 @@ namespace ProjetoPI.Controllers
                 return false;
             }
             return true;
+        }
+
+        public bool Cadastrar(string nome, string login, string senha)
+        {
+            Usuarios usuario = new Usuarios();
+            usuario.Nome = nome;
+            usuario.login = login;
+            UsuariosRepository usuariosRepository = new UsuariosRepository(new DataBaseService());
+
+            return usuariosRepository.RegistrarUsuarios(usuario, senha);
         }
     }
 }
