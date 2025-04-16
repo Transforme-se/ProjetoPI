@@ -107,8 +107,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControlerLoginCadastro.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form1.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Models\Metas\Metas.cs" />
+    <Compile Include="Models\Metas\MetasRepository.cs" />
+    <Compile Include="Models\Usuarios\Usuarios.cs" />
+    <Compile Include="Models\Usuarios\UsuariosRepository.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AutenticacaoService.cs" />
+    <Compile Include="Services\Criptografia.cs" />
+    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\SessaoUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ArredondarPainel.cs" />
     <Compile Include="Views\login.cs">
