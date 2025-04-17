@@ -34,21 +34,21 @@ namespace ProjetoPI.Views
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.painelDireito = new Krypton.Toolkit.KryptonPanel();
+            this.btnCadastrar = new Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtSenhaLogin = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
             this.btnEntrarLogin = new Krypton.Toolkit.KryptonButton();
             this.painelEsquerdo = new Krypton.Toolkit.KryptonPanel();
+            this.kryptonPictureBox5 = new Krypton.Toolkit.KryptonPictureBox();
+            this.kryptonPictureBox4 = new Krypton.Toolkit.KryptonPictureBox();
+            this.kryptonPictureBox3 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtConfSenha = new Krypton.Toolkit.KryptonTextBox();
             this.txtNovoUsuario = new Krypton.Toolkit.KryptonTextBox();
             this.txtSenhaCadastro = new Krypton.Toolkit.KryptonTextBox();
             this.Concluir = new Krypton.Toolkit.KryptonButton();
-            this.kryptonPictureBox3 = new Krypton.Toolkit.KryptonPictureBox();
-            this.kryptonPictureBox4 = new Krypton.Toolkit.KryptonPictureBox();
-            this.kryptonPictureBox5 = new Krypton.Toolkit.KryptonPictureBox();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            this.btnCadastrar = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -58,9 +58,9 @@ namespace ProjetoPI.Views
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelEsquerdo)).BeginInit();
             this.painelEsquerdo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // painelFundo
@@ -109,6 +109,28 @@ namespace ProjetoPI.Views
             this.painelDireito.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.painelDireito.TabIndex = 1;
             this.painelDireito.Paint += new System.Windows.Forms.PaintEventHandler(this.painelDireito_Paint);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCadastrar.Location = new System.Drawing.Point(265, 36);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(133, 43);
+            this.btnCadastrar.StateCommon.Border.Rounding = 40F;
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnCadastrar.Values.Text = "Cadastre-se";
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.kryptonButton1.Location = new System.Drawing.Point(102, 36);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(133, 43);
+            this.kryptonButton1.StateCommon.Border.Rounding = 40F;
+            this.kryptonButton1.TabIndex = 7;
+            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton1.Values.Text = "Entrar";
             // 
             // kryptonPictureBox2
             // 
@@ -170,6 +192,7 @@ namespace ProjetoPI.Views
             this.btnEntrarLogin.TabIndex = 0;
             this.btnEntrarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEntrarLogin.Values.Text = "Entrar";
+            this.btnEntrarLogin.Click += new System.EventHandler(this.btnEntrarLogin_Click);
             // 
             // painelEsquerdo
             // 
@@ -188,6 +211,37 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.Size = new System.Drawing.Size(424, 554);
             this.painelEsquerdo.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.painelEsquerdo.TabIndex = 0;
+            // 
+            // kryptonPictureBox5
+            // 
+            this.kryptonPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.kryptonPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox5.Image")));
+            this.kryptonPictureBox5.Location = new System.Drawing.Point(76, 324);
+            this.kryptonPictureBox5.Name = "kryptonPictureBox5";
+            this.kryptonPictureBox5.Size = new System.Drawing.Size(37, 33);
+            this.kryptonPictureBox5.TabIndex = 8;
+            this.kryptonPictureBox5.TabStop = false;
+            // 
+            // kryptonPictureBox4
+            // 
+            this.kryptonPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.kryptonPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox4.Image")));
+            this.kryptonPictureBox4.Location = new System.Drawing.Point(76, 227);
+            this.kryptonPictureBox4.Name = "kryptonPictureBox4";
+            this.kryptonPictureBox4.Size = new System.Drawing.Size(37, 33);
+            this.kryptonPictureBox4.TabIndex = 7;
+            this.kryptonPictureBox4.TabStop = false;
+            // 
+            // kryptonPictureBox3
+            // 
+            this.kryptonPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.kryptonPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.kryptonPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox3.Image")));
+            this.kryptonPictureBox3.Location = new System.Drawing.Point(77, 159);
+            this.kryptonPictureBox3.Name = "kryptonPictureBox3";
+            this.kryptonPictureBox3.Size = new System.Drawing.Size(25, 29);
+            this.kryptonPictureBox3.TabIndex = 5;
+            this.kryptonPictureBox3.TabStop = false;
             // 
             // txtConfSenha
             // 
@@ -235,59 +289,7 @@ namespace ProjetoPI.Views
             this.Concluir.TabIndex = 0;
             this.Concluir.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.Concluir.Values.Text = "Concluir";
-            // 
-            // kryptonPictureBox3
-            // 
-            this.kryptonPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.kryptonPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox3.Image")));
-            this.kryptonPictureBox3.Location = new System.Drawing.Point(77, 159);
-            this.kryptonPictureBox3.Name = "kryptonPictureBox3";
-            this.kryptonPictureBox3.Size = new System.Drawing.Size(25, 29);
-            this.kryptonPictureBox3.TabIndex = 5;
-            this.kryptonPictureBox3.TabStop = false;
-            // 
-            // kryptonPictureBox4
-            // 
-            this.kryptonPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox4.Image")));
-            this.kryptonPictureBox4.Location = new System.Drawing.Point(76, 227);
-            this.kryptonPictureBox4.Name = "kryptonPictureBox4";
-            this.kryptonPictureBox4.Size = new System.Drawing.Size(37, 33);
-            this.kryptonPictureBox4.TabIndex = 7;
-            this.kryptonPictureBox4.TabStop = false;
-            // 
-            // kryptonPictureBox5
-            // 
-            this.kryptonPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox5.Image")));
-            this.kryptonPictureBox5.Location = new System.Drawing.Point(76, 324);
-            this.kryptonPictureBox5.Name = "kryptonPictureBox5";
-            this.kryptonPictureBox5.Size = new System.Drawing.Size(37, 33);
-            this.kryptonPictureBox5.TabIndex = 8;
-            this.kryptonPictureBox5.TabStop = false;
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonButton1.Location = new System.Drawing.Point(102, 36);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(133, 43);
-            this.kryptonButton1.StateCommon.Border.Rounding = 40F;
-            this.kryptonButton1.TabIndex = 7;
-            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kryptonButton1.Values.Text = "Entrar";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCadastrar.Location = new System.Drawing.Point(265, 36);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(133, 43);
-            this.btnCadastrar.StateCommon.Border.Rounding = 40F;
-            this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnCadastrar.Values.Text = "Cadastre-se";
+            this.Concluir.Click += new System.EventHandler(this.Concluir_Click);
             // 
             // login
             // 
@@ -312,9 +314,9 @@ namespace ProjetoPI.Views
             ((System.ComponentModel.ISupportInitialize)(this.painelEsquerdo)).EndInit();
             this.painelEsquerdo.ResumeLayout(false);
             this.painelEsquerdo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

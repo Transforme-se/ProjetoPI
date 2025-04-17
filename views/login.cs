@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using ProjetoPI.Controllers;
+using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
@@ -22,6 +24,19 @@ namespace ProjetoPI.Views
         {
             ArredondarPainel.Arredondar(painelEsquerdo, 30);
             ArredondarPainel.Arredondar(painelDireito, 30);
+
+            try
+            {
+                using (var dbService = new DataBaseService())
+                {
+                    dbService.OpenConnection();
+                    MessageBox.Show("Conexão com o banco de dados bem-sucedida!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Falha ao conectar ao banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -66,6 +81,24 @@ namespace ProjetoPI.Views
         {
             txtConfSenha.Hint = "Confirme sua senha..";
             txtConfSenha.StateActive.Content.Color1 = Color.Gray;
+        }
+
+        private void btnEntrarLogin_Click(object sender, EventArgs e)
+        {
+            new ControlerLoginCadastro().Login(txtUsuario.Text, txtSenhaLogin.Text);
+        }
+
+        private void Concluir_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                new ControlerLoginCadastro().Cadastrar(txtNovoUsuario.Text, txtSenhaCadastro.Text, txtConfSenha.Text);
+                MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
