@@ -28,9 +28,10 @@ namespace ProjetoPI.Controllers
             Usuarios usuario = new Usuarios();
             usuario.Nome = nome;
             usuario.login = login;
+            string senhaHash = Criptografia.HashSenha(senha);
             UsuariosRepository usuariosRepository = new UsuariosRepository(new DataBaseService());
 
-            return usuariosRepository.RegistrarUsuarios(usuario, senha);
+            return usuariosRepository.RegistrarUsuarios(usuario, senhaHash);
         }
     }
 }
