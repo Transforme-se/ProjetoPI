@@ -85,14 +85,14 @@ namespace ProjetoPI.Views
 
         private void btnEntrarLogin_Click(object sender, EventArgs e)
         {
-            new ControlerLoginCadastro().Login(txtUsuario.Text, txtSenhaLogin.Text);
+            new ControllerLoginCadastro().Login(txtUsuario.Text, txtSenhaLogin.Text);
         }
 
         private void Concluir_Click(object sender, EventArgs e)
         {
             try 
             {
-                new ControlerLoginCadastro().Cadastrar(txtNovoUsuario.Text, txtSenhaCadastro.Text, txtConfSenha.Text);
+                new ControllerLoginCadastro().Cadastrar(txtNovoUsuario.Text, txtSenhaCadastro.Text, txtConfSenha.Text);
                 MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

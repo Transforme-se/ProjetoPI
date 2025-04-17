@@ -106,7 +106,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\ControlerLoginCadastro.cs" />
+    <Compile Include="Controllers\ControllerLoginCadastro.cs" />
+    <Compile Include="Controllers\ControllerTxtBox.cs" />
     <Compile Include="Models\Metas\Metas.cs" />
     <Compile Include="Models\Metas\MetasRepository.cs" />
     <Compile Include="Models\Usuarios\Usuarios.cs" />

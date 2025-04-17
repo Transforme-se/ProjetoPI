@@ -9,7 +9,7 @@ using ProjetoPI.Services;
 
 namespace ProjetoPI.Controllers
 {
-    class ControlerLoginCadastro
+    class ControllerLoginCadastro
     {
         public bool Login (string login, string senha)
         {
