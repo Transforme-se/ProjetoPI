@@ -9,6 +9,11 @@ namespace ProjetoPI.Controllers
 {
     class ControllerTxtBox
     {
+        public string RemoverEspacosInicioFim(string texto)
+        {
+            // Remove os espaços em branco do início e do fim do texto
+            return texto.Trim();
+        }
         public bool TextoNaoVazio(string texto)
         {
             // Verifica se o texto não é nulo, vazio ou composto apenas por espaços

@@ -21,8 +21,7 @@ namespace ProjetoPI.Controllers
             bool possuiLetraMinuscula = controleTextBox.PossuiLetraMinuscula(senha);
             bool possuiTamanhoMinimo = senha.Length >= 6; // Verifica se a senha tem pelo menos 8 caracteres
             // Combina todas as validações
-            return naoVazia && possuiEspaco && possuiCaracteresEspeciais && possuiNumeros && possuiLetraMaiuscula && possuiLetraMinuscula;
-
+            return naoVazia && !possuiEspaco && possuiCaracteresEspeciais && possuiNumeros && possuiLetraMaiuscula && possuiLetraMinuscula;
         }
     }
 }
