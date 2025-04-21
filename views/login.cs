@@ -11,7 +11,7 @@ using Krypton.Toolkit;
 
 namespace ProjetoPI.Views
 {
-    public partial class login: Form
+    public partial class login : Form
     {
         public login()
         {
@@ -27,45 +27,54 @@ namespace ProjetoPI.Views
 
         private void t(object sender, PaintEventArgs e)
         {
-            
         }
 
         private void painelDireito_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-            txtUsuario.Hint = "Digite seu usuário";
-           
-            
-
-        }
+        private void txtUsuario_TextChanged(object sender, EventArgs e) { }
 
         private void txtSenhaLogin_TextChanged(object sender, EventArgs e)
         {
-            txtSenhaLogin.Hint = "Digite sua senha";
-           
-
         }
 
-        private void txtNovoUsuario_TextChanged(object sender, EventArgs e)
+
+       
+
+        private void painelEsquerdo_Paint(object sender, PaintEventArgs e)
         {
-            txtNovoUsuario.Hint = "Digite seu usuário";
-            txtNovoUsuario.StateActive.Content.Color1 = Color.Gray;
         }
 
-        private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)
+        private void kryptonPictureBox5_Click(object sender, EventArgs e)
         {
-            txtSenhaCadastro.Hint = "Digite sua senha...";
-            txtSenhaCadastro.StateActive.Content.Color1 = Color.Gray;
         }
 
-        private void txtConfSenha_TextChanged(object sender, EventArgs e)
-        {
-            txtConfSenha.Hint = "Confirme sua senha..";
-            txtConfSenha.StateActive.Content.Color1 = Color.Gray;
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {// Adiciona um PictureBox sobre o KryptonTextBox
+
         }
+
+       
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+     
+
+        private void txtSenhaConf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
+
+      
+    
+
+
