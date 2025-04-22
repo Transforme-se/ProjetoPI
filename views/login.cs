@@ -24,6 +24,7 @@ namespace ProjetoPI.Views
         {
             ArredondarPainel.Arredondar(painelEsquerdo, 30);
             ArredondarPainel.Arredondar(painelDireito, 30);
+            ArredondarPainel.Arredondar(painel1, 30);
 
             try
             {
@@ -37,6 +38,11 @@ namespace ProjetoPI.Views
             {
                 MessageBox.Show($"Falha ao conectar ao banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -48,6 +48,7 @@ namespace ProjetoPI.Views
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
             this.btnEntrar = new Krypton.Toolkit.KryptonButton();
+            this.painel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -66,6 +67,7 @@ namespace ProjetoPI.Views
             this.painelFundo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.painelFundo.Controls.Add(this.painel1);
             this.painelFundo.Controls.Add(this.painelDivisor);
             this.painelFundo.Location = new System.Drawing.Point(0, 0);
             this.painelFundo.Name = "painelFundo";
@@ -233,6 +235,7 @@ namespace ProjetoPI.Views
             this.btnCadastro.TabIndex = 10;
             this.btnCadastro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnCadastro.Values.Text = "Cadastre-se";
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // txtSenha
             // 
@@ -302,6 +305,14 @@ namespace ProjetoPI.Views
             this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEntrar.Values.Text = "Entrar";
             // 
+            // painel1
+            // 
+            this.painel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painel1.BackgroundImage")));
+            this.painel1.Location = new System.Drawing.Point(15, 13);
+            this.painel1.Name = "painel1";
+            this.painel1.Size = new System.Drawing.Size(667, 719);
+            this.painel1.TabIndex = 5;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,10 +321,10 @@ namespace ProjetoPI.Views
             this.Controls.Add(this.painelFundo);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).EndInit();
             this.painelFundo.ResumeLayout(false);
@@ -351,5 +362,6 @@ namespace ProjetoPI.Views
         private KryptonTextBox txtUsuarioCad;
         private KryptonButton btnCadastro;
         private KryptonTextBox txtNome;
+        private System.Windows.Forms.Panel painel1;
     }
 }
