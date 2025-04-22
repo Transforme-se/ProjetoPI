@@ -19,7 +19,7 @@ namespace ProjetoPI.Controllers
             bool possuiNumeros = controleTextBox.PossuiNumeros(senha);
             bool possuiLetraMaiuscula = controleTextBox.PossuiLetraMaiuscula(senha);
             bool possuiLetraMinuscula = controleTextBox.PossuiLetraMinuscula(senha);
-            bool possuiTamanhoMinimo = senha.Length >= 6; // Verifica se a senha tem pelo menos 8 caracteres
+            bool possuiTamanhoMinimo = senha.Length >= 6; // Verifica se a senha tem pelo menos 6 caracteres
             // Combina todas as validações
             return naoVazia && !possuiEspaco && possuiCaracteresEspeciais && possuiNumeros && possuiLetraMaiuscula && possuiLetraMinuscula;
         }
