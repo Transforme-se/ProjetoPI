@@ -43,7 +43,14 @@ namespace ProjetoPI.Views
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            var mover = new PainelLogin();
+            mover.MoverPainel(painel1, 688);
+        }
 
+        private void btnVoltarLogin_Click(object sender, EventArgs e)
+        {
+            var mover = new PainelLogin();
+            mover.MoverPainel(painel1, 13);
         }
     }
 }

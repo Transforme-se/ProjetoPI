@@ -32,6 +32,7 @@ namespace ProjetoPI.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
+            this.painel1 = new System.Windows.Forms.Panel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.painelEsquerdo = new Krypton.Toolkit.KryptonPanel();
             this.txtSenhaConf = new Krypton.Toolkit.KryptonTextBox();
@@ -48,7 +49,7 @@ namespace ProjetoPI.Views
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
             this.btnEntrar = new Krypton.Toolkit.KryptonButton();
-            this.painel1 = new System.Windows.Forms.Panel();
+            this.btnVoltarLogin = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -75,6 +76,14 @@ namespace ProjetoPI.Views
             this.painelFundo.StateCommon.Color1 = System.Drawing.Color.White;
             this.painelFundo.TabIndex = 4;
             // 
+            // painel1
+            // 
+            this.painel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painel1.BackgroundImage")));
+            this.painel1.Location = new System.Drawing.Point(15, 13);
+            this.painel1.Name = "painel1";
+            this.painel1.Size = new System.Drawing.Size(667, 719);
+            this.painel1.TabIndex = 5;
+            // 
             // painelDivisor
             // 
             this.painelDivisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -95,6 +104,10 @@ namespace ProjetoPI.Views
             // 
             // painelEsquerdo
             // 
+            this.painelEsquerdo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.painelEsquerdo.Controls.Add(this.btnVoltarLogin);
             this.painelEsquerdo.Controls.Add(this.txtSenhaConf);
             this.painelEsquerdo.Controls.Add(this.txtSenhaCad);
             this.painelEsquerdo.Controls.Add(this.txtUsuarioCad);
@@ -305,13 +318,20 @@ namespace ProjetoPI.Views
             this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEntrar.Values.Text = "Entrar";
             // 
-            // painel1
+            // btnVoltarLogin
             // 
-            this.painel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painel1.BackgroundImage")));
-            this.painel1.Location = new System.Drawing.Point(15, 13);
-            this.painel1.Name = "painel1";
-            this.painel1.Size = new System.Drawing.Size(667, 719);
-            this.painel1.TabIndex = 5;
+            this.btnVoltarLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVoltarLogin.Location = new System.Drawing.Point(351, 62);
+            this.btnVoltarLogin.Name = "btnVoltarLogin";
+            this.btnVoltarLogin.Size = new System.Drawing.Size(135, 43);
+            this.btnVoltarLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
+            this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnVoltarLogin.TabIndex = 14;
+            this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnVoltarLogin.Values.Text = "Login";
+            this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
             // 
             // login
             // 
@@ -363,5 +383,6 @@ namespace ProjetoPI.Views
         private KryptonButton btnCadastro;
         private KryptonTextBox txtNome;
         private System.Windows.Forms.Panel painel1;
+        private KryptonButton btnVoltarLogin;
     }
 }

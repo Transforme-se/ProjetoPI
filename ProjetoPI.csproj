@@ -145,6 +145,7 @@
     <Compile Include="Views\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PainelLogin.cs" />
     <Compile Include="Views\perfil.cs">
       <SubType>Form</SubType>
     </Compile>
