@@ -21,7 +21,7 @@ namespace ProjetoPI.Services
         //O construtor da classe DataBaseService inicializa a conexão com o banco de dados usando a string de conexão definida no arquivo de configuração
         public DataBaseService()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
             _connection = new MySqlConnection(connectionString);
         }
 
