@@ -11,19 +11,28 @@ namespace ProjetoPI.Controllers
 {
     class ControllerLoginCadastro
     {
-        public bool Login (string login, string senha)
+        // Injeção de dependência
+        private readonly AutenticacaoService _autenticacaoService;
+        private readonly UsuariosRepository _usuariosRepository;
+
+        public ControllerLoginCadastro(AutenticacaoService autenticacaoService, UsuariosRepository usuariosRepository)
+        {
+            _autenticacaoService = autenticacaoService;
+            _usuariosRepository = usuariosRepository;
+        }
+
+        public Usuarios Login (string login, string senha)
         {
             AutenticacaoService autenticacaoService = new AutenticacaoService(new DataBaseService());
             var usuario = autenticacaoService.Autenticacao(login, senha);
             if (usuario == null)
             {
                 MessageBox.Show("Login ou senha inválidos");
-                return false;
             }
-            return true;
+            return autenticacaoService.Autenticacao(login, senha);
         }
 
-        public bool Cadastrar(string nome, string login, string senha)
+        public bool Cadastrar(string nome, string login, string senha, string senhaConf)
         {
             Usuarios usuario = new Usuarios();
             usuario.Nome = nome;
