@@ -35,6 +35,7 @@ namespace ProjetoPI.Views
             this.painel1 = new System.Windows.Forms.Panel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.painelEsquerdo = new Krypton.Toolkit.KryptonPanel();
+            this.btnVoltarLogin = new Krypton.Toolkit.KryptonButton();
             this.txtSenhaConf = new Krypton.Toolkit.KryptonTextBox();
             this.txtSenhaCad = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsuarioCad = new Krypton.Toolkit.KryptonTextBox();
@@ -49,7 +50,6 @@ namespace ProjetoPI.Views
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
             this.btnEntrar = new Krypton.Toolkit.KryptonButton();
-            this.btnVoltarLogin = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -79,7 +79,7 @@ namespace ProjetoPI.Views
             // painel1
             // 
             this.painel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painel1.BackgroundImage")));
-            this.painel1.Location = new System.Drawing.Point(15, 13);
+            this.painel1.Location = new System.Drawing.Point(688, 13);
             this.painel1.Name = "painel1";
             this.painel1.Size = new System.Drawing.Size(667, 719);
             this.painel1.TabIndex = 5;
@@ -122,6 +122,21 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.StateCommon.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.painelEsquerdo.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             this.painelEsquerdo.TabIndex = 0;
+            // 
+            // btnVoltarLogin
+            // 
+            this.btnVoltarLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVoltarLogin.Location = new System.Drawing.Point(351, 62);
+            this.btnVoltarLogin.Name = "btnVoltarLogin";
+            this.btnVoltarLogin.Size = new System.Drawing.Size(135, 43);
+            this.btnVoltarLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
+            this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnVoltarLogin.TabIndex = 14;
+            this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnVoltarLogin.Values.Text = "Login";
+            this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
             // 
             // txtSenhaConf
             // 
@@ -175,7 +190,6 @@ namespace ProjetoPI.Views
             this.txtNome.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtNome.Location = new System.Drawing.Point(236, 148);
             this.txtNome.Name = "txtNome";
-            this.txtNome.PasswordChar = '*';
             this.txtNome.Size = new System.Drawing.Size(250, 42);
             this.txtNome.StateActive.Border.Rounding = 40F;
             this.txtNome.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.True;
@@ -217,6 +231,7 @@ namespace ProjetoPI.Views
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvar.Values.Text = "Salvar";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // painelDireito
             // 
@@ -317,21 +332,7 @@ namespace ProjetoPI.Views
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEntrar.Values.Text = "Entrar";
-            // 
-            // btnVoltarLogin
-            // 
-            this.btnVoltarLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVoltarLogin.Location = new System.Drawing.Point(351, 62);
-            this.btnVoltarLogin.Name = "btnVoltarLogin";
-            this.btnVoltarLogin.Size = new System.Drawing.Size(135, 43);
-            this.btnVoltarLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
-            this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnVoltarLogin.TabIndex = 14;
-            this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnVoltarLogin.Values.Text = "Login";
-            this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // login
             // 

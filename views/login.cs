@@ -9,15 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 using ProjetoPI.Controllers;
+using ProjetoPI.Models.Usuarios;
 using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
     public partial class login : Form
     {
+        ControllerLoginCadastro controllerLoginCadastro;
+
         public login()
         {
             InitializeComponent();
+            DataBaseService dataBaseService = new DataBaseService();
+            AutenticacaoService autenticacaoService = new AutenticacaoService(dataBaseService);
+            UsuariosRepository usuariosRepository = new UsuariosRepository(dataBaseService);
+            controllerLoginCadastro = new ControllerLoginCadastro(autenticacaoService, usuariosRepository);
+
         }
 
         private void login_Load(object sender, EventArgs e)
@@ -45,12 +53,68 @@ namespace ProjetoPI.Views
         {
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 688);
+            LimparCamposCadastro();
         }
 
         private void btnVoltarLogin_Click(object sender, EventArgs e)
         {
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 13);
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Usuarios user = controllerLoginCadastro.Login(txtUsuario.Text, txtSenha.Text);
+            try
+            {
+                if (user != null)
+                {
+                    MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Aqui você pode redirecionar o usuário para a próxima tela
+                }
+                else
+                {
+                    LimparLogin();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao autenticar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try {
+                var user = controllerLoginCadastro.Cadastrar(txtNome.Text, txtUsuarioCad.Text, txtSenhaCad.Text, txtSenhaConf.Text);
+                if (user)
+                {
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCamposCadastro();
+                    var mover = new PainelLogin();
+                    mover.MoverPainel(painel1, 13);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LimparCamposCadastro()
+        {
+            txtNome.Clear();
+            txtUsuarioCad.Clear();
+            txtSenhaCad.Clear();
+            txtSenhaConf.Clear();
+            txtUsuario.Clear();
+            txtSenha.Clear();
+        }
+
+        private void LimparLogin()
+        {
+            txtSenha.Clear();
         }
     }
 }
