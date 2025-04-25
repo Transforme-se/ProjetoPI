@@ -180,6 +180,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\telaPrincipal.resx">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoPI.Models.Metas.Metas.datasource" />
