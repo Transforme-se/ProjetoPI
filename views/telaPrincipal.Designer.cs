@@ -34,6 +34,7 @@
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
             this.tabela = new Krypton.Toolkit.KryptonDataGridView();
+            this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbBoasVindas = new Krypton.Toolkit.KryptonLabel();
             this.btnPag = new Krypton.Toolkit.KryptonButton();
             this.btnRetornar = new Krypton.Toolkit.KryptonButton();
@@ -51,19 +52,18 @@
             this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn2 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn3 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.kryptonDataGridViewCheckBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             this.kryptonDataGridViewTextBoxColumn4 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn5 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kryptonDataGridViewCheckBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
             this.painelMetas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).BeginInit();
             this.painelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // painelFundo
@@ -108,9 +108,9 @@
             this.kryptonDataGridViewTextBoxColumn1,
             this.kryptonDataGridViewTextBoxColumn2,
             this.kryptonDataGridViewTextBoxColumn3,
-            this.kryptonDataGridViewCheckBoxColumn1,
             this.kryptonDataGridViewTextBoxColumn4,
-            this.kryptonDataGridViewTextBoxColumn5});
+            this.kryptonDataGridViewTextBoxColumn5,
+            this.kryptonDataGridViewCheckBoxColumn1});
             this.tabela.DataSource = this.metasBindingSource;
             this.tabela.Location = new System.Drawing.Point(41, 97);
             this.tabela.Name = "tabela";
@@ -126,6 +126,10 @@
             this.tabela.StateTracking.HeaderRow.Border.Rounding = 10F;
             this.tabela.TabIndex = 9;
             this.tabela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabela_CellContentClick);
+            // 
+            // metasBindingSource
+            // 
+            this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
             // 
             // lbBoasVindas
             // 
@@ -341,20 +345,6 @@
             this.kryptonDataGridViewTextBoxColumn3.Name = "kryptonDataGridViewTextBoxColumn3";
             this.kryptonDataGridViewTextBoxColumn3.Width = 87;
             // 
-            // kryptonDataGridViewCheckBoxColumn1
-            // 
-            this.kryptonDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewCheckBoxColumn1.DataPropertyName = "status";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            this.kryptonDataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.kryptonDataGridViewCheckBoxColumn1.FalseValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.HeaderText = "status";
-            this.kryptonDataGridViewCheckBoxColumn1.IndeterminateValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.Name = "kryptonDataGridViewCheckBoxColumn1";
-            this.kryptonDataGridViewCheckBoxColumn1.TrueValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.Width = 48;
-            // 
             // kryptonDataGridViewTextBoxColumn4
             // 
             this.kryptonDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -370,9 +360,19 @@
             this.kryptonDataGridViewTextBoxColumn5.Name = "kryptonDataGridViewTextBoxColumn5";
             this.kryptonDataGridViewTextBoxColumn5.Width = 116;
             // 
-            // metasBindingSource
+            // kryptonDataGridViewCheckBoxColumn1
             // 
-            this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
+            this.kryptonDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.kryptonDataGridViewCheckBoxColumn1.DataPropertyName = "status";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.kryptonDataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.kryptonDataGridViewCheckBoxColumn1.FalseValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.HeaderText = "status";
+            this.kryptonDataGridViewCheckBoxColumn1.IndeterminateValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.Name = "kryptonDataGridViewCheckBoxColumn1";
+            this.kryptonDataGridViewCheckBoxColumn1.TrueValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.Width = 48;
             // 
             // telaPrincipal
             // 
@@ -392,11 +392,11 @@
             this.painelMetas.ResumeLayout(false);
             this.painelMetas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).EndInit();
             this.painelMenu.ResumeLayout(false);
             this.painelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,12 +420,12 @@
         private Krypton.Toolkit.KryptonButton btnAvancar;
         private Krypton.Toolkit.KryptonLabel lbBoasVindas;
         private Krypton.Toolkit.KryptonButton btnRemover;
+        private System.Windows.Forms.BindingSource metasBindingSource;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn1;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn2;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn3;
-        private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn kryptonDataGridViewCheckBoxColumn1;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn4;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn5;
-        private System.Windows.Forms.BindingSource metasBindingSource;
+        private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn kryptonDataGridViewCheckBoxColumn1;
     }
 }

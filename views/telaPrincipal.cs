@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using ProjetoPI.Controllers;
+using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
@@ -22,7 +24,7 @@ namespace ProjetoPI.Views
         {
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
-            ArredondarPainel.Arredondar(painelMetas, 30);
+            ArredondarPainel.Arredondar(painelMetas, 30);tabela.DataSource = new ControllerMetas(new DataBaseService()).ObterTodasMetas();
         }
 
         private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
