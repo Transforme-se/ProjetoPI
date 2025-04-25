@@ -25,18 +25,28 @@ namespace ProjetoPI.Models.Metas
 
             try
             {
-                string query = "SELECT titulo, descricao, status, dataCriacao, dataConclusao FROM metas";
-                MySqlDataReader resultadoBanco = _databaseService.ExecuteQuery(query);
+                // Consulta SQL para buscar metas do usuário logado
+                string query = "SELECT idMetas, titulo, descricao, status, dataCriacao, dataConclusao FROM metas WHERE idUsuarios = @id";
 
-                // Lê os dados do banco de dados e adiciona à lista de metas
-                while (resultadoBanco.Read())
+                // Obtém o ID do usuário logado
+                int idUsuario = SessaoUsuario.usuarioLogado.Id;
+
+                // Define os parâmetros da consulta
+                MySqlParameter[] parameters = new MySqlParameter[]
                 {
-                    Metas meta = new Metas();
-                    meta = Metas.UserFromDataReade(resultadoBanco);
+                     new MySqlParameter("@id", idUsuario)
+                };
 
-                    metas.Add(meta);
+                // Executa a consulta e obtém o resultado
+                using (MySqlDataReader resultadoBanco = _databaseService.ExecuteQuery(query, parameters))
+                {
+                    // Lê os dados do banco de dados e adiciona à lista de metas
+                    while (resultadoBanco.Read())
+                    {
+                        Metas meta = Metas.UserFromDataReade(resultadoBanco);
+                        metas.Add(meta);
+                    }
                 }
-                _databaseService.CloseConnection();
 
                 return metas;
             }
@@ -45,6 +55,7 @@ namespace ProjetoPI.Models.Metas
                 throw new Exception("Erro ao buscar metas: " + ex.Message);
             }
         }
+
 
         public bool AdicionarMetas(Metas metas)
         {
