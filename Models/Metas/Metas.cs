@@ -22,7 +22,7 @@ namespace ProjetoPI.Models.Metas
         {
             return new Metas
             {
-                Id = Convert.ToInt32(reader["Id"]),
+                Id = Convert.ToInt32(reader["idMetas"]),
                 Titulo = Convert.ToString(reader["Titulo"]),
                 Descricao = Convert.ToString(reader["Descricao"]),
                 status = Convert.ToBoolean(reader["status"]),
