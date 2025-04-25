@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerLoginCadastro.cs" />
+    <Compile Include="Controllers\ControllerMetas.cs" />
     <Compile Include="Controllers\ControllerSenha.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />
     <Compile Include="Models\Metas\Metas.cs" />
@@ -178,6 +179,7 @@
       <DependentUpon>telaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjetoPI.Models.Metas.Metas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
