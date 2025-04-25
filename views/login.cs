@@ -64,13 +64,14 @@ namespace ProjetoPI.Views
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Usuarios user = controllerLoginCadastro.Login(txtUsuario.Text, txtSenha.Text);
             try
             {
+                Usuarios user = controllerLoginCadastro.Login(txtUsuario.Text, txtSenha.Text);
                 if (user != null)
                 {
+                    SessaoUsuario.Login(user);
                     MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Aqui você pode redirecionar o usuário para a próxima tela
+                    new telaPrincipal().Show();
                 }
                 else
                 {
@@ -80,7 +81,6 @@ namespace ProjetoPI.Views
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao autenticar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
