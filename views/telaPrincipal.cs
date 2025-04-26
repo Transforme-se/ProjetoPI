@@ -13,9 +13,13 @@ namespace ProjetoPI.Views
 {
     public partial class telaPrincipal : Form
     {
-        public telaPrincipal()
+        ControllerMetas controllerMetas;
+        public telaPrincipal(Models.Usuarios.Usuarios user)
         {
             InitializeComponent();
+            DataBaseService dataBaseService = new DataBaseService();
+            controllerMetas = new ControllerMetas(dataBaseService);
+
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)
