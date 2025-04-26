@@ -56,6 +56,27 @@ namespace ProjetoPI.Models.Metas
             }
         }
 
+        public bool EditarStatus(Metas metas)
+        {
+            try
+            {
+                // Atualiza o status da meta no banco de dados
+                string query = "UPDATE metas SET status = @status WHERE idMetas = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@status", metas.status),
+                    new MySqlParameter("@id", metas.Id)
+                };
+                // Executa a consulta de atualização
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao editar status: " + ex.Message);
+            }
+        }
+
 
         public bool AdicionarMetas(Metas metas)
         {
