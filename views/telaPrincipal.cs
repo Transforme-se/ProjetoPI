@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using ProjetoPI.Controllers;
+using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
@@ -44,7 +46,7 @@ namespace ProjetoPI.Views
         {
             // Abre uma janela para selecionar a imagem
             
-            }
+        }
         
 
         private void kryptonRichTextBox1_TextChanged(object sender, EventArgs e)
