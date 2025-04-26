@@ -69,8 +69,9 @@ namespace ProjetoPI.Views
             {
                 if (user != null)
                 {
-                    MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Aqui você pode redirecionar o usuário para a próxima tela
+                    SessaoUsuario.Login(user);
+                    telaPrincipal telaPrincipal = new telaPrincipal(user);
+                    telaPrincipal.Show();
                 }
                 else
                 {
