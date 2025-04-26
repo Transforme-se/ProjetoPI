@@ -27,6 +27,7 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
+            tabela.DataSource = controllerMetas.ObterTodasMetas();
         }
 
         private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
