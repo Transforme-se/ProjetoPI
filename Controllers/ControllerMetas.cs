@@ -34,5 +34,24 @@ namespace ProjetoPI.Controllers
             }
             return metas;
         }
+
+        public Metas CadastrarMetas(string titulo, string descricao, DateTime dataConclusao)
+        {
+            Metas metas = new Metas();
+            metas.Titulo = titulo;
+            metas.Descricao = descricao;
+            metas.DataConclusao = dataConclusao;
+
+            MetasRepository metasRepository = new MetasRepository(_databaseService);
+            
+            bool resultado = metasRepository.AdicionarMetas(metas);
+
+            return resultado ? metas : null;
+        }
+
+        public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
+        {
+
+        }
     }
 }
