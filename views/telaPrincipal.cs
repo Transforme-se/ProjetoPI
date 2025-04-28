@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Krypton.Toolkit;
 using ProjetoPI.Controllers;
+using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
     public partial class telaPrincipal : Form
     {
-        ControllerMetas controllerMetas;
+        MetasRepository _metasRepository;
+        ControllerMetas _controllerMetas;
         public telaPrincipal(Models.Usuarios.Usuarios user)
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();
-            controllerMetas = new ControllerMetas(dataBaseService);
-
+            _metasRepository = new MetasRepository(dataBaseService);
+            _controllerMetas = new ControllerMetas(dataBaseService);
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)
@@ -29,17 +23,7 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
-            tabela.DataSource = controllerMetas.ObterTodasMetas();
-        }
-
-        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lbBoasVindas_Click(object sender, EventArgs e)
-        {
-
+            tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -47,19 +31,14 @@ namespace ProjetoPI.Views
             // Abre uma janela para selecionar a imagem
             
         }
-        
 
-        private void kryptonRichTextBox1_TextChanged(object sender, EventArgs e)
+        private void btnNovaMeta_Click(object sender, EventArgs e)
         {
-
+            AdicionarMeta adicionarMeta = new AdicionarMeta();
+            adicionarMeta.Show();
         }
 
-        private void kryptonPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        private void btnEditarMeta_Click(object sender, EventArgs e)
         {
 
         }
