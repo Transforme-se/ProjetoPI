@@ -77,18 +77,18 @@ namespace ProjetoPI.Models.Metas
             }
         }
 
-
         public bool AdicionarMetas(Metas metas)
         {
             try
             {
                 // Insere os dados da meta no banco de dados
-                string query = "INSERT INTO metas (Titulo, Descricao, status, DataCriacao, DataConclusao) VALUES(@titulo, @descricao, @status, @dataCriacao, @dataConclusao)";
+                string query = "INSERT INTO metas (Titulo, Descricao, status, idUsuarios, DataCriacao, DataConclusao) VALUES(@titulo, @descricao, @status, @id, @dataCriacao, @dataConclusao)";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
+                    new MySqlParameter("@id", SessaoUsuario.usuarioLogado.Id),
                     new MySqlParameter("@dataCriacao", DateTime.Now),
                     new MySqlParameter("@dataConclusao", metas.DataConclusao)
                 };
