@@ -86,10 +86,13 @@ namespace ProjetoPI.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            try {
+            try 
+            {
+                Console.WriteLine("Iniciando cadastro de usuário..");
                 var user = controllerLoginCadastro.Cadastrar(txtNome.Text, txtUsuarioCad.Text, txtSenhaCad.Text, txtSenhaConf.Text);
                 if (user)
                 {
+                    Console.WriteLine("Usuário cadastrado com sucesso!");
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimparCamposCadastro();
                     var mover = new PainelLogin();
@@ -98,7 +101,11 @@ namespace ProjetoPI.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao cadastrar: {ex.Message}","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Console.WriteLine("Finalizando cadastro de usuário...");
             }
         }
 

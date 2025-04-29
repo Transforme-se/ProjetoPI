@@ -27,6 +27,7 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
             tabela.DataSource = new ControllerMetas(new DataBaseService()).ObterTodasMetas();
+            lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
         }
 
         private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,6 +69,16 @@ namespace ProjetoPI.Views
         }
 
         private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNovaMeta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbUser_Click(object sender, EventArgs e)
         {
 
         }

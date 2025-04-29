@@ -126,8 +126,8 @@
   <ItemGroup>
     <Compile Include="Controllers\ControllerLoginCadastro.cs" />
     <Compile Include="Controllers\ControllerMetas.cs" />
-    <Compile Include="Controllers\ControllerSenha.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />
+    <Compile Include="Controllers\ValidarCadastro.cs" />
     <Compile Include="Models\Metas\Metas.cs" />
     <Compile Include="Models\Metas\MetasRepository.cs" />
     <Compile Include="Models\Usuarios\Usuarios.cs" />
@@ -167,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\TelaInicio.resx">
       <DependentUpon>TelaInicio.cs</DependentUpon>
@@ -199,6 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUsuarioLogin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
