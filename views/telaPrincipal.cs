@@ -52,7 +52,9 @@ namespace ProjetoPI.Views
 
         private void Tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
+            if (e.RowIndex < 0) return;
+            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["Id"].Value;
+            MessageBox.Show($"Meta selecionada: {idMetaSelecionada}");
         }
         private void BtnEditarMeta_Click(object sender, EventArgs e)
         {
