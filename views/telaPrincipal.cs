@@ -16,6 +16,8 @@ namespace ProjetoPI.Views
 {
     public partial class telaPrincipal : Form
     {
+        private int idMetaSelecionada;
+
         public telaPrincipal()
         {
             InitializeComponent();
@@ -40,37 +42,7 @@ namespace ProjetoPI.Views
 
                 // Alterna o valor do status
                 meta.status = !meta.status;
-
-                // Atualiza o banco de dados
-                //bool atualizado = new ControllerMetas(new DataBaseService()).AtualizarStatus(meta.Id, meta.status);
-
-                //if (!atualizado)
-                //{
-                //    MessageBox.Show("Erro ao atualizar o status no banco de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
             }
-        }
-
-        private void lbBoasVindas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            // Abre uma janela para selecionar a imagem
-
-        }
-
-
-        private void kryptonRichTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonPictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNovaMeta_Click(object sender, EventArgs e)
@@ -78,9 +50,13 @@ namespace ProjetoPI.Views
 
         }
 
-        private void lbUser_Click(object sender, EventArgs e)
+        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
+        }
+        private void btnEditarMeta_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
