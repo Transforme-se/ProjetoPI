@@ -2,7 +2,7 @@
 
 namespace ProjetoPI.Views
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,32 +30,32 @@ namespace ProjetoPI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painel1 = new System.Windows.Forms.Panel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.painelEsquerdo = new Krypton.Toolkit.KryptonPanel();
-            this.txtSenhaConf = new Krypton.Toolkit.KryptonTextBox();
-            this.txtSenhaCad = new Krypton.Toolkit.KryptonTextBox();
-            this.txtUsuarioCad = new Krypton.Toolkit.KryptonTextBox();
-            this.txtNome = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonPictureBox5 = new Krypton.Toolkit.KryptonPictureBox();
             this.kryptonPictureBox3 = new Krypton.Toolkit.KryptonPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            this.btnVoltarLogin = new Krypton.Toolkit.KryptonButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtNome = new Krypton.Toolkit.KryptonTextBox();
+            this.txtSenhaConf = new Krypton.Toolkit.KryptonTextBox();
+            this.txtUsuarioCad = new Krypton.Toolkit.KryptonTextBox();
+            this.txtSenhaCad = new Krypton.Toolkit.KryptonTextBox();
             this.painelDireito = new Krypton.Toolkit.KryptonPanel();
-            this.btnCadastro = new Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEntrar = new Krypton.Toolkit.KryptonButton();
+            this.btnCadastro = new Krypton.Toolkit.KryptonButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
-            this.kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
             this.txtSenha = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnEntrar = new Krypton.Toolkit.KryptonButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnVoltarLogin = new Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
+            this.kryptonPictureBox2 = new Krypton.Toolkit.KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -63,16 +63,16 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelDireito)).BeginInit();
             this.painelDireito.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // painelFundo
@@ -130,73 +130,6 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             this.painelEsquerdo.TabIndex = 0;
             // 
-            // txtSenhaConf
-            // 
-            this.txtSenhaConf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenhaConf.CueHint.CueHintText = "Confirme sua senha";
-            this.txtSenhaConf.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtSenhaConf.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtSenhaConf.Location = new System.Drawing.Point(0, 186);
-            this.txtSenhaConf.Name = "txtSenhaConf";
-            this.txtSenhaConf.PasswordChar = '*';
-            this.txtSenhaConf.Size = new System.Drawing.Size(423, 42);
-            this.txtSenhaConf.StateActive.Border.Rounding = 40F;
-            this.txtSenhaConf.StateCommon.Border.Rounding = 20F;
-            this.txtSenhaConf.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenhaConf.TabIndex = 7;
-            // 
-            // txtSenhaCad
-            // 
-            this.txtSenhaCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenhaCad.CueHint.CueHintText = "Criei uma senha";
-            this.txtSenhaCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtSenhaCad.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtSenhaCad.Location = new System.Drawing.Point(0, 124);
-            this.txtSenhaCad.Name = "txtSenhaCad";
-            this.txtSenhaCad.PasswordChar = '*';
-            this.txtSenhaCad.Size = new System.Drawing.Size(423, 42);
-            this.txtSenhaCad.StateActive.Border.Rounding = 40F;
-            this.txtSenhaCad.StateCommon.Border.Rounding = 20F;
-            this.txtSenhaCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenhaCad.TabIndex = 6;
-            // 
-            // txtUsuarioCad
-            // 
-            this.txtUsuarioCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuarioCad.CueHint.CueHintText = "Crie um usuário";
-            this.txtUsuarioCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtUsuarioCad.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtUsuarioCad.Location = new System.Drawing.Point(0, 62);
-            this.txtUsuarioCad.Name = "txtUsuarioCad";
-            this.txtUsuarioCad.Size = new System.Drawing.Size(423, 42);
-            this.txtUsuarioCad.StateActive.Border.Rounding = 40F;
-            this.txtUsuarioCad.StateCommon.Border.Rounding = 20F;
-            this.txtUsuarioCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtUsuarioCad.TabIndex = 5;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.CueHint.CueHintText = "Digite seu nome";
-            this.txtNome.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtNome.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtNome.Location = new System.Drawing.Point(0, 0);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(423, 42);
-            this.txtNome.StateActive.Border.Rounding = 40F;
-            this.txtNome.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.True;
-            this.txtNome.StateCommon.Border.Rounding = 20F;
-            this.txtNome.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtNome.TabIndex = 4;
-            // 
             // kryptonPictureBox5
             // 
             this.kryptonPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -222,6 +155,143 @@ namespace ProjetoPI.Views
             this.kryptonPictureBox3.TabStop = false;
             this.kryptonPictureBox3.Visible = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(226)))), ((int)(((byte)(193)))));
+            this.panel2.Controls.Add(this.kryptonButton1);
+            this.panel2.Controls.Add(this.btnVoltarLogin);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.txtNome);
+            this.panel2.Controls.Add(this.txtSenhaConf);
+            this.panel2.Controls.Add(this.txtUsuarioCad);
+            this.panel2.Controls.Add(this.txtSenhaCad);
+            this.panel2.Location = new System.Drawing.Point(122, 195);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(423, 328);
+            this.panel2.TabIndex = 10;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Location = new System.Drawing.Point(0, 285);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(170, 43);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.Rounding = 40F;
+            this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButton1.TabIndex = 12;
+            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton1.Values.Text = "Salvar";
+            this.kryptonButton1.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
+            // btnVoltarLogin
+            // 
+            this.btnVoltarLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVoltarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltarLogin.Location = new System.Drawing.Point(253, 285);
+            this.btnVoltarLogin.Name = "btnVoltarLogin";
+            this.btnVoltarLogin.Size = new System.Drawing.Size(170, 43);
+            this.btnVoltarLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
+            this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnVoltarLogin.TabIndex = 11;
+            this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnVoltarLogin.Values.Text = "Voltar para Login";
+            this.btnVoltarLogin.Click += new System.EventHandler(this.BtnVoltarLogin_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::ProjetoPI.Properties.Resources.iconSenhaLogin1;
+            this.pictureBox4.Location = new System.Drawing.Point(17, 128);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::ProjetoPI.Properties.Resources.iconUsuarioLogin;
+            this.pictureBox3.Location = new System.Drawing.Point(17, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.CueHint.CueHintText = "Digite seu nome";
+            this.txtNome.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtNome.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtNome.Location = new System.Drawing.Point(0, 0);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(423, 42);
+            this.txtNome.StateActive.Border.Rounding = 40F;
+            this.txtNome.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.True;
+            this.txtNome.StateCommon.Border.Rounding = 20F;
+            this.txtNome.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
+            this.txtNome.TabIndex = 4;
+            // 
+            // txtSenhaConf
+            // 
+            this.txtSenhaConf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSenhaConf.CueHint.CueHintText = "Confirme sua senha";
+            this.txtSenhaConf.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaConf.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaConf.Location = new System.Drawing.Point(0, 186);
+            this.txtSenhaConf.Name = "txtSenhaConf";
+            this.txtSenhaConf.PasswordChar = '*';
+            this.txtSenhaConf.Size = new System.Drawing.Size(423, 42);
+            this.txtSenhaConf.StateActive.Border.Rounding = 40F;
+            this.txtSenhaConf.StateCommon.Border.Rounding = 20F;
+            this.txtSenhaConf.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
+            this.txtSenhaConf.TabIndex = 7;
+            // 
+            // txtUsuarioCad
+            // 
+            this.txtUsuarioCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuarioCad.CueHint.CueHintText = "Crie um usuário";
+            this.txtUsuarioCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtUsuarioCad.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtUsuarioCad.Location = new System.Drawing.Point(0, 62);
+            this.txtUsuarioCad.Name = "txtUsuarioCad";
+            this.txtUsuarioCad.Size = new System.Drawing.Size(423, 42);
+            this.txtUsuarioCad.StateActive.Border.Rounding = 40F;
+            this.txtUsuarioCad.StateCommon.Border.Rounding = 20F;
+            this.txtUsuarioCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
+            this.txtUsuarioCad.TabIndex = 5;
+            // 
+            // txtSenhaCad
+            // 
+            this.txtSenhaCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSenhaCad.CueHint.CueHintText = "Criei uma senha";
+            this.txtSenhaCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaCad.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaCad.Location = new System.Drawing.Point(0, 124);
+            this.txtSenhaCad.Name = "txtSenhaCad";
+            this.txtSenhaCad.PasswordChar = '*';
+            this.txtSenhaCad.Size = new System.Drawing.Size(423, 42);
+            this.txtSenhaCad.StateActive.Border.Rounding = 40F;
+            this.txtSenhaCad.StateCommon.Border.Rounding = 20F;
+            this.txtSenhaCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
+            this.txtSenhaCad.TabIndex = 6;
+            // 
             // painelDireito
             // 
             this.painelDireito.Controls.Add(this.panel1);
@@ -233,21 +303,6 @@ namespace ProjetoPI.Views
             this.painelDireito.Size = new System.Drawing.Size(667, 719);
             this.painelDireito.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(226)))), ((int)(((byte)(193)))));
             this.painelDireito.TabIndex = 1;
-            // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastro.Location = new System.Drawing.Point(0, 285);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(170, 43);
-            this.btnCadastro.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnCadastro.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnCadastro.StateCommon.Border.Rounding = 40F;
-            this.btnCadastro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnCadastro.TabIndex = 4;
-            this.btnCadastro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnCadastro.Values.Text = "Cadastre-se";
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // panel1
             // 
@@ -263,6 +318,49 @@ namespace ProjetoPI.Views
             this.panel1.Size = new System.Drawing.Size(423, 328);
             this.panel1.TabIndex = 7;
             // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.Location = new System.Drawing.Point(253, 285);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(170, 43);
+            this.btnEntrar.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnEntrar.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnEntrar.StateCommon.Border.Rounding = 40F;
+            this.btnEntrar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnEntrar.TabIndex = 3;
+            this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnEntrar.Values.Text = "Entrar";
+            this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
+            // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.Location = new System.Drawing.Point(0, 285);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(170, 43);
+            this.btnCadastro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnCadastro.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnCadastro.StateCommon.Border.Rounding = 40F;
+            this.btnCadastro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnCadastro.TabIndex = 4;
+            this.btnCadastro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnCadastro.Values.Text = "Cadastre-se";
+            this.btnCadastro.Click += new System.EventHandler(this.BtnCadastro_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::ProjetoPI.Properties.Resources.iconSenhaLogin1;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 66);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -273,32 +371,6 @@ namespace ProjetoPI.Views
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // kryptonPictureBox1
-            // 
-            this.kryptonPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.kryptonPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox1.Image")));
-            this.kryptonPictureBox1.Location = new System.Drawing.Point(83, 199);
-            this.kryptonPictureBox1.MaximumSize = new System.Drawing.Size(31, 35);
-            this.kryptonPictureBox1.Name = "kryptonPictureBox1";
-            this.kryptonPictureBox1.Size = new System.Drawing.Size(31, 34);
-            this.kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.kryptonPictureBox1.TabIndex = 4;
-            this.kryptonPictureBox1.TabStop = false;
-            this.kryptonPictureBox1.Visible = false;
-            // 
-            // kryptonPictureBox2
-            // 
-            this.kryptonPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.kryptonPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox2.Image")));
-            this.kryptonPictureBox2.Location = new System.Drawing.Point(83, 261);
-            this.kryptonPictureBox2.MaximumSize = new System.Drawing.Size(31, 35);
-            this.kryptonPictureBox2.Name = "kryptonPictureBox2";
-            this.kryptonPictureBox2.Size = new System.Drawing.Size(31, 34);
-            this.kryptonPictureBox2.TabIndex = 6;
-            this.kryptonPictureBox2.TabStop = false;
-            this.kryptonPictureBox2.Visible = false;
             // 
             // txtSenha
             // 
@@ -334,101 +406,33 @@ namespace ProjetoPI.Views
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             // 
-            // pictureBox2
+            // kryptonPictureBox1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::ProjetoPI.Properties.Resources.iconSenhaLogin1;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 66);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.kryptonPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.kryptonPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox1.Image")));
+            this.kryptonPictureBox1.Location = new System.Drawing.Point(83, 199);
+            this.kryptonPictureBox1.MaximumSize = new System.Drawing.Size(31, 35);
+            this.kryptonPictureBox1.Name = "kryptonPictureBox1";
+            this.kryptonPictureBox1.Size = new System.Drawing.Size(31, 34);
+            this.kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.kryptonPictureBox1.TabIndex = 4;
+            this.kryptonPictureBox1.TabStop = false;
+            this.kryptonPictureBox1.Visible = false;
             // 
-            // btnEntrar
+            // kryptonPictureBox2
             // 
-            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEntrar.Location = new System.Drawing.Point(253, 285);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(170, 43);
-            this.btnEntrar.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnEntrar.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnEntrar.StateCommon.Border.Rounding = 40F;
-            this.btnEntrar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnEntrar.TabIndex = 3;
-            this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnEntrar.Values.Text = "Entrar";
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.kryptonPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.kryptonPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox2.Image")));
+            this.kryptonPictureBox2.Location = new System.Drawing.Point(83, 261);
+            this.kryptonPictureBox2.MaximumSize = new System.Drawing.Size(31, 35);
+            this.kryptonPictureBox2.Name = "kryptonPictureBox2";
+            this.kryptonPictureBox2.Size = new System.Drawing.Size(31, 34);
+            this.kryptonPictureBox2.TabIndex = 6;
+            this.kryptonPictureBox2.TabStop = false;
+            this.kryptonPictureBox2.Visible = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(226)))), ((int)(((byte)(193)))));
-            this.panel2.Controls.Add(this.kryptonButton1);
-            this.panel2.Controls.Add(this.btnVoltarLogin);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Controls.Add(this.txtSenhaConf);
-            this.panel2.Controls.Add(this.txtUsuarioCad);
-            this.panel2.Controls.Add(this.txtSenhaCad);
-            this.panel2.Location = new System.Drawing.Point(122, 195);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 328);
-            this.panel2.TabIndex = 10;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::ProjetoPI.Properties.Resources.iconUsuarioLogin;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::ProjetoPI.Properties.Resources.iconSenhaLogin1;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 128);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnVoltarLogin
-            // 
-            this.btnVoltarLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnVoltarLogin.Location = new System.Drawing.Point(253, 285);
-            this.btnVoltarLogin.Name = "btnVoltarLogin";
-            this.btnVoltarLogin.Size = new System.Drawing.Size(170, 43);
-            this.btnVoltarLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
-            this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnVoltarLogin.TabIndex = 11;
-            this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnVoltarLogin.Values.Text = "Voltar para Login";
-            this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonButton1.Location = new System.Drawing.Point(0, 285);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(170, 43);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.Rounding = 40F;
-            this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.TabIndex = 12;
-            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kryptonButton1.Values.Text = "Salvar";
-            this.kryptonButton1.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -437,10 +441,10 @@ namespace ProjetoPI.Views
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "login";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";
-            this.Load += new System.EventHandler(this.login_Load);
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).EndInit();
             this.painelFundo.ResumeLayout(false);
             this.painelDivisor.ResumeLayout(false);
@@ -448,18 +452,18 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelDireito)).EndInit();
             this.painelDireito.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

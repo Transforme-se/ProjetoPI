@@ -14,11 +14,11 @@ using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
         ControllerLoginCadastro controllerLoginCadastro;
 
-        public login()
+        public Login()
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();
@@ -28,7 +28,7 @@ namespace ProjetoPI.Views
 
         }
 
-        private void login_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
             ArredondarPainel.Arredondar(painelEsquerdo, 30);
             ArredondarPainel.Arredondar(painelDireito, 30);
@@ -49,20 +49,20 @@ namespace ProjetoPI.Views
 
         }
 
-        private void btnCadastro_Click(object sender, EventArgs e)
+        private void BtnCadastro_Click(object sender, EventArgs e)
         {
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 688);
             LimparCamposCadastro();
         }
 
-        private void btnVoltarLogin_Click(object sender, EventArgs e)
+        private void BtnVoltarLogin_Click(object sender, EventArgs e)
         {
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 13);
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void BtnEntrar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace ProjetoPI.Views
             }
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
             try 
             {

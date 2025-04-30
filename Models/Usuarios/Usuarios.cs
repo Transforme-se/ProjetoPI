@@ -11,7 +11,7 @@ namespace ProjetoPI.Models.Usuarios
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string login { get; set; }
+        public string Login { get; set; }
         public string SenhaHash { get; set; }
 
         // Contrutor para pegar os dados que vieram do banco de dados e transformar em um objeto Usuarios
@@ -22,7 +22,7 @@ namespace ProjetoPI.Models.Usuarios
             {
                 Id = Convert.ToInt32(reader["IdUsuarios"]),
                 Nome =  Convert.ToString(reader["Nome"]),
-                login = Convert.ToString(reader["Login"]),
+                Login = Convert.ToString(reader["Login"]),
                 SenhaHash = Convert.ToString(reader["SenhaHash"])
             };
         }

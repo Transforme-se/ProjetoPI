@@ -23,7 +23,7 @@ namespace ProjetoPI.Views
             InitializeComponent();
         }
 
-        private void telaPrincipal_Load(object sender, EventArgs e)
+        private void TelaPrincipal_Load(object sender, EventArgs e)
         {
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
@@ -32,7 +32,7 @@ namespace ProjetoPI.Views
             lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
         }
 
-        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "kryptonDataGridViewCheckBoxColumn1" && e.RowIndex >= 0)
@@ -45,16 +45,16 @@ namespace ProjetoPI.Views
             }
         }
 
-        private void btnNovaMeta_Click(object sender, EventArgs e)
+        private void BtnNovaMeta_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
         }
-        private void btnEditarMeta_Click(object sender, EventArgs e)
+        private void BtnEditarMeta_Click(object sender, EventArgs e)
         {
            
         }

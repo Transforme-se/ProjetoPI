@@ -60,7 +60,7 @@ namespace ProjetoPI.Controllers
             Usuarios usuario = new Usuarios
             {
                 Nome = nome,
-                login = login
+                Login = login
             };
             string senhaHash = Criptografia.HashSenha(senha);
             UsuariosRepository usuariosRepository = new UsuariosRepository(new DataBaseService());

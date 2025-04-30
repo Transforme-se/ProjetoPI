@@ -27,7 +27,7 @@ namespace ProjetoPI.Models.Usuarios
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@nome", usuario.Nome),
-                    new MySqlParameter("@login", usuario.login),
+                    new MySqlParameter("@login", usuario.Login),
                     new MySqlParameter("@senhaHash", senha),
                     new MySqlParameter("@createdAt", DateTime.Now)
                 };
