@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjetoPI.Controllers
 {
     class ValidarCadastro
     {
-        private ControllerTxtBox controllerTxtBox;
+        private ControllerTxtBox controllerTxtBox = new ControllerTxtBox();
 
         public bool ValidarLogin(string login)
         {
+            MessageBox.Show("Validando Login");
             bool naoVazio = controllerTxtBox.TextoNaoVazio(login);
             bool possuiEspaco = controllerTxtBox.PossuiEspaco(login);
             bool possuiCaracteresEspeciais = controllerTxtBox.PossuiCaracteresEspeciais(login);
@@ -23,7 +25,7 @@ namespace ProjetoPI.Controllers
         public bool ValidarNome(string nome)
         {
             // Variáveis intermediárias para cada validação
-            nome = controllerTxtBox.RemoverEspacosInicioFim(nome);
+            MessageBox.Show("Validando Nome");
             bool naoVazia = controllerTxtBox.TextoNaoVazio(nome);
             bool possuiCaracteresEspeciais = controllerTxtBox.PossuiCaracteresEspeciais(nome);
             bool possuiNumeros = controllerTxtBox.PossuiNumeros(nome);
@@ -33,6 +35,7 @@ namespace ProjetoPI.Controllers
         }
         public bool ValidarSenha(string senha)
         {
+            MessageBox.Show("Validando Senha");
             bool naoVazia = controllerTxtBox.TextoNaoVazio(senha);
             bool possuiEspaco = controllerTxtBox.PossuiEspaco(senha);
             bool possuiCaracteresEspeciais = controllerTxtBox.PossuiCaracteresEspeciais(senha);
