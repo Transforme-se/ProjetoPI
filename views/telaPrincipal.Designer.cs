@@ -228,7 +228,7 @@
             // 
             // metasBindingSource
             // 
-            this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
+            //this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
             // 
             // lbBoasVindas
             // 

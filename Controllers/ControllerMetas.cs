@@ -49,9 +49,9 @@ namespace ProjetoPI.Controllers
             return resultado ? metas : null;
         }
 
-        public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
-        {
+        //public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
+        //{
 
-        }
+        //}
     }
 }

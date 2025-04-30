@@ -50,10 +50,6 @@ namespace ProjetoPI.Views
             {
                 MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-
-            }
 
         }
     }

@@ -48,17 +48,14 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton.Toolkit, Version=90.25.2.55, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>packages\Krypton.Toolkit.90.25.2.55\lib\net48\Krypton.Toolkit.dll</HintPath>
+    <Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.3.0\lib\net48\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton.Toolkit, Version=90.25.2.55, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>packages\Krypton.Toolkit.90.25.2.55\lib\net48\Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Compression.Base.29.1.38\lib\net462\Syncfusion.Compression.Base.dll</HintPath>
@@ -139,6 +136,12 @@
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessaoUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdicionarMeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdicionarMeta.Designer.cs">
+      <DependentUpon>AdicionarMeta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ArredondarPainel.cs" />
     <Compile Include="Views\login.cs">
       <SubType>Form</SubType>
@@ -168,6 +171,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AdicionarMeta.resx">
+      <DependentUpon>AdicionarMeta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaInicio.resx">
       <DependentUpon>TelaInicio.cs</DependentUpon>
     </EmbeddedResource>
