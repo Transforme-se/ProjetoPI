@@ -64,14 +64,14 @@ namespace ProjetoPI.Views
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Usuarios user = controllerLoginCadastro.Login(txtUsuario.Text, txtSenha.Text);
             try
             {
+                Usuarios user = controllerLoginCadastro.Login(txtUsuario.Text, txtSenha.Text);
                 if (user != null)
                 {
                     SessaoUsuario.Login(user);
-                    telaPrincipal telaPrincipal = new telaPrincipal(user);
-                    telaPrincipal.Show();
+                    MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new telaPrincipal().Show();
                 }
                 else
                 {
@@ -81,16 +81,18 @@ namespace ProjetoPI.Views
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao autenticar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            try {
+            try 
+            {
+                Console.WriteLine("Iniciando cadastro de usuário..");
                 var user = controllerLoginCadastro.Cadastrar(txtNome.Text, txtUsuarioCad.Text, txtSenhaCad.Text, txtSenhaConf.Text);
                 if (user)
                 {
+                    Console.WriteLine("Usuário cadastrado com sucesso!");
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimparCamposCadastro();
                     var mover = new PainelLogin();
@@ -99,7 +101,11 @@ namespace ProjetoPI.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao cadastrar: {ex.Message}","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Console.WriteLine("Finalizando cadastro de usuário...");
             }
         }
 

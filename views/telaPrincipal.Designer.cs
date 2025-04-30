@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaPrincipal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
-            this.btnNovaMeta = new Krypton.Toolkit.KryptonButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabela = new Krypton.Toolkit.KryptonDataGridView();
             this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn2 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
@@ -44,29 +44,34 @@
             this.kryptonDataGridViewCheckBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbBoasVindas = new Krypton.Toolkit.KryptonLabel();
-            this.btnPag = new Krypton.Toolkit.KryptonButton();
-            this.btnRetornar = new Krypton.Toolkit.KryptonButton();
-            this.btnAvancar = new Krypton.Toolkit.KryptonButton();
-            this.calendario = new Krypton.Toolkit.KryptonMonthCalendar();
-            this.btnRemover = new Krypton.Toolkit.KryptonButton();
-            this.btnAdicionar = new Krypton.Toolkit.KryptonButton();
+            this.btnNovaMeta = new Krypton.Toolkit.KryptonButton();
             this.txtBusca = new Krypton.Toolkit.KryptonTextBox();
+            this.calendario = new Krypton.Toolkit.KryptonMonthCalendar();
             this.painelMenu = new Krypton.Toolkit.KryptonPanel();
             this.lbUser = new Krypton.Toolkit.KryptonLabel();
             this.btnConfig = new Krypton.Toolkit.KryptonButton();
             this.imgUser = new Krypton.Toolkit.KryptonPictureBox();
             this.btnConta = new Krypton.Toolkit.KryptonButton();
             this.btnPerfil = new Krypton.Toolkit.KryptonButton();
+            this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewTextBoxColumn2 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewTextBoxColumn3 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewTextBoxColumn4 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewTextBoxColumn5 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewCheckBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
+            this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEditarMeta = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
             this.painelMetas.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).BeginInit();
             this.painelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // painelFundo
@@ -76,6 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.painelFundo.Controls.Add(this.painelMetas);
             this.painelFundo.Controls.Add(this.painelMenu);
+            this.painelFundo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelFundo.Location = new System.Drawing.Point(0, 0);
             this.painelFundo.Margin = new System.Windows.Forms.Padding(4);
             this.painelFundo.Name = "painelFundo";
@@ -88,38 +94,36 @@
             this.painelMetas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.painelMetas.Controls.Add(this.btnEditarMeta);
-            this.painelMetas.Controls.Add(this.btnNovaMeta);
-            this.painelMetas.Controls.Add(this.tabela);
-            this.painelMetas.Controls.Add(this.lbBoasVindas);
-            this.painelMetas.Controls.Add(this.btnPag);
-            this.painelMetas.Controls.Add(this.btnRetornar);
-            this.painelMetas.Controls.Add(this.btnAvancar);
-            this.painelMetas.Controls.Add(this.calendario);
-            this.painelMetas.Controls.Add(this.btnRemover);
-            this.painelMetas.Controls.Add(this.btnAdicionar);
-            this.painelMetas.Controls.Add(this.txtBusca);
-            this.painelMetas.Location = new System.Drawing.Point(500, 34);
-            this.painelMetas.Margin = new System.Windows.Forms.Padding(4);
+            this.painelMetas.Controls.Add(this.panel1);
+            this.painelMetas.Location = new System.Drawing.Point(375, 28);
             this.painelMetas.Name = "painelMetas";
-            this.painelMetas.Size = new System.Drawing.Size(1293, 842);
+            this.painelMetas.Padding = new System.Windows.Forms.Padding(50);
+            this.painelMetas.Size = new System.Drawing.Size(970, 684);
             this.painelMetas.StateCommon.Color1 = System.Drawing.Color.WhiteSmoke;
             this.painelMetas.TabIndex = 1;
             // 
-            // btnNovaMeta
+            // panel1
             // 
-            this.btnNovaMeta.Location = new System.Drawing.Point(1001, 447);
-            this.btnNovaMeta.Name = "btnNovaMeta";
-            this.btnNovaMeta.Size = new System.Drawing.Size(201, 72);
-            this.btnNovaMeta.TabIndex = 17;
-            this.btnNovaMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnNovaMeta.Values.Text = "Adicionar Nova Meta";
-            this.btnNovaMeta.Click += new System.EventHandler(this.btnNovaMeta_Click);
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnEditarMeta);
+            this.panel1.Controls.Add(this.tabela);
+            this.panel1.Controls.Add(this.lbBoasVindas);
+            this.panel1.Controls.Add(this.btnNovaMeta);
+            this.panel1.Controls.Add(this.txtBusca);
+            this.panel1.Controls.Add(this.calendario);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(50, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(870, 584);
+            this.panel1.TabIndex = 17;
             // 
             // tabela
             // 
             this.tabela.AllowUserToAddRows = false;
             this.tabela.AllowUserToDeleteRows = false;
+            this.tabela.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabela.AutoGenerateColumns = false;
             this.tabela.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -129,15 +133,12 @@
             this.kryptonDataGridViewTextBoxColumn3,
             this.kryptonDataGridViewTextBoxColumn4,
             this.kryptonDataGridViewTextBoxColumn5,
-            this.kryptonDataGridViewTextBoxColumn6,
             this.kryptonDataGridViewCheckBoxColumn1});
             this.tabela.DataSource = this.metasBindingSource;
-            this.tabela.Location = new System.Drawing.Point(19, 87);
-            this.tabela.Margin = new System.Windows.Forms.Padding(4);
+            this.tabela.Location = new System.Drawing.Point(0, 88);
             this.tabela.Name = "tabela";
             this.tabela.RowHeadersVisible = false;
-            this.tabela.RowHeadersWidth = 51;
-            this.tabela.Size = new System.Drawing.Size(871, 670);
+            this.tabela.Size = new System.Drawing.Size(605, 496);
             this.tabela.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.tabela.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.tabela.StatePressed.HeaderColumn.Border.Rounding = 10F;
@@ -147,208 +148,65 @@
             this.tabela.StateTracking.HeaderColumn.Border.Rounding = 10F;
             this.tabela.StateTracking.HeaderRow.Border.Rounding = 10F;
             this.tabela.TabIndex = 9;
-            // 
-            // kryptonDataGridViewTextBoxColumn1
-            // 
-            this.kryptonDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.kryptonDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.kryptonDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn1.Name = "kryptonDataGridViewTextBoxColumn1";
-            this.kryptonDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn1.Visible = false;
-            this.kryptonDataGridViewTextBoxColumn1.Width = 55;
-            // 
-            // kryptonDataGridViewTextBoxColumn2
-            // 
-            this.kryptonDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
-            this.kryptonDataGridViewTextBoxColumn2.HeaderText = "Titulo";
-            this.kryptonDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn2.Name = "kryptonDataGridViewTextBoxColumn2";
-            this.kryptonDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn2.Width = 80;
-            // 
-            // kryptonDataGridViewTextBoxColumn3
-            // 
-            this.kryptonDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn3.DataPropertyName = "Descricao";
-            this.kryptonDataGridViewTextBoxColumn3.HeaderText = "Descricao";
-            this.kryptonDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn3.Name = "kryptonDataGridViewTextBoxColumn3";
-            this.kryptonDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn3.Width = 107;
-            // 
-            // kryptonDataGridViewTextBoxColumn4
-            // 
-            this.kryptonDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn4.DataPropertyName = "IdUsuario";
-            this.kryptonDataGridViewTextBoxColumn4.HeaderText = "IdUsuario";
-            this.kryptonDataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn4.Name = "kryptonDataGridViewTextBoxColumn4";
-            this.kryptonDataGridViewTextBoxColumn4.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn4.Visible = false;
-            this.kryptonDataGridViewTextBoxColumn4.Width = 105;
-            // 
-            // kryptonDataGridViewTextBoxColumn5
-            // 
-            this.kryptonDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn5.DataPropertyName = "DataCriacao";
-            this.kryptonDataGridViewTextBoxColumn5.HeaderText = "DataCriacao";
-            this.kryptonDataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn5.Name = "kryptonDataGridViewTextBoxColumn5";
-            this.kryptonDataGridViewTextBoxColumn5.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn5.Visible = false;
-            this.kryptonDataGridViewTextBoxColumn5.Width = 124;
-            // 
-            // kryptonDataGridViewTextBoxColumn6
-            // 
-            this.kryptonDataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewTextBoxColumn6.DataPropertyName = "DataConclusao";
-            this.kryptonDataGridViewTextBoxColumn6.HeaderText = "DataConclusao";
-            this.kryptonDataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn6.Name = "kryptonDataGridViewTextBoxColumn6";
-            this.kryptonDataGridViewTextBoxColumn6.ReadOnly = true;
-            this.kryptonDataGridViewTextBoxColumn6.Width = 142;
-            // 
-            // kryptonDataGridViewCheckBoxColumn1
-            // 
-            this.kryptonDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.kryptonDataGridViewCheckBoxColumn1.DataPropertyName = "status";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            this.kryptonDataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.kryptonDataGridViewCheckBoxColumn1.FalseValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.HeaderText = "status";
-            this.kryptonDataGridViewCheckBoxColumn1.IndeterminateValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.kryptonDataGridViewCheckBoxColumn1.Name = "kryptonDataGridViewCheckBoxColumn1";
-            this.kryptonDataGridViewCheckBoxColumn1.TrueValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.Width = 57;
-            // 
-            // metasBindingSource
-            // 
-            //this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
+            this.tabela.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabela_CellClick);
+            this.tabela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabela_CellContentClick);
             // 
             // lbBoasVindas
             // 
-            this.lbBoasVindas.Location = new System.Drawing.Point(249, 31);
-            this.lbBoasVindas.Margin = new System.Windows.Forms.Padding(4);
+            this.lbBoasVindas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbBoasVindas.AutoSize = false;
+            this.lbBoasVindas.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
+            this.lbBoasVindas.Location = new System.Drawing.Point(3, 18);
             this.lbBoasVindas.Name = "lbBoasVindas";
-            this.lbBoasVindas.Size = new System.Drawing.Size(485, 65);
+            this.lbBoasVindas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbBoasVindas.Size = new System.Drawing.Size(864, 52);
+            this.lbBoasVindas.StateCommon.Padding = new System.Windows.Forms.Padding(1);
             this.lbBoasVindas.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 27.75F, System.Drawing.FontStyle.Italic);
+            this.lbBoasVindas.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbBoasVindas.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbBoasVindas.TabIndex = 16;
             this.lbBoasVindas.Values.Text = "Olá, qual a meta de hoje ?  ";
             // 
-            // btnPag
+            // btnNovaMeta
             // 
-            this.btnPag.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPag.Location = new System.Drawing.Point(165, 775);
-            this.btnPag.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPag.Name = "btnPag";
-            this.btnPag.Size = new System.Drawing.Size(48, 27);
-            this.btnPag.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnPag.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnPag.StateCommon.Border.Rounding = 10F;
-            this.btnPag.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnPag.TabIndex = 15;
-            this.btnPag.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnPag.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnPag.Values.Image")));
-            this.btnPag.Values.Text = "1";
-            // 
-            // btnRetornar
-            // 
-            this.btnRetornar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRetornar.Location = new System.Drawing.Point(87, 775);
-            this.btnRetornar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(52, 27);
-            this.btnRetornar.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnRetornar.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnRetornar.StateCommon.Border.Rounding = 10F;
-            this.btnRetornar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnRetornar.TabIndex = 14;
-            this.btnRetornar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnRetornar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnRetornar.Values.Image")));
-            this.btnRetornar.Values.Text = "<";
-            // 
-            // btnAvancar
-            // 
-            this.btnAvancar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAvancar.Location = new System.Drawing.Point(235, 775);
-            this.btnAvancar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAvancar.Name = "btnAvancar";
-            this.btnAvancar.Size = new System.Drawing.Size(49, 27);
-            this.btnAvancar.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnAvancar.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnAvancar.StateCommon.Border.Rounding = 10F;
-            this.btnAvancar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAvancar.TabIndex = 13;
-            this.btnAvancar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnAvancar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnAvancar.Values.Image")));
-            this.btnAvancar.Values.Text = ">";
-            // 
-            // calendario
-            // 
-            this.calendario.Location = new System.Drawing.Point(944, 202);
-            this.calendario.Margin = new System.Windows.Forms.Padding(4);
-            this.calendario.Name = "calendario";
-            this.calendario.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007White;
-            this.calendario.SelectionEnd = new System.DateTime(2025, 4, 19, 0, 0, 0, 0);
-            this.calendario.SelectionStart = new System.DateTime(2025, 4, 19, 0, 0, 0, 0);
-            this.calendario.ShowToday = false;
-            this.calendario.ShowTodayCircle = false;
-            this.calendario.Size = new System.Drawing.Size(299, 196);
-            this.calendario.StateCommon.Border.Rounding = 10F;
-            this.calendario.StateDisabled.Border.Rounding = 20F;
-            this.calendario.TabIndex = 12;
-            this.calendario.TodayDate = new System.DateTime(2025, 4, 19, 0, 0, 0, 0);
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRemover.Location = new System.Drawing.Point(1148, 766);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(40, 37);
-            this.btnRemover.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnRemover.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnRemover.StateCommon.Border.Rounding = 10F;
-            this.btnRemover.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnRemover.TabIndex = 11;
-            this.btnRemover.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnRemover.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Values.Image")));
-            this.btnRemover.Values.Text = "-";
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdicionar.Location = new System.Drawing.Point(1196, 766);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(49, 37);
-            this.btnAdicionar.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnAdicionar.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnAdicionar.StateCommon.Border.Rounding = 10F;
-            this.btnAdicionar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAdicionar.TabIndex = 10;
-            this.btnAdicionar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnAdicionar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Values.Image")));
-            this.btnAdicionar.Values.Text = "+";
+            this.btnNovaMeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovaMeta.Location = new System.Drawing.Point(634, 360);
+            this.btnNovaMeta.Name = "btnNovaMeta";
+            this.btnNovaMeta.Size = new System.Drawing.Size(236, 43);
+            this.btnNovaMeta.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnNovaMeta.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnNovaMeta.StateCommon.Border.Rounding = 10F;
+            this.btnNovaMeta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnNovaMeta.TabIndex = 4;
+            this.btnNovaMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnNovaMeta.Values.Text = "Adicionar Nova Meta";
+            this.btnNovaMeta.Click += new System.EventHandler(this.btnNovaMeta_Click);
             // 
             // txtBusca
             // 
-            this.txtBusca.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusca.CueHint.CueHintText = "Buscar metas";
             this.txtBusca.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.txtBusca.Location = new System.Drawing.Point(931, 98);
-            this.txtBusca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusca.Location = new System.Drawing.Point(634, 88);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(315, 46);
             this.txtBusca.StateActive.Border.Rounding = 40F;
             this.txtBusca.StateCommon.Border.Rounding = 20F;
             this.txtBusca.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtBusca.TabIndex = 5;
+            // 
+            // calendario
+            // 
+            this.calendario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendario.Location = new System.Drawing.Point(634, 150);
+            this.calendario.Name = "calendario";
+            this.calendario.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007White;
+            this.calendario.Size = new System.Drawing.Size(236, 190);
+            this.calendario.StateCommon.Border.Rounding = 10F;
+            this.calendario.StateDisabled.Border.Rounding = 20F;
+            this.calendario.TabIndex = 12;
+            this.calendario.TodayDate = new System.DateTime(2025, 4, 29, 19, 20, 6, 0);
             // 
             // painelMenu
             // 
@@ -368,18 +226,23 @@
             // 
             // lbUser
             // 
-            this.lbUser.Location = new System.Drawing.Point(164, 219);
-            this.lbUser.Margin = new System.Windows.Forms.Padding(4);
+            this.lbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUser.AutoSize = false;
+            this.lbUser.Location = new System.Drawing.Point(3, 178);
+            this.lbUser.MaximumSize = new System.Drawing.Size(319, 36);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(63, 24);
+            this.lbUser.Size = new System.Drawing.Size(319, 36);
+            this.lbUser.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbUser.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbUser.TabIndex = 0;
             this.lbUser.Values.Text = "Batman";
             // 
             // btnConfig
             // 
             this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfig.Location = new System.Drawing.Point(117, 543);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfig.Location = new System.Drawing.Point(95, 441);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(177, 53);
             this.btnConfig.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -393,8 +256,7 @@
             // imgUser
             // 
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
-            this.imgUser.Location = new System.Drawing.Point(133, 64);
-            this.imgUser.Margin = new System.Windows.Forms.Padding(4);
+            this.imgUser.Location = new System.Drawing.Point(101, 52);
             this.imgUser.Name = "imgUser";
             this.imgUser.Size = new System.Drawing.Size(161, 148);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -404,8 +266,7 @@
             // btnConta
             // 
             this.btnConta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConta.Location = new System.Drawing.Point(117, 447);
-            this.btnConta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConta.Location = new System.Drawing.Point(95, 363);
             this.btnConta.Name = "btnConta";
             this.btnConta.Size = new System.Drawing.Size(177, 53);
             this.btnConta.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -419,8 +280,7 @@
             // btnPerfil
             // 
             this.btnPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPerfil.Location = new System.Drawing.Point(117, 347);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPerfil.Location = new System.Drawing.Point(95, 282);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(177, 53);
             this.btnPerfil.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -430,14 +290,84 @@
             this.btnPerfil.TabIndex = 1;
             this.btnPerfil.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnPerfil.Values.Text = "Meu Perfil";
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
-            // btnEditarMeta
+            // kryptonDataGridViewTextBoxColumn1
+            // 
+            this.kryptonDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.kryptonDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.kryptonDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.kryptonDataGridViewTextBoxColumn1.Name = "kryptonDataGridViewTextBoxColumn1";
+            this.kryptonDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.kryptonDataGridViewTextBoxColumn1.Visible = false;
+            this.kryptonDataGridViewTextBoxColumn1.Width = 27;
+            // 
+            // kryptonDataGridViewTextBoxColumn2
+            // 
+            this.kryptonDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kryptonDataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
+            this.kryptonDataGridViewTextBoxColumn2.HeaderText = "Titulo";
+            this.kryptonDataGridViewTextBoxColumn2.Name = "kryptonDataGridViewTextBoxColumn2";
+            this.kryptonDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // kryptonDataGridViewTextBoxColumn3
+            // 
+            this.kryptonDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kryptonDataGridViewTextBoxColumn3.DataPropertyName = "Descricao";
+            this.kryptonDataGridViewTextBoxColumn3.HeaderText = "Descricao";
+            this.kryptonDataGridViewTextBoxColumn3.Name = "kryptonDataGridViewTextBoxColumn3";
+            this.kryptonDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // kryptonDataGridViewTextBoxColumn4
+            // 
+            this.kryptonDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.kryptonDataGridViewTextBoxColumn4.DataPropertyName = "DataCriacao";
+            this.kryptonDataGridViewTextBoxColumn4.HeaderText = "DataCriacao";
+            this.kryptonDataGridViewTextBoxColumn4.Name = "kryptonDataGridViewTextBoxColumn4";
+            this.kryptonDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // kryptonDataGridViewTextBoxColumn5
+            // 
+            this.kryptonDataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.kryptonDataGridViewTextBoxColumn5.DataPropertyName = "DataConclusao";
+            this.kryptonDataGridViewTextBoxColumn5.HeaderText = "DataConclusao";
+            this.kryptonDataGridViewTextBoxColumn5.Name = "kryptonDataGridViewTextBoxColumn5";
+            this.kryptonDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // kryptonDataGridViewCheckBoxColumn1
+            // 
+            this.kryptonDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.kryptonDataGridViewCheckBoxColumn1.DataPropertyName = "status";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = false;
+            this.kryptonDataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.kryptonDataGridViewCheckBoxColumn1.FalseValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.HeaderText = "status";
+            this.kryptonDataGridViewCheckBoxColumn1.IndeterminateValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.Name = "kryptonDataGridViewCheckBoxColumn1";
+            this.kryptonDataGridViewCheckBoxColumn1.TrueValue = null;
+            this.kryptonDataGridViewCheckBoxColumn1.Width = 48;
+            // 
+            // metasBindingSource
             // 
             this.btnEditarMeta.Location = new System.Drawing.Point(1001, 554);
             this.btnEditarMeta.Name = "btnEditarMeta";
             this.btnEditarMeta.Size = new System.Drawing.Size(201, 72);
             this.btnEditarMeta.TabIndex = 18;
+            this.btnEditarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnEditarMeta.Values.Text = "Editar Meta";
+            this.btnEditarMeta.Click += new System.EventHandler(this.btnEditarMeta_Click);
+            // 
+            // btnEditarMeta
+            // 
+            this.btnEditarMeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarMeta.Location = new System.Drawing.Point(634, 423);
+            this.btnEditarMeta.Name = "btnEditarMeta";
+            this.btnEditarMeta.Size = new System.Drawing.Size(236, 43);
+            this.btnEditarMeta.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnEditarMeta.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnEditarMeta.StateCommon.Border.Rounding = 10F;
+            this.btnEditarMeta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnEditarMeta.TabIndex = 17;
             this.btnEditarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEditarMeta.Values.Text = "Editar Meta";
             this.btnEditarMeta.Click += new System.EventHandler(this.btnEditarMeta_Click);
@@ -449,7 +379,7 @@
             this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.painelFundo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "telaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";
@@ -459,12 +389,12 @@
             this.painelFundo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).EndInit();
             this.painelMetas.ResumeLayout(false);
-            this.painelMetas.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).EndInit();
             this.painelMenu.ResumeLayout(false);
-            this.painelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -482,22 +412,17 @@
         private Krypton.Toolkit.KryptonLabel lbUser;
         private Krypton.Toolkit.KryptonTextBox txtBusca;
         private Krypton.Toolkit.KryptonDataGridView tabela;
-        private Krypton.Toolkit.KryptonButton btnAdicionar;
         private Krypton.Toolkit.KryptonMonthCalendar calendario;
-        private Krypton.Toolkit.KryptonButton btnPag;
-        private Krypton.Toolkit.KryptonButton btnRetornar;
-        private Krypton.Toolkit.KryptonButton btnAvancar;
-        private Krypton.Toolkit.KryptonLabel lbBoasVindas;
-        private Krypton.Toolkit.KryptonButton btnRemover;
         private System.Windows.Forms.BindingSource metasBindingSource;
+        private Krypton.Toolkit.KryptonButton btnNovaMeta;
+        private System.Windows.Forms.Panel panel1;
+        private Krypton.Toolkit.KryptonLabel lbBoasVindas;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn1;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn2;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn3;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn4;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn5;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn6;
         private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn kryptonDataGridViewCheckBoxColumn1;
-        private Krypton.Toolkit.KryptonButton btnNovaMeta;
         private Krypton.Toolkit.KryptonButton btnEditarMeta;
     }
 }
