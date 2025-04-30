@@ -35,13 +35,14 @@ namespace ProjetoPI.Views
         private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
-            if (tabela.Columns[e.ColumnIndex].Name == "kryptonDataGridViewCheckBoxColumn1" && e.RowIndex >= 0)
+            if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
             {
                 // Obtém a meta correspondente
                 Metas meta = (Metas)tabela.Rows[e.RowIndex].DataBoundItem;
 
                 // Alterna o valor do status
                 meta.status = !meta.status;
+
             }
         }
 

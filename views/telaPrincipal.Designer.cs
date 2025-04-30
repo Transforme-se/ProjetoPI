@@ -52,7 +52,7 @@
             this.Descricao = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn4 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.PrevConclusao = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.kryptonDataGridViewCheckBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
+            this.status = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
@@ -136,7 +136,7 @@
             this.Descricao,
             this.kryptonDataGridViewTextBoxColumn4,
             this.PrevConclusao,
-            this.kryptonDataGridViewCheckBoxColumn1});
+            this.status});
             this.tabela.DataSource = this.metasBindingSource;
             this.tabela.Location = new System.Drawing.Point(0, 88);
             this.tabela.Name = "tabela";
@@ -345,19 +345,19 @@
             this.PrevConclusao.ReadOnly = true;
             this.PrevConclusao.Width = 200;
             // 
-            // kryptonDataGridViewCheckBoxColumn1
+            // status
             // 
-            this.kryptonDataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.kryptonDataGridViewCheckBoxColumn1.DataPropertyName = "status";
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.status.DataPropertyName = "status";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.NullValue = false;
-            this.kryptonDataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.kryptonDataGridViewCheckBoxColumn1.FalseValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.HeaderText = "status";
-            this.kryptonDataGridViewCheckBoxColumn1.IndeterminateValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.Name = "kryptonDataGridViewCheckBoxColumn1";
-            this.kryptonDataGridViewCheckBoxColumn1.TrueValue = null;
-            this.kryptonDataGridViewCheckBoxColumn1.Width = 48;
+            this.status.DefaultCellStyle = dataGridViewCellStyle1;
+            this.status.FalseValue = null;
+            this.status.HeaderText = "status";
+            this.status.IndeterminateValue = null;
+            this.status.Name = "status";
+            this.status.TrueValue = null;
+            this.status.Width = 48;
             // 
             // telaPrincipal
             // 
@@ -410,6 +410,6 @@
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Descricao;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn4;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn PrevConclusao;
-        private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn kryptonDataGridViewCheckBoxColumn1;
+        private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn status;
     }
 }
