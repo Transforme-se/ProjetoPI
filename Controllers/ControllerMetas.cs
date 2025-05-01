@@ -35,7 +35,7 @@ namespace ProjetoPI.Controllers
             return metas;
         }
 
-        public Metas CadastrarMetas(string titulo, string descricao, DateTime dataConclusao)
+        public Metas CadastrarMetas(string titulo, string descricao, DateTime? dataConclusao)
         {
             try
             {
