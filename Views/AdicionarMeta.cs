@@ -14,13 +14,14 @@ namespace ProjetoPI.Views
 {
     public partial class AdicionarMeta: Form
     {
-        ControllerMetas controllerMetas;
-        public AdicionarMeta()
+        private telaPrincipal _telaPrincipal;
+        private ControllerMetas _controllerMetas;
+        public AdicionarMeta(telaPrincipal telaPrincipal)
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();
-            controllerMetas = new ControllerMetas(dataBaseService);
-
+            _controllerMetas = new ControllerMetas(dataBaseService);
+            _telaPrincipal = telaPrincipal;
         }
 
         private void btnSalvarMeta_Click(object sender, EventArgs e)
@@ -30,15 +31,17 @@ namespace ProjetoPI.Views
                 string titulo = txtTituloMeta.Text;
                 string descricao = txtDescricaoMeta.Text;
                 DateTime dataConclusao = DataConclusaoMeta.Value;
+
                 if (string.IsNullOrWhiteSpace(titulo) || string.IsNullOrWhiteSpace(descricao))
                 {
                     MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                var meta = controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
+                var meta = _controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
                 if (meta != null)
                 {
                     MessageBox.Show("Meta cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _telaPrincipal.AtualizarMetas();
                     this.Close();
                 }
                 else

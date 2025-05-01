@@ -32,6 +32,11 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
             lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
+            AtualizarMetas();
+        }
+
+        public void AtualizarMetas()
+        {
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
@@ -50,7 +55,7 @@ namespace ProjetoPI.Views
 
         private void btnNovaMeta_Click(object sender, EventArgs e)
         {
-            AdicionarMeta adicionarMeta = new AdicionarMeta();
+            AdicionarMeta adicionarMeta = new AdicionarMeta(this);
             adicionarMeta.Show();
         }
 
