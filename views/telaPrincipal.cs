@@ -31,8 +31,8 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
-            tabela.DataSource = new ControllerMetas(new DataBaseService()).ObterTodasMetas();
             lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
+            tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
         private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,9 +50,11 @@ namespace ProjetoPI.Views
 
         private void btnNovaMeta_Click(object sender, EventArgs e)
         {
-
+            AdicionarMeta adicionarMeta = new AdicionarMeta();
+            adicionarMeta.Show();
         }
 
+        int idMetaSelecionada;
         private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
