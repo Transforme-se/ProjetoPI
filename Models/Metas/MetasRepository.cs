@@ -56,6 +56,25 @@ namespace ProjetoPI.Models.Metas
             }
         }
 
+        public Metas ObterMetasPorId(int id)
+        {
+            string query = "SELECT * FROM metas WHERE idMetas = @id";
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+                new MySqlParameter("@id", id)
+            };
+
+            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
+            {
+                if (reader.Read())
+                {
+                    return Metas.UserFromDataReade(reader);
+                }
+            }
+
+            return null;
+        }
+
         public bool EditarStatus(Metas metas)
         {
             try
@@ -113,14 +132,14 @@ namespace ProjetoPI.Models.Metas
             try
             {
                 // Atualiza os dados da meta no banco de dados
-                string query = "@UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataConclusao = @dataConclusao WHERE Id = @id";
+                string query = "UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataConclusao = @dataConclusao WHERE idMetas = @id";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
-                    new MySqlParameter("@dataConclusao", metas.DataConclusao),
-                    new MySqlParameter("@id", metas.Id)
+                    new MySqlParameter("@dataConclusao", metas.DataConclusao.HasValue ? (object)metas.DataConclusao.Value : DBNull.Value),
+                    new MySqlParameter("@Id", metas.Id)
                 };
 
                 // Executa a consulta de atualização

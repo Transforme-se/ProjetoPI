@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoPI.Models.Metas
 {
-    class Metas
+    public class Metas
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
