@@ -26,34 +26,26 @@ namespace ProjetoPI.Views
 
         private void btnSalvarMeta_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string titulo = txtTituloMeta.Text;
-                string descricao = txtDescricaoMeta.Text;
-                DateTime dataConclusao = DataConclusaoMeta.Value;
+            string titulo = txtTituloMeta.Text;
+            string descricao = txtDescricaoMeta.Text;
+            DateTime dataConclusao = DataConclusaoMeta.Value;
 
-                if (string.IsNullOrWhiteSpace(titulo) || string.IsNullOrWhiteSpace(descricao))
-                {
-                    MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                var meta = _controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
-                if (meta != null)
-                {
-                    MessageBox.Show("Meta cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    _telaPrincipal.AtualizarMetas();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao cadastrar a meta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch(Exception ex)
+            if (string.IsNullOrWhiteSpace(titulo))
             {
-                MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-
+            var meta = _controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
+            if (meta != null)
+            {
+                MessageBox.Show("Meta cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _telaPrincipal.AtualizarMetas();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar a meta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

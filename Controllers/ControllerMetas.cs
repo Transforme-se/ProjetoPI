@@ -37,16 +37,25 @@ namespace ProjetoPI.Controllers
 
         public Metas CadastrarMetas(string titulo, string descricao, DateTime dataConclusao)
         {
-            Metas metas = new Metas();
-            metas.Titulo = titulo;
-            metas.Descricao = descricao;
-            metas.DataConclusao = dataConclusao;
+            try
+            {
+                Metas metas = new Metas();
+                metas.Titulo = titulo;
+                metas.Descricao = descricao;
+                metas.DataConclusao = dataConclusao;
 
-            MetasRepository metasRepository = new MetasRepository(_databaseService);
+                MetasRepository metasRepository = new MetasRepository(_databaseService);
             
-            bool resultado = metasRepository.AdicionarMetas(metas);
+                bool resultado = metasRepository.AdicionarMetas(metas);
 
-            return resultado ? metas : null;
+                return resultado ? metas : null;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
         }
 
         //public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
