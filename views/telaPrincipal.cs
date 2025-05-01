@@ -6,11 +6,11 @@ using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
-    public partial class telaPrincipal : Form
+    public partial class TelaPrincipal : Form
     {
         MetasRepository _metasRepository;
         ControllerMetas _controllerMetas;
-        public telaPrincipal(Models.Usuarios.Usuarios user)
+        public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();

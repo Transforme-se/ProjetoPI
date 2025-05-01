@@ -14,11 +14,11 @@ using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
         ControllerLoginCadastro controllerLoginCadastro;
 
-        public login()
+        public Login()
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();
@@ -71,7 +71,7 @@ namespace ProjetoPI.Views
                 {
                     SessaoUsuario.Login(user);
                     MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    new telaPrincipal(user).Show();
+                    new TelaPrincipal(user).Show();
                 }
                 else
                 {
