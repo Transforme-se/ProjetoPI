@@ -65,8 +65,10 @@
             this.DataConclusaoMeta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DataConclusaoMeta.Location = new System.Drawing.Point(225, 226);
             this.DataConclusaoMeta.Name = "DataConclusaoMeta";
+            this.DataConclusaoMeta.ShowCheckBox = true;
             this.DataConclusaoMeta.Size = new System.Drawing.Size(128, 25);
             this.DataConclusaoMeta.TabIndex = 4;
+            this.DataConclusaoMeta.ValueNullable = new System.DateTime(2025, 5, 1, 15, 0, 1, 0);
             // 
             // AdicionarMeta
             // 
