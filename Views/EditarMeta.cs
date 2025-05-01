@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ProjetoPI.Controllers;
+using ProjetoPI.Models.Metas;
+using ProjetoPI.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,18 @@ namespace ProjetoPI.Views
 {
     public partial class EditarMeta: Form
     {
-        public EditarMeta()
+        private Metas _meta;
+        private ControllerMetas _controllerMetas;
+        public EditarMeta(ControllerMetas controllerMetas, Metas meta)
         {
             InitializeComponent();
+            
+            _controllerMetas = controllerMetas;
+            _meta = meta;
+
+            txtTituloMeta.Text = _meta.Titulo;
+            txtDescricaoMeta.Text = _meta.Descricao;
+            txtConclusaoMeta.Text = _meta.DataConclusao.HasValue ? _meta.DataConclusao.Value.ToString("dd/MM/yyyy") : string.Empty;
         }
 
         private void ConclusaoEditarMeta_KeyPress(object sender, KeyPressEventArgs e)
@@ -48,17 +60,26 @@ namespace ProjetoPI.Views
             txtConclusaoMeta.SelectionStart = txtConclusaoMeta.Text.Length;
         }
 
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (DateTime.TryParse(txtConclusaoMeta.Text, out DateTime dataValida))
+            string titulo = txtTituloMeta.Text;
+            string descricao = txtDescricaoMeta.Text;
+            DateTime? dataConclusao = null;
+
+            if (!string.IsNullOrWhiteSpace(txtConclusaoMeta.Text) && DateTime.TryParse(txtConclusaoMeta.Text, out DateTime dataValida))
             {
-                MessageBox.Show($"Data salva: {dataValida.ToString("dd/MM/yyyy")}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataConclusao = dataValida;
             }
-            else
-            {
-                MessageBox.Show("Por favor, insira uma data válida no formato dd/MM/yyyy.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
+            _meta.Titulo = titulo;
+            _meta.Descricao = descricao;
+            _meta.DataConclusao = dataConclusao;
+
+            // Atualiza a meta no banco de dados
+            _controllerMetas.EditarMeta(_meta.Id, _meta.Titulo, _meta.Descricao, _meta.DataConclusao?.ToString("yyyy-MM-dd"));
+
+            MessageBox.Show("Meta atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

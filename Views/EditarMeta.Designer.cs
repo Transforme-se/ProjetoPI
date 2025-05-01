@@ -40,7 +40,6 @@
             this.txtTituloMeta.Name = "txtTituloMeta";
             this.txtTituloMeta.Size = new System.Drawing.Size(219, 27);
             this.txtTituloMeta.TabIndex = 0;
-            this.txtTituloMeta.Text = "Titulo";
             // 
             // txtDescricaoMeta
             // 
@@ -49,7 +48,6 @@
             this.txtDescricaoMeta.Name = "txtDescricaoMeta";
             this.txtDescricaoMeta.Size = new System.Drawing.Size(219, 27);
             this.txtDescricaoMeta.TabIndex = 1;
-            this.txtDescricaoMeta.Text = "Descrição";
             // 
             // txtConclusaoMeta
             // 
@@ -57,7 +55,6 @@
             this.txtConclusaoMeta.Name = "txtConclusaoMeta";
             this.txtConclusaoMeta.Size = new System.Drawing.Size(219, 27);
             this.txtConclusaoMeta.TabIndex = 2;
-            this.txtConclusaoMeta.Text = "DataConclusao";
             this.txtConclusaoMeta.TextChanged += new System.EventHandler(this.ConclusaoEditarMeta_TextChanged);
             this.txtConclusaoMeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConclusaoEditarMeta_KeyPress);
             // 
@@ -68,7 +65,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(90, 25);
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnSalvar.Values.Text = "kryptonButton1";
+            this.btnSalvar.Values.Text = "Salvar";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // EditarMeta

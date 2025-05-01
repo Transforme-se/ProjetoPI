@@ -58,7 +58,27 @@ namespace ProjetoPI.Views
         }
         private void btnEditarMeta_Click(object sender, EventArgs e)
         {
-           
+            if (idMetaSelecionada <= 0)
+            {
+                MessageBox.Show("Por favor, selecione uma meta para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Busca a meta pelo ID
+            var meta = _controllerMetas.ObterMetasPorId(idMetaSelecionada);
+            if (meta == null)
+            {
+                MessageBox.Show("Meta não encontrada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Abre o formulário de edição com os dados da meta
+            EditarMeta editarMeta = new EditarMeta(_controllerMetas, meta);
+            editarMeta.ShowDialog();
+
+            // Atualiza a tabela após a edição
+            AtualizarMetas();
         }
+
     }
 }
