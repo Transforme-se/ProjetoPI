@@ -10,7 +10,7 @@ using Syncfusion.OfficeChart;
 
 namespace ProjetoPI.Controllers
 {
-    class ControllerMetas
+    public class ControllerMetas
     {
         private readonly DataBaseService _databaseService;
         private readonly MetasRepository _metasRepository;
@@ -33,6 +33,11 @@ namespace ProjetoPI.Controllers
                 return null;
             }
             return metas;
+        }
+
+        public Metas ObterMetasPorId(int idMeta)
+        {
+            return _metasRepository.ObterMetasPorId(idMeta);
         }
 
         public Metas CadastrarMetas(string titulo, string descricao, DateTime? dataConclusao)
@@ -58,9 +63,26 @@ namespace ProjetoPI.Controllers
             return null;
         }
 
-        //public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
-        //{
+        public void EditarMeta(int idMeta, string titulo, string descricao, string dataTexto)
+        {
+            // Valida a data
+            DateTime? dataConclusao = null;
+            if (!string.IsNullOrWhiteSpace(dataTexto) && DateTime.TryParse(dataTexto, out DateTime dataValida))
+            {
+                dataConclusao = dataValida;
+            }
 
-        //}
+            // Envia os dados validados para o Model ou Repository
+            var meta = new Metas
+            {
+                Id = idMeta,
+                Titulo = titulo,
+                Descricao = descricao,
+                DataConclusao = dataConclusao
+            };
+
+            _metasRepository.EditarMetas(meta);
+        }
+
     }
 }
