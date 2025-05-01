@@ -84,5 +84,11 @@ namespace ProjetoPI.Controllers
             _metasRepository.EditarMetas(meta);
         }
 
+        public void ExcluirMeta(int idMeta)
+        {
+            // Envia o ID da meta para o Model ou Repository
+            _metasRepository.DeletarMetas(idMeta);
+        }
+
     }
 }

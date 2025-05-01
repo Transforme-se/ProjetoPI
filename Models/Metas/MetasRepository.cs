@@ -163,7 +163,7 @@ namespace ProjetoPI.Models.Metas
             try
             {
                 // Deleta os dados da meta no banco de dados
-                string query = "DELETE FROM metas WHERE Id = @id";
+                string query = "DELETE FROM metas WHERE idMetas = @id";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@id", id)
