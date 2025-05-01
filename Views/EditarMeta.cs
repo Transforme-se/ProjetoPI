@@ -81,5 +81,13 @@ namespace ProjetoPI.Views
             MessageBox.Show("Meta atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void brnExcluirMeta_Click(object sender, EventArgs e)
+        {
+            _controllerMetas.ExcluirMeta(_meta.Id);
+
+            MessageBox.Show("Meta excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
     }
 }

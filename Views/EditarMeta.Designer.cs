@@ -32,6 +32,7 @@
             this.txtDescricaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtConclusaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.btnSalvar = new Krypton.Toolkit.KryptonButton();
+            this.brnExcluirMeta = new Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // txtTituloMeta
@@ -60,24 +61,36 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(472, 304);
+            this.btnSalvar.Location = new System.Drawing.Point(463, 296);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 25);
+            this.btnSalvar.Size = new System.Drawing.Size(119, 40);
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvar.Values.Text = "Salvar";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // brnExcluirMeta
+            // 
+            this.brnExcluirMeta.Location = new System.Drawing.Point(94, 296);
+            this.brnExcluirMeta.Name = "brnExcluirMeta";
+            this.brnExcluirMeta.Size = new System.Drawing.Size(121, 40);
+            this.brnExcluirMeta.TabIndex = 4;
+            this.brnExcluirMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.brnExcluirMeta.Values.Text = "Excluir Meta";
+            this.brnExcluirMeta.Click += new System.EventHandler(this.brnExcluirMeta_Click);
             // 
             // EditarMeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.brnExcluirMeta);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtConclusaoMeta);
             this.Controls.Add(this.txtDescricaoMeta);
             this.Controls.Add(this.txtTituloMeta);
             this.Name = "EditarMeta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaEditarMeta";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -90,5 +103,6 @@
         private Krypton.Toolkit.KryptonTextBox txtDescricaoMeta;
         private Krypton.Toolkit.KryptonTextBox txtConclusaoMeta;
         private Krypton.Toolkit.KryptonButton btnSalvar;
+        private Krypton.Toolkit.KryptonButton brnExcluirMeta;
     }
 }
