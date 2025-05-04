@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
-using Syncfusion.OfficeChart;
 
 namespace ProjetoPI.Controllers
 {
@@ -26,7 +22,7 @@ namespace ProjetoPI.Controllers
             List<Metas> metas = new List<Metas>();
 
             metas = _metasRepository.ObterTodasMetas();
-            
+
             if (metas == null)
             {
                 MessageBox.Show("AAAAAAAA 2");
@@ -50,7 +46,7 @@ namespace ProjetoPI.Controllers
                 metas.DataConclusao = dataConclusao;
 
                 MetasRepository metasRepository = new MetasRepository(_databaseService);
-            
+
                 bool resultado = metasRepository.AdicionarMetas(metas);
 
                 return resultado ? metas : null;
@@ -90,5 +86,16 @@ namespace ProjetoPI.Controllers
             _metasRepository.DeletarMetas(idMeta);
         }
 
+        public bool EditarStatus(Metas meta)
+        {
+            try
+            {
+                return _metasRepository.EditarStatus(meta);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao editar status: {ex.Message}", ex);
+            }
+        }
     }
 }
