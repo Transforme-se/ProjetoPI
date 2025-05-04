@@ -8,8 +8,9 @@ namespace ProjetoPI.Views
 {
     public partial class TelaPrincipal : Form
     {
-        MetasRepository _metasRepository;
-        ControllerMetas _controllerMetas;
+        private MetasRepository _metasRepository;
+        private ControllerMetas _controllerMetas;
+        private int idMetaSelecionada;
         public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
             InitializeComponent();
@@ -32,30 +33,13 @@ namespace ProjetoPI.Views
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
-        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Verifica se a célula clicada é da coluna "status"
-            if (tabela.Columns[e.ColumnIndex].Name == "kryptonDataGridViewCheckBoxColumn1" && e.RowIndex >= 0)
-            {
-                // Obtém a meta correspondente
-                Metas meta = (Metas)tabela.Rows[e.RowIndex].DataBoundItem;
-
-                // Alterna o valor do status
-                meta.status = !meta.status;
-            }
-        }
-
         private void btnNovaMeta_Click(object sender, EventArgs e)
         {
             AdicionarMeta adicionarMeta = new AdicionarMeta(this);
             adicionarMeta.Show();
         }
 
-        int idMetaSelecionada;
-        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
-        }
+
         private void btnEditarMeta_Click(object sender, EventArgs e)
         {
             if (idMetaSelecionada <= 0)
@@ -80,5 +64,35 @@ namespace ProjetoPI.Views
             AtualizarMetas();
         }
 
+        //Editar status da meta
+        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
+            // Verifica se a célula clicada é da coluna "status"
+            if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
+            {
+                // Obtém a meta correspondente
+                Metas meta = (Metas)tabela.Rows[e.RowIndex].DataBoundItem;
+
+                // Alterna o valor do status
+                bool novoStatus = !meta.status;
+
+                bool sucesso = _controllerMetas.EditarStatus(new Metas
+                {
+                    Id = meta.Id,
+                    status = novoStatus
+                });
+
+                if (sucesso)
+                {
+                    MessageBox.Show("Status atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AtualizarMetas(); // Atualiza a tabela
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao atualizar o status.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
