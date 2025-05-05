@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using ProjetoPI.Services;
 
@@ -25,18 +22,28 @@ namespace ProjetoPI.Models.Metas
 
             try
             {
-                string query = "SELECT titulo, descricao, status, dataCriacao, dataConclusao FROM metas";
-                MySqlDataReader resultadoBanco = _databaseService.ExecuteQuery(query);
+                // Consulta SQL para buscar metas do usuário logado
+                string query = "SELECT idMetas, titulo, descricao, status, dataCriacao, dataConclusao FROM metas WHERE idUsuarios = @id";
 
-                // Lê os dados do banco de dados e adiciona à lista de metas
-                while (resultadoBanco.Read())
+                // Obtém o ID do usuário logado
+                int idUsuario = SessaoUsuario.usuarioLogado.Id;
+
+                // Define os parâmetros da consulta
+                MySqlParameter[] parameters = new MySqlParameter[]
                 {
-                    Metas meta = new Metas();
-                    meta = Metas.UserFromDataReade(resultadoBanco);
+                     new MySqlParameter("@id", idUsuario)
+                };
 
-                    metas.Add(meta);
+                // Executa a consulta e obtém o resultado
+                using (MySqlDataReader resultadoBanco = _databaseService.ExecuteQuery(query, parameters))
+                {
+                    // Lê os dados do banco de dados e adiciona à lista de metas
+                    while (resultadoBanco.Read())
+                    {
+                        Metas meta = Metas.UserFromDataReade(resultadoBanco);
+                        metas.Add(meta);
+                    }
                 }
-                _databaseService.CloseConnection();
 
                 return metas;
             }
@@ -46,17 +53,58 @@ namespace ProjetoPI.Models.Metas
             }
         }
 
+        public Metas ObterMetasPorId(int id)
+        {
+            string query = "SELECT * FROM metas WHERE idMetas = @id";
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+                new MySqlParameter("@id", id)
+            };
+
+            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
+            {
+                if (reader.Read())
+                {
+                    return Metas.UserFromDataReade(reader);
+                }
+            }
+
+            return null;
+        }
+
+        public bool EditarStatus(Metas metas)
+        {
+            try
+            {
+                // Atualiza o status da meta no banco de dados
+                string query = "UPDATE metas SET status = @status WHERE idMetas = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@status", metas.status),
+                    new MySqlParameter("@id", metas.Id)
+                };
+                // Executa a consulta de atualização
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao editar status: " + ex.Message);
+            }
+        }
+
         public bool AdicionarMetas(Metas metas)
         {
             try
             {
                 // Insere os dados da meta no banco de dados
-                string query = "INSERT INTO metas (Titulo, Descricao, status, DataCriacao, DataConclusao) VALUES(@titulo, @descricao, @status, @dataCriacao, @dataConclusao)";
+                string query = "INSERT INTO metas (Titulo, Descricao, status, idUsuarios, DataCriacao, DataConclusao) VALUES(@titulo, @descricao, @status, @id, @dataCriacao, @dataConclusao)";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
+                    new MySqlParameter("@id", SessaoUsuario.usuarioLogado.Id),
                     new MySqlParameter("@dataCriacao", DateTime.Now),
                     new MySqlParameter("@dataConclusao", metas.DataConclusao)
                 };
@@ -81,14 +129,14 @@ namespace ProjetoPI.Models.Metas
             try
             {
                 // Atualiza os dados da meta no banco de dados
-                string query = "@UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataConclusao = @dataConclusao WHERE Id = @id";
+                string query = "UPDATE metas SET Titulo = @titulo, Descricao = @descricao, status = @status, DataConclusao = @dataConclusao WHERE idMetas = @id";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
-                    new MySqlParameter("@dataConclusao", metas.DataConclusao),
-                    new MySqlParameter("@id", metas.Id)
+                    new MySqlParameter("@dataConclusao", metas.DataConclusao.HasValue ? (object)metas.DataConclusao.Value : DBNull.Value),
+                    new MySqlParameter("@Id", metas.Id)
                 };
 
                 // Executa a consulta de atualização
@@ -112,7 +160,7 @@ namespace ProjetoPI.Models.Metas
             try
             {
                 // Deleta os dados da meta no banco de dados
-                string query = "DELETE FROM metas WHERE Id = @id";
+                string query = "DELETE FROM metas WHERE idMetas = @id";
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@id", id)
