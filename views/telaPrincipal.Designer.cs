@@ -137,7 +137,6 @@
             this.btnEditarMeta.TabIndex = 17;
             this.btnEditarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEditarMeta.Values.Text = "Editar Meta";
-            this.btnEditarMeta.Click += new System.EventHandler(this.btnEditarMeta_Click);
             // 
             // tabela
             // 
