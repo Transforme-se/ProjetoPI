@@ -1,6 +1,6 @@
 ﻿namespace ProjetoPI.Views
 {
-    partial class telaPrincipal
+    partial class TelaPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -121,7 +121,7 @@
             this.btnLimparFiltro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnLimparFiltro.Values.Text = "Limpar Filtro";
             this.btnLimparFiltro.Visible = false;
-            this.btnLimparFiltro.Click += new System.EventHandler(this.btnLimparFiltro_Click);
+            this.btnLimparFiltro.Click += new System.EventHandler(this.BtnLimparFiltro_Click);
             // 
             // btnEditarMeta
             // 
@@ -264,7 +264,7 @@
             this.btnNovaMeta.TabIndex = 4;
             this.btnNovaMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnNovaMeta.Values.Text = "Adicionar Nova Meta";
-            this.btnNovaMeta.Click += new System.EventHandler(this.btnNovaMeta_Click);
+            this.btnNovaMeta.Click += new System.EventHandler(this.BtnNovaMeta_Click);
             // 
             // txtBusca
             // 
@@ -278,7 +278,7 @@
             this.txtBusca.StateCommon.Border.Rounding = 20F;
             this.txtBusca.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtBusca.TabIndex = 5;
-            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtBusca.TextChanged += new System.EventHandler(this.TxtBusca_TextChanged);
             // 
             // calendario
             // 
@@ -389,7 +389,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.telaPrincipal_Load);
+            this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).EndInit();
             this.painelFundo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).EndInit();

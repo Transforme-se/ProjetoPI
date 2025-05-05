@@ -14,11 +14,11 @@ using ProjetoPI.Services;
 
 namespace ProjetoPI.Views
 {
-    public partial class telaPrincipal : Form
+    public partial class TelaPrincipal : Form
     {
         MetasRepository _metasRepository;
         ControllerMetas _controllerMetas;
-        public telaPrincipal(Models.Usuarios.Usuarios user)
+        public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
             InitializeComponent();
             DataBaseService dataBaseService = new DataBaseService();
@@ -26,7 +26,7 @@ namespace ProjetoPI.Views
             _controllerMetas = new ControllerMetas(dataBaseService);
         }
 
-        private void telaPrincipal_Load(object sender, EventArgs e)
+        private void TelaPrincipal_Load(object sender, EventArgs e)
         {
             ArredondarPainel.Arredondar(painelFundo, 30);
             ArredondarPainel.Arredondar(painelMenu, 30);
@@ -35,7 +35,7 @@ namespace ProjetoPI.Views
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
-        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "kryptonDataGridViewCheckBoxColumn1" && e.RowIndex >= 0)
@@ -48,23 +48,19 @@ namespace ProjetoPI.Views
             }
         }
 
-        private void btnNovaMeta_Click(object sender, EventArgs e)
+        private void BtnNovaMeta_Click(object sender, EventArgs e)
         {
             AdicionarMeta adicionarMeta = new AdicionarMeta();
             adicionarMeta.Show();
         }
 
         int idMetaSelecionada;
-        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
         }
-        private void btnEditarMeta_Click(object sender, EventArgs e)
-        {
-           
-        }
 
-        private void txtBusca_TextChanged(object sender, EventArgs e)
+        private void TxtBusca_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtBusca.Text))
             {
@@ -79,7 +75,7 @@ namespace ProjetoPI.Views
             }
         }
 
-        private void btnLimparFiltro_Click(object sender, EventArgs e)
+        private void BtnLimparFiltro_Click(object sender, EventArgs e)
         {
             txtBusca.Text = string.Empty;
             tabela.DataSource = _controllerMetas.ObterTodasMetas();

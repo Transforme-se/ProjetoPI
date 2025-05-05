@@ -71,7 +71,7 @@ namespace ProjetoPI.Views
                 {
                     SessaoUsuario.Login(user);
                     MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    new telaPrincipal(user).Show();
+                    new TelaPrincipal(user).Show();
                 }
                 else
                 {
