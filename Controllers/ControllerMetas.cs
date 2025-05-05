@@ -49,9 +49,19 @@ namespace ProjetoPI.Controllers
             return resultado ? metas : null;
         }
 
-        //public Metas EditarMetas(string titulo, string descricao, DateTime dataConclusao, bool status)
-        //{
+        public List<Metas> ObterMetasFiltradas(string filtro)
+        {
+            List<Metas> metas = new List<Metas>();
+            
+            foreach (var meta in _metasRepository.ObterTodasMetas())
+            {
+                if (meta.Titulo.Contains(filtro) || meta.Descricao.Contains(filtro))
+                {
+                    metas.Add(meta);
+                }
+            }
 
-        //}
+            return metas;
+        }
     }
 }
