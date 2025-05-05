@@ -150,12 +150,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PainelLogin.cs" />
-    <Compile Include="Views\perfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\perfil.Designer.cs">
-      <DependentUpon>perfil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,9 +175,6 @@
     <None Include="packages.config" />
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\perfil.resx">
-      <DependentUpon>perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
