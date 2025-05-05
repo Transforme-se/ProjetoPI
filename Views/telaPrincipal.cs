@@ -70,11 +70,20 @@ namespace ProjetoPI.Views
             {
                 List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradas(txtBusca.Text);
                 tabela.DataSource = metasFiltradas;
+                btnLimparFiltro.Visible = true;
             }
             else
             {
                 tabela.DataSource = _controllerMetas.ObterTodasMetas();
+                btnLimparFiltro.Visible = false;
             }
+        }
+
+        private void btnLimparFiltro_Click(object sender, EventArgs e)
+        {
+            txtBusca.Text = string.Empty;
+            tabela.DataSource = _controllerMetas.ObterTodasMetas();
+            btnLimparFiltro.Visible = false;
         }
     }
 }

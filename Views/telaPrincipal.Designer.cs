@@ -34,6 +34,7 @@
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimparFiltro = new Krypton.Toolkit.KryptonButton();
             this.btnEditarMeta = new Krypton.Toolkit.KryptonButton();
             this.tabela = new Krypton.Toolkit.KryptonDataGridView();
             this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
@@ -92,6 +93,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnLimparFiltro);
             this.panel1.Controls.Add(this.btnEditarMeta);
             this.panel1.Controls.Add(this.tabela);
             this.panel1.Controls.Add(this.lbBoasVindas);
@@ -103,6 +105,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(870, 584);
             this.panel1.TabIndex = 17;
+            // 
+            // btnLimparFiltro
+            // 
+            this.btnLimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimparFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltro.Location = new System.Drawing.Point(634, 541);
+            this.btnLimparFiltro.Name = "btnLimparFiltro";
+            this.btnLimparFiltro.Size = new System.Drawing.Size(236, 43);
+            this.btnLimparFiltro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnLimparFiltro.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnLimparFiltro.StateCommon.Border.Rounding = 10F;
+            this.btnLimparFiltro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnLimparFiltro.TabIndex = 18;
+            this.btnLimparFiltro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnLimparFiltro.Values.Text = "Limpar Filtro";
+            this.btnLimparFiltro.Visible = false;
+            this.btnLimparFiltro.Click += new System.EventHandler(this.btnLimparFiltro_Click);
             // 
             // btnEditarMeta
             // 
@@ -410,5 +429,6 @@
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn4;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn PrevConclusao;
         private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn status;
+        private Krypton.Toolkit.KryptonButton btnLimparFiltro;
     }
 }
