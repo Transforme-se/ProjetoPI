@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaPrincipal));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimparFiltro = new Krypton.Toolkit.KryptonButton();
             this.btnEditarMeta = new Krypton.Toolkit.KryptonButton();
             this.tabela = new Krypton.Toolkit.KryptonDataGridView();
             this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
@@ -53,7 +54,6 @@
             this.imgUser = new Krypton.Toolkit.KryptonPictureBox();
             this.btnConta = new Krypton.Toolkit.KryptonButton();
             this.btnPerfil = new Krypton.Toolkit.KryptonButton();
-            this.btnLimparFiltro = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
@@ -105,6 +105,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(870, 584);
             this.panel1.TabIndex = 17;
+            // 
+            // btnLimparFiltro
+            // 
+            this.btnLimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimparFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimparFiltro.Location = new System.Drawing.Point(634, 541);
+            this.btnLimparFiltro.Name = "btnLimparFiltro";
+            this.btnLimparFiltro.Size = new System.Drawing.Size(236, 43);
+            this.btnLimparFiltro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnLimparFiltro.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnLimparFiltro.StateCommon.Border.Rounding = 10F;
+            this.btnLimparFiltro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnLimparFiltro.TabIndex = 18;
+            this.btnLimparFiltro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnLimparFiltro.Values.Text = "Limpar Filtro";
+            this.btnLimparFiltro.Visible = false;
+            this.btnLimparFiltro.Click += new System.EventHandler(this.btnLimparFiltro_Click);
             // 
             // btnEditarMeta
             // 
@@ -202,9 +219,9 @@
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.status.DataPropertyName = "status";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            this.status.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.status.DefaultCellStyle = dataGridViewCellStyle1;
             this.status.FalseValue = null;
             this.status.HeaderText = "status";
             this.status.IndeterminateValue = null;
@@ -359,23 +376,6 @@
             this.btnPerfil.TabIndex = 1;
             this.btnPerfil.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnPerfil.Values.Text = "Meu Perfil";
-            // 
-            // btnLimparFiltro
-            // 
-            this.btnLimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimparFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimparFiltro.Location = new System.Drawing.Point(634, 541);
-            this.btnLimparFiltro.Name = "btnLimparFiltro";
-            this.btnLimparFiltro.Size = new System.Drawing.Size(236, 43);
-            this.btnLimparFiltro.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnLimparFiltro.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnLimparFiltro.StateCommon.Border.Rounding = 10F;
-            this.btnLimparFiltro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnLimparFiltro.TabIndex = 18;
-            this.btnLimparFiltro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnLimparFiltro.Values.Text = "Adicionar Nova Meta";
-            this.btnLimparFiltro.Visible = false;
-            this.btnLimparFiltro.Click += new System.EventHandler(this.btnLimparFiltro_Click);
             // 
             // telaPrincipal
             // 
