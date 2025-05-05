@@ -2,7 +2,7 @@
 
 namespace ProjetoPI.Views
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace ProjetoPI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painel1 = new System.Windows.Forms.Panel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
