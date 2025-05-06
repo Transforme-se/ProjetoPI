@@ -76,14 +76,24 @@ namespace ProjetoPI.Controllers
 
         public Metas CadastrarMetas(string titulo, string descricao, DateTime? dataConclusao)
         {
+            // Valida os dados da meta
+            var resultadoValidacao = ValidarMeta(titulo, descricao, dataConclusao?.ToString());
+            if (!resultadoValidacao.Sucesso)
+            {
+                MessageBox.Show(resultadoValidacao.Mensagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+
             try
             {
-                Metas metas = new Metas();
-                metas.Titulo = titulo;
-                metas.Descricao = descricao;
-                metas.DataConclusao = dataConclusao;
+                Metas metas = new Metas
+                {
+                    Titulo = titulo,
+                    Descricao = descricao,
+                    DataConclusao = dataConclusao
+                };
 
-                MetasRepository metasRepository = new MetasRepository(_databaseService);
+                bool resultado = _metasRepository.AdicionarMetas(metas);
 
                 bool resultado = metasRepository.AdicionarMetas(metas);
 
@@ -96,17 +106,22 @@ namespace ProjetoPI.Controllers
             }
             return null;
         }
+        }
 
         public void EditarMeta(int idMeta, string titulo, string descricao, string dataTexto)
         {
-            // Valida a data
-            DateTime? dataConclusao = null;
-            if (!string.IsNullOrWhiteSpace(dataTexto) && DateTime.TryParse(dataTexto, out DateTime dataValida))
+            // Valida os dados da meta
+            var resultadoValidacao = ValidarMeta(titulo, descricao, dataTexto);
+            if (!resultadoValidacao.Sucesso)
             {
-                dataConclusao = dataValida;
+                MessageBox.Show(resultadoValidacao.Mensagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            // Envia os dados validados para o Model ou Repository
+            // Valida e converte a data
+            DateTime? dataConclusao = ConverterData(dataTexto);
+
+            // Cria o objeto meta com os dados atualizados
             var meta = new Metas
             {
                 Id = idMeta,
@@ -115,6 +130,7 @@ namespace ProjetoPI.Controllers
                 DataConclusao = dataConclusao
             };
 
+            // Atualiza a meta no repositório
             _metasRepository.EditarMetas(meta);
         }
 
