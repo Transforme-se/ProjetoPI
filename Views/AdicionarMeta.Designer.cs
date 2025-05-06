@@ -67,7 +67,6 @@
             this.txtDataConclusao.Size = new System.Drawing.Size(224, 27);
             this.txtDataConclusao.TabIndex = 4;
             this.txtDataConclusao.TextChanged += new System.EventHandler(this.FormatacaoDataMeta_TextChanged);
-            this.txtDataConclusao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormatacaoDataMeta_KeyPress);
             // 
             // AdicionarMeta
             // 

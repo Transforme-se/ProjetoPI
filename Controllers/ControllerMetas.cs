@@ -101,8 +101,8 @@ namespace ProjetoPI.Controllers
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return null;
-        }
+                return null;
+            }
         }
 
         public void EditarMeta(int idMeta, string titulo, string descricao, string dataTexto)
