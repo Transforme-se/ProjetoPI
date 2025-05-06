@@ -36,6 +36,44 @@ namespace ProjetoPI.Controllers
             return _metasRepository.ObterMetasPorId(idMeta);
         }
 
+        public class ResultadoOperacao
+        {
+            public bool Sucesso { get; set; }
+            public string Mensagem { get; set; }
+        }
+
+
+        public ResultadoOperacao ValidarMeta(string titulo, string descricao, string dataTexto)
+        {
+            // Valida o título
+            if (string.IsNullOrWhiteSpace(titulo))
+            {
+                return new ResultadoOperacao
+                {
+                    Sucesso = false,
+                    Mensagem = "Por favor, preencha o título da meta."
+                };
+            }
+
+            // Valida a data
+            if (!string.IsNullOrWhiteSpace(dataTexto) && !DateTime.TryParse(dataTexto, out _))
+            {
+                return new ResultadoOperacao
+                {
+                    Sucesso = false,
+                    Mensagem = "A data de conclusão informada é inválida."
+                };
+            }
+
+            // Se tudo estiver válido
+            return new ResultadoOperacao
+            {
+                Sucesso = true,
+                Mensagem = "Validação bem-sucedida."
+            };
+        }
+
+
         public Metas CadastrarMetas(string titulo, string descricao, DateTime? dataConclusao)
         {
             try
