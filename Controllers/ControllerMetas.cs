@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
@@ -95,15 +96,11 @@ namespace ProjetoPI.Controllers
 
                 bool resultado = _metasRepository.AdicionarMetas(metas);
 
-                bool resultado = metasRepository.AdicionarMetas(metas);
-
                 return resultado ? metas : null;
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             return null;
         }
         }
@@ -150,6 +147,40 @@ namespace ProjetoPI.Controllers
             {
                 throw new Exception($"Erro ao editar status: {ex.Message}", ex);
             }
+        }
+
+        // Método para formatar a data no formato desejado
+        public string FormatarData(DateTime? data)
+        {
+            return data?.ToString("dd/MM/yyyy") ?? string.Empty;
+        }
+
+        // Método para converter uma string para DateTime?
+        public DateTime? ConverterData(string dataTexto)
+        {
+            if (DateTime.TryParse(dataTexto, out DateTime dataValida))
+            {
+                return dataValida;
+            }
+            return null;
+        }
+
+        public string FormatarTextoData(string texto)
+        {
+            // Remove qualquer caractere que não seja número
+            string numeros = new string(texto.Where(char.IsDigit).ToArray());
+
+            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
+            if (numeros.Length >= 2)
+            {
+                numeros = numeros.Insert(2, "/");
+            }
+            if (numeros.Length >= 5)
+            {
+                numeros = numeros.Insert(5, "/");
+            }
+
+            return numeros;
         }
     }
 }
