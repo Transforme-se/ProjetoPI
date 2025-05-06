@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
@@ -36,39 +37,88 @@ namespace ProjetoPI.Controllers
             return _metasRepository.ObterMetasPorId(idMeta);
         }
 
+        public class ResultadoOperacao
+        {
+            public bool Sucesso { get; set; }
+            public string Mensagem { get; set; }
+        }
+
+
+        public ResultadoOperacao ValidarMeta(string titulo, string descricao, string dataTexto)
+        {
+            // Valida o título
+            if (string.IsNullOrWhiteSpace(titulo))
+            {
+                return new ResultadoOperacao
+                {
+                    Sucesso = false,
+                    Mensagem = "Por favor, preencha o título da meta."
+                };
+            }
+
+            // Valida a data
+            if (!string.IsNullOrWhiteSpace(dataTexto) && !DateTime.TryParse(dataTexto, out _))
+            {
+                return new ResultadoOperacao
+                {
+                    Sucesso = false,
+                    Mensagem = "A data de conclusão informada é inválida."
+                };
+            }
+
+            // Se tudo estiver válido
+            return new ResultadoOperacao
+            {
+                Sucesso = true,
+                Mensagem = "Validação bem-sucedida."
+            };
+        }
+
+
         public Metas CadastrarMetas(string titulo, string descricao, DateTime? dataConclusao)
         {
+            // Valida os dados da meta
+            var resultadoValidacao = ValidarMeta(titulo, descricao, dataConclusao?.ToString());
+            if (!resultadoValidacao.Sucesso)
+            {
+                MessageBox.Show(resultadoValidacao.Mensagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null;
+            }
+
             try
             {
-                Metas metas = new Metas();
-                metas.Titulo = titulo;
-                metas.Descricao = descricao;
-                metas.DataConclusao = dataConclusao;
+                Metas metas = new Metas
+                {
+                    Titulo = titulo,
+                    Descricao = descricao,
+                    DataConclusao = dataConclusao
+                };
 
-                MetasRepository metasRepository = new MetasRepository(_databaseService);
-
-                bool resultado = metasRepository.AdicionarMetas(metas);
+                bool resultado = _metasRepository.AdicionarMetas(metas);
 
                 return resultado ? metas : null;
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao salvar a meta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
-            return null;
         }
 
         public void EditarMeta(int idMeta, string titulo, string descricao, string dataTexto)
         {
-            // Valida a data
-            DateTime? dataConclusao = null;
-            if (!string.IsNullOrWhiteSpace(dataTexto) && DateTime.TryParse(dataTexto, out DateTime dataValida))
+            // Valida os dados da meta
+            var resultadoValidacao = ValidarMeta(titulo, descricao, dataTexto);
+            if (!resultadoValidacao.Sucesso)
             {
-                dataConclusao = dataValida;
+                MessageBox.Show(resultadoValidacao.Mensagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            // Envia os dados validados para o Model ou Repository
+            // Valida e converte a data
+            DateTime? dataConclusao = ConverterData(dataTexto);
+
+            // Cria o objeto meta com os dados atualizados
             var meta = new Metas
             {
                 Id = idMeta,
@@ -77,6 +127,7 @@ namespace ProjetoPI.Controllers
                 DataConclusao = dataConclusao
             };
 
+            // Atualiza a meta no repositório
             _metasRepository.EditarMetas(meta);
         }
 
@@ -96,6 +147,40 @@ namespace ProjetoPI.Controllers
             {
                 throw new Exception($"Erro ao editar status: {ex.Message}", ex);
             }
+        }
+
+        // Método para formatar a data no formato desejado
+        public string FormatarData(DateTime? data)
+        {
+            return data?.ToString("dd/MM/yyyy") ?? string.Empty;
+        }
+
+        // Método para converter uma string para DateTime?
+        public DateTime? ConverterData(string dataTexto)
+        {
+            if (DateTime.TryParse(dataTexto, out DateTime dataValida))
+            {
+                return dataValida;
+            }
+            return null;
+        }
+
+        public string FormatarTextoData(string texto)
+        {
+            // Remove qualquer caractere que não seja número
+            string numeros = new string(texto.Where(char.IsDigit).ToArray());
+
+            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
+            if (numeros.Length >= 2)
+            {
+                numeros = numeros.Insert(2, "/");
+            }
+            if (numeros.Length >= 5)
+            {
+                numeros = numeros.Insert(5, "/");
+            }
+
+            return numeros;
         }
     }
 }

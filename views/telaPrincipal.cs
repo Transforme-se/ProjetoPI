@@ -67,7 +67,6 @@ namespace ProjetoPI.Views
         //Editar status da meta
         private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
             {
@@ -93,6 +92,12 @@ namespace ProjetoPI.Views
                     MessageBox.Show("Erro ao atualizar o status.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        //Verifica qual é a linha selecionada
+        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
         }
     }
 }

@@ -57,7 +57,6 @@
             this.txtConclusaoMeta.Size = new System.Drawing.Size(219, 27);
             this.txtConclusaoMeta.TabIndex = 2;
             this.txtConclusaoMeta.TextChanged += new System.EventHandler(this.ConclusaoEditarMeta_TextChanged);
-            this.txtConclusaoMeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConclusaoEditarMeta_KeyPress);
             // 
             // btnSalvar
             // 
