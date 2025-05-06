@@ -89,5 +89,15 @@ namespace ProjetoPI.Views
             MessageBox.Show("Meta excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void txtTituloMeta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditarMeta_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

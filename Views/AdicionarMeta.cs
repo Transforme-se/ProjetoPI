@@ -87,5 +87,9 @@ namespace ProjetoPI.Views
             }
         }
 
+        private void AdicionarMeta_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

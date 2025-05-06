@@ -142,6 +142,12 @@
     <Compile Include="Views\AdicionarMeta.Designer.cs">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\alterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\alterarSenha.Designer.cs">
+      <DependentUpon>alterarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ArredondarPainel.cs" />
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -150,12 +156,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PainelLogin.cs" />
-    <Compile Include="Views\perfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\perfil.Designer.cs">
-      <DependentUpon>perfil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\EditarMeta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +181,9 @@
     <EmbeddedResource Include="Views\AdicionarMeta.resx">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\alterarSenha.resx">
+      <DependentUpon>alterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EditarMeta.resx">
       <DependentUpon>EditarMeta.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,9 +193,6 @@
     <None Include="packages.config" />
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\perfil.resx">
-      <DependentUpon>perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>

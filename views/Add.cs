@@ -10,23 +10,26 @@ using System.Windows.Forms;
 
 namespace ProjetoPI.Views
 {
-    public partial class perfil : Form
+    public partial class Add: Form
     {
-        public perfil()
+        public Add()
         {
             InitializeComponent();
         }
 
-        private void painelFundo_Paint(object sender, PaintEventArgs e)
+        private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void perfil_Load(object sender, EventArgs e)
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
-            ArredondarPainel.Arredondar(painelFundo, 30);
-            ArredondarPainel.Arredondar(painelPerfil, 30);
+
         }
-            
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

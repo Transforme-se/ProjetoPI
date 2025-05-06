@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarMeta));
             this.txtTituloMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtDescricaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.btnSalvarMeta = new Krypton.Toolkit.KryptonButton();
@@ -36,25 +37,31 @@
             // 
             // txtTituloMeta
             // 
-            this.txtTituloMeta.Location = new System.Drawing.Point(225, 107);
+            this.txtTituloMeta.CueHint.CueHintText = "Título";
+            this.txtTituloMeta.Location = new System.Drawing.Point(79, 61);
+            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTituloMeta.Name = "txtTituloMeta";
-            this.txtTituloMeta.Size = new System.Drawing.Size(224, 27);
+            this.txtTituloMeta.Size = new System.Drawing.Size(168, 35);
+            this.txtTituloMeta.StateCommon.Border.Rounding = 20F;
             this.txtTituloMeta.TabIndex = 0;
-            this.txtTituloMeta.Text = "Título da meta";
             // 
             // txtDescricaoMeta
             // 
-            this.txtDescricaoMeta.Location = new System.Drawing.Point(225, 158);
+            this.txtDescricaoMeta.CueHint.CueHintText = "Descrição (Opcional)";
+            this.txtDescricaoMeta.Location = new System.Drawing.Point(79, 131);
+            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescricaoMeta.Name = "txtDescricaoMeta";
-            this.txtDescricaoMeta.Size = new System.Drawing.Size(224, 27);
+            this.txtDescricaoMeta.Size = new System.Drawing.Size(168, 35);
+            this.txtDescricaoMeta.StateCommon.Border.Rounding = 20F;
             this.txtDescricaoMeta.TabIndex = 1;
-            this.txtDescricaoMeta.Text = "Descrição (Opcional)";
             // 
             // btnSalvarMeta
             // 
-            this.btnSalvarMeta.Location = new System.Drawing.Point(408, 282);
+            this.btnSalvarMeta.Location = new System.Drawing.Point(221, 277);
+            this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalvarMeta.Name = "btnSalvarMeta";
-            this.btnSalvarMeta.Size = new System.Drawing.Size(119, 44);
+            this.btnSalvarMeta.Size = new System.Drawing.Size(89, 36);
+            this.btnSalvarMeta.StateCommon.Border.Rounding = 20F;
             this.btnSalvarMeta.TabIndex = 3;
             this.btnSalvarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvarMeta.Values.Text = "Salvar";
@@ -62,25 +69,32 @@
             // 
             // txtDataConclusao
             // 
-            this.txtDataConclusao.Location = new System.Drawing.Point(225, 217);
+            this.txtDataConclusao.CueHint.CueHintText = "Previsão de Conclusão";
+            this.txtDataConclusao.Location = new System.Drawing.Point(79, 208);
+            this.txtDataConclusao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDataConclusao.Name = "txtDataConclusao";
-            this.txtDataConclusao.Size = new System.Drawing.Size(224, 27);
+            this.txtDataConclusao.Size = new System.Drawing.Size(168, 35);
+            this.txtDataConclusao.StateCommon.Border.Rounding = 20F;
             this.txtDataConclusao.TabIndex = 4;
             this.txtDataConclusao.TextChanged += new System.EventHandler(this.FormatacaoDataMeta_TextChanged);
             this.txtDataConclusao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormatacaoDataMeta_KeyPress);
             // 
             // AdicionarMeta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(358, 350);
             this.Controls.Add(this.txtDataConclusao);
             this.Controls.Add(this.btnSalvarMeta);
             this.Controls.Add(this.txtDescricaoMeta);
             this.Controls.Add(this.txtTituloMeta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdicionarMeta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdicionarMeta";
+            this.Load += new System.EventHandler(this.AdicionarMeta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

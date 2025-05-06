@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
@@ -93,6 +95,33 @@ namespace ProjetoPI.Views
                     MessageBox.Show("Erro ao atualizar o status.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void imgUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterarFoto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
