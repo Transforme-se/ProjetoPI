@@ -2,7 +2,7 @@
 
 namespace ProjetoPI.Views
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace ProjetoPI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painel1 = new System.Windows.Forms.Panel();
             this.painelDivisor = new Krypton.Toolkit.KryptonTableLayoutPanel();
@@ -77,8 +77,8 @@ namespace ProjetoPI.Views
             // 
             // painelFundo
             // 
-            this.painelFundo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.painelFundo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.painelFundo.Controls.Add(this.painel1);
             this.painelFundo.Controls.Add(this.painelDivisor);
@@ -98,8 +98,8 @@ namespace ProjetoPI.Views
             // 
             // painelDivisor
             // 
-            this.painelDivisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.painelDivisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.painelDivisor.ColumnCount = 2;
             this.painelDivisor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -116,8 +116,8 @@ namespace ProjetoPI.Views
             // 
             // painelEsquerdo
             // 
-            this.painelEsquerdo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.painelEsquerdo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.painelEsquerdo.Controls.Add(this.kryptonPictureBox5);
             this.painelEsquerdo.Controls.Add(this.kryptonPictureBox3);
@@ -132,8 +132,8 @@ namespace ProjetoPI.Views
             // 
             // txtSenhaConf
             // 
-            this.txtSenhaConf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSenhaConf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenhaConf.CueHint.CueHintText = "Confirme sua senha";
             this.txtSenhaConf.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -149,8 +149,8 @@ namespace ProjetoPI.Views
             // 
             // txtSenhaCad
             // 
-            this.txtSenhaCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSenhaCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenhaCad.CueHint.CueHintText = "Criei uma senha";
             this.txtSenhaCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -166,8 +166,8 @@ namespace ProjetoPI.Views
             // 
             // txtUsuarioCad
             // 
-            this.txtUsuarioCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtUsuarioCad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuarioCad.CueHint.CueHintText = "Crie um usuário";
             this.txtUsuarioCad.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -182,8 +182,8 @@ namespace ProjetoPI.Views
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.CueHint.CueHintText = "Digite seu nome";
             this.txtNome.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -247,7 +247,7 @@ namespace ProjetoPI.Views
             this.btnCadastro.TabIndex = 4;
             this.btnCadastro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnCadastro.Values.Text = "Cadastre-se";
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            this.btnCadastro.Click += new System.EventHandler(this.BtnCadastro_Click);
             // 
             // panel1
             // 
@@ -289,7 +289,7 @@ namespace ProjetoPI.Views
             // 
             // kryptonPictureBox2
             // 
-            this.kryptonPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.kryptonPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.kryptonPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox2.Image")));
             this.kryptonPictureBox2.Location = new System.Drawing.Point(83, 261);
@@ -302,8 +302,8 @@ namespace ProjetoPI.Views
             // 
             // txtSenha
             // 
-            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenha.CueHint.CueHintText = "Insira sua senha";
             this.txtSenha.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -319,8 +319,8 @@ namespace ProjetoPI.Views
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.CueHint.CueHintText = "Insira seu usuário";
             this.txtUsuario.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -358,7 +358,7 @@ namespace ProjetoPI.Views
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEntrar.Values.Text = "Entrar";
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // panel2
             // 
@@ -411,7 +411,7 @@ namespace ProjetoPI.Views
             this.btnVoltarLogin.TabIndex = 11;
             this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnVoltarLogin.Values.Text = "Voltar para Login";
-            this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
+            this.btnVoltarLogin.Click += new System.EventHandler(this.BtnVoltarLogin_Click);
             // 
             // kryptonButton1
             // 
@@ -426,7 +426,7 @@ namespace ProjetoPI.Views
             this.kryptonButton1.TabIndex = 12;
             this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kryptonButton1.Values.Text = "Salvar";
-            this.kryptonButton1.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.kryptonButton1.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // login
             // 
@@ -440,7 +440,7 @@ namespace ProjetoPI.Views
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";
-            this.Load += new System.EventHandler(this.login_Load);
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).EndInit();
             this.painelFundo.ResumeLayout(false);
             this.painelDivisor.ResumeLayout(false);
