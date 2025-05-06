@@ -65,6 +65,10 @@ namespace ProjetoPI.Views
             if (!string.IsNullOrEmpty(txtBusca.Text))
             {
                 List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradas(txtBusca.Text);
+                if (VerificarMetasVazias(metasFiltradas))
+                    painalMetaVazia.Visible = true;
+                else
+                    painalMetaVazia.Visible = false;
                 tabela.DataSource = metasFiltradas;
                 btnLimparFiltro.Visible = true;
             }
@@ -75,10 +79,18 @@ namespace ProjetoPI.Views
             }
         }
 
+        private bool VerificarMetasVazias(List<Metas> metas)
+        {
+            if (metas == null || metas.Count == 0)
+                return true;
+            return false;
+        }
+
         private void BtnLimparFiltro_Click(object sender, EventArgs e)
         {
             txtBusca.Text = string.Empty;
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
+            painalMetaVazia.Visible = false;
             btnLimparFiltro.Visible = false;
         }
 
@@ -100,6 +112,10 @@ namespace ProjetoPI.Views
                 lastSelectedDate = currentSelectedDate;
                 List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradasData(currentSelectedDate);
                 tabela.DataSource = metasFiltradas;
+                if (VerificarMetasVazias(metasFiltradas))
+                    painalMetaVazia.Visible = true;
+                else
+                    painalMetaVazia.Visible = false;
                 btnLimparFiltro.Visible = true;
             }
         }

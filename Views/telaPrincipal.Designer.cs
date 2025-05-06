@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
+            this.painalMetaVazia = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimparFiltro = new Krypton.Toolkit.KryptonButton();
             this.btnEditarMeta = new Krypton.Toolkit.KryptonButton();
@@ -54,10 +55,12 @@
             this.PrevConclusao = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.status = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
             this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
             this.painelMetas.SuspendLayout();
+            this.painalMetaVazia.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).BeginInit();
@@ -82,6 +85,7 @@
             this.painelMetas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.painelMetas.Controls.Add(this.painalMetaVazia);
             this.painelMetas.Controls.Add(this.panel1);
             this.painelMetas.Location = new System.Drawing.Point(375, 28);
             this.painelMetas.Name = "painelMetas";
@@ -89,6 +93,19 @@
             this.painelMetas.Size = new System.Drawing.Size(970, 684);
             this.painelMetas.StateCommon.Color1 = System.Drawing.Color.WhiteSmoke;
             this.painelMetas.TabIndex = 1;
+            // 
+            // painalMetaVazia
+            // 
+            this.painalMetaVazia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.painalMetaVazia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.painalMetaVazia.Controls.Add(this.kryptonLabel1);
+            this.painalMetaVazia.Location = new System.Drawing.Point(50, 163);
+            this.painalMetaVazia.Name = "painalMetaVazia";
+            this.painalMetaVazia.Size = new System.Drawing.Size(605, 65);
+            this.painalMetaVazia.TabIndex = 19;
+            this.painalMetaVazia.Visible = false;
             // 
             // panel1
             // 
@@ -383,6 +400,23 @@
             // 
             this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel1.AutoSize = false;
+            this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
+            this.kryptonLabel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonLabel1.Size = new System.Drawing.Size(605, 62);
+            this.kryptonLabel1.StateCommon.Padding = new System.Windows.Forms.Padding(1);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 18.75F, System.Drawing.FontStyle.Italic);
+            this.kryptonLabel1.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel1.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel1.TabIndex = 19;
+            this.kryptonLabel1.Values.Text = "Nenhuma meta encontrada";
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +434,7 @@
             this.painelFundo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).EndInit();
             this.painelMetas.ResumeLayout(false);
+            this.painalMetaVazia.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();
@@ -436,5 +471,7 @@
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn PrevConclusao;
         private Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn status;
         private Krypton.Toolkit.KryptonButton btnLimparFiltro;
+        private System.Windows.Forms.Panel painalMetaVazia;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
