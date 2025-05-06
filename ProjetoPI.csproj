@@ -1,223 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C97930C7-049C-4065-8371-11F440B5FE30}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ProjetoPI</RootNamespace>
-    <AssemblyName>ProjetoPI</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf, Version=3.30.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>packages\Google.Protobuf.3.30.2\lib\net45\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
-      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
-    </Reference>
-    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
-      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
-    </Reference>
-    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
-      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>packages\MySql.Data.9.3.0\lib\net48\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Compression.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.Compression.Base.29.1.38\lib\net462\Syncfusion.Compression.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DocIO.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.DocIO.Wpf.29.1.38\lib\net462\Syncfusion.DocIO.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.Licensing.29.1.38\lib\net462\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.OfficeChart.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.OfficeChart.Base.29.1.38\lib\net462\Syncfusion.OfficeChart.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfRichTextBoxAdv.WPF, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.SfRichTextBoxAdv.WPF.29.1.38\lib\net462\Syncfusion.SfRichTextBoxAdv.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Shared.WPF, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.Shared.WPF.29.1.38\lib\net462\Syncfusion.Shared.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.4\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.4\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Pipelines, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.IO.Pipelines.9.0.4\lib\net462\System.IO.Pipelines.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
-      <HintPath>packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Controllers\ControllerLoginCadastro.cs" />
-    <Compile Include="Controllers\ControllerMetas.cs" />
-    <Compile Include="Controllers\ControllerTxtBox.cs" />
-    <Compile Include="Controllers\ValidarCadastro.cs" />
-    <Compile Include="Models\Metas\Metas.cs" />
-    <Compile Include="Models\Metas\MetasRepository.cs" />
-    <Compile Include="Models\Usuarios\Usuarios.cs" />
-    <Compile Include="Models\Usuarios\UsuariosRepository.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AutenticacaoService.cs" />
-    <Compile Include="Services\Criptografia.cs" />
-    <Compile Include="Services\DataBaseService.cs" />
-    <Compile Include="Services\SessaoUsuario.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AdicionarMeta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AdicionarMeta.Designer.cs">
-      <DependentUpon>AdicionarMeta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ArredondarPainel.cs" />
-    <Compile Include="Views\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PainelLogin.cs" />
-    <Compile Include="Views\perfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\perfil.Designer.cs">
-      <DependentUpon>perfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EditarMeta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditarMeta.Designer.cs">
-      <DependentUpon>EditarMeta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TelaPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\TelaPrincipal.Designer.cs">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Views\AdicionarMeta.resx">
-      <DependentUpon>AdicionarMeta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditarMeta.resx">
-      <DependentUpon>EditarMeta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TelaInicio.resx">
-      <DependentUpon>TelaInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <EmbeddedResource Include="Views\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\perfil.resx">
-      <DependentUpon>perfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\DataSources\ProjetoPI.Models.Metas.Metas.datasource" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconUsuarioLogin.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProjectGuid>{C97930C7-049C-4065-8371-11F440B5FE30}</ProjectGuid>
+		<OutputType>WinExe</OutputType>
+		<RootNamespace>ProjetoPI</RootNamespace>
+		<AssemblyName>ProjetoPI</AssemblyName>
+		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+		<FileAlignment>512</FileAlignment>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\Release\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Referências de pacotes NuGet -->
+		<Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+			<HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+		</Reference>
+		<Reference Include="Google.Protobuf, Version=3.30.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+			<HintPath>packages\Google.Protobuf.3.30.2\lib\net45\Google.Protobuf.dll</HintPath>
+		</Reference>
+		<Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+			<HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+		</Reference>
+		<Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+			<HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+		</Reference>
+		<Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+			<HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+		</Reference>
+		<Reference Include="Krypton.Toolkit, Version=95.25.4.111, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+			<HintPath>packages\Krypton.Toolkit.95.25.4.111\lib\net48\Krypton.Toolkit.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+		</Reference>
+		<Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+			<HintPath>packages\MySql.Data.9.3.0\lib\net48\MySql.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.Compression.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.Compression.Base.29.1.38\lib\net462\Syncfusion.Compression.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.DocIO.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.DocIO.Wpf.29.1.38\lib\net462\Syncfusion.DocIO.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.Licensing, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.Licensing.29.1.38\lib\net462\Syncfusion.Licensing.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.OfficeChart.Base, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.OfficeChart.Base.29.1.38\lib\net462\Syncfusion.OfficeChart.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.SfRichTextBoxAdv.WPF, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.SfRichTextBoxAdv.WPF.29.1.38\lib\net462\Syncfusion.SfRichTextBoxAdv.WPF.dll</HintPath>
+		</Reference>
+		<Reference Include="Syncfusion.Shared.WPF, Version=29.1462.38.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+			<HintPath>packages\Syncfusion.Shared.WPF.29.1.38\lib\net462\Syncfusion.Shared.WPF.dll</HintPath>
+		</Reference>
+
+		<!-- Referências do .NET Framework -->
+		<Reference Include="System" />
+		<Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.Configuration.ConfigurationManager.9.0.4\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Core" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="System.Deployment" />
+		<Reference Include="System.Design" />
+		<Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.4\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Drawing" />
+		<Reference Include="System.IO.Pipelines, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.IO.Pipelines.9.0.4\lib\net462\System.IO.Pipelines.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Management" />
+		<Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.Numerics" />
+		<Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+			<HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+			<HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+			<HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Transactions" />
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+			<HintPath>packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Arquivos de código -->
+		<Compile Include="Controllers\ControllerLoginCadastro.cs" />
+		<Compile Include="Controllers\ControllerMetas.cs" />
+		<Compile Include="Controllers\ControllerTxtBox.cs" />
+		<Compile Include="Controllers\ValidarCadastro.cs" />
+		<Compile Include="Models\Metas\Metas.cs" />
+		<Compile Include="Models\Metas\MetasRepository.cs" />
+		<Compile Include="Models\Usuarios\Usuarios.cs" />
+		<Compile Include="Models\Usuarios\UsuariosRepository.cs" />
+		<Compile Include="Program.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Compile Include="Services\AutenticacaoService.cs" />
+		<Compile Include="Services\Criptografia.cs" />
+		<Compile Include="Services\DataBaseService.cs" />
+		<Compile Include="Services\SessaoUsuario.cs" />
+
+		<!-- Formulários Windows Forms -->
+		<Compile Include="Views\AdicionarMeta.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="Views\AdicionarMeta.Designer.cs">
+			<DependentUpon>AdicionarMeta.cs</DependentUpon>
+		</Compile>
+
+		<Compile Include="Views\ArredondarPainel.cs" />
+
+		<Compile Include="Views\EditarMeta.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="Views\EditarMeta.Designer.cs">
+			<DependentUpon>EditarMeta.cs</DependentUpon>
+		</Compile>
+
+		<Compile Include="Views\Login.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="Views\Login.Designer.cs">
+			<DependentUpon>Login.cs</DependentUpon>
+		</Compile>
+
+		<Compile Include="Views\PainelLogin.cs" />
+
+		<Compile Include="Views\TelaPrincipal.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="Views\TelaPrincipal.Designer.cs">
+			<DependentUpon>TelaPrincipal.cs</DependentUpon>
+		</Compile>
+
+		<!-- Arquivos de recursos -->
+		<Compile Include="Properties\Resources.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Properties\Settings.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Arquivos de recursos embutidos -->
+		<EmbeddedResource Include="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Views\AdicionarMeta.resx">
+			<DependentUpon>AdicionarMeta.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Views\EditarMeta.resx">
+			<DependentUpon>EditarMeta.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Views\Login.resx">
+			<DependentUpon>Login.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Views\TelaPrincipal.resx">
+			<DependentUpon>TelaPrincipal.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Arquivos diversos -->
+		<None Include="App.config" />
+		<None Include="packages.config" />
+		<None Include="Properties\DataSources\ProjetoPI.Models.Metas.Metas.datasource" />
+		<None Include="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+		<None Include="Resources\iconUsuarioLogin.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Pastas -->
+		<Folder Include="Assets\images\" />
+	</ItemGroup>
+
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
