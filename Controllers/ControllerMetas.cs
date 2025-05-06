@@ -55,7 +55,7 @@ namespace ProjetoPI.Controllers
             
             foreach (var meta in _metasRepository.ObterTodasMetas())
             {
-                if (meta.Titulo.Contains(filtro) || meta.Descricao.Contains(filtro))
+                if (meta.Titulo.ToLower().Contains(filtro.ToLower()) || meta.Descricao.ToLower().Contains(filtro.ToLower()))
                 {
                     metas.Add(meta);
                 }
