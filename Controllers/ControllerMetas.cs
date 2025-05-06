@@ -202,12 +202,19 @@ namespace ProjetoPI.Controllers
             List<Metas> metas = new List<Metas>();
             foreach (var meta in _metasRepository.ObterTodasMetas())
             {
-                if (meta.DataConclusao.ToString().Equals(data.ToShortDateString()))
+                DateTime date = meta.DataConclusao ?? DateTime.MinValue;
+                if (date.ToShortDateString().Equals(data.ToShortDateString()))
                 {
                     metas.Add(meta);
                 }
             }
             return metas;
+        }
+        public bool VerificarMetasVazias(List<Metas> metas)
+        {
+            if (metas == null || metas.Count == 0)
+                return true;
+            return false;
         }
     }
 }
