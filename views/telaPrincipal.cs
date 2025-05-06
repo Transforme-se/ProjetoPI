@@ -81,5 +81,39 @@ namespace ProjetoPI.Views
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
             btnLimparFiltro.Visible = false;
         }
+
+        private DateTime? lastSelectedDate = null;
+        private bool ignoreNextChange = false;
+
+        private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (ignoreNextChange)
+            {
+                ignoreNextChange = false;
+                return;
+            }
+
+            DateTime currentSelectedDate = calendario.SelectionStart;
+
+            if (!lastSelectedDate.HasValue || currentSelectedDate != lastSelectedDate.Value)
+            {
+                lastSelectedDate = currentSelectedDate;
+                List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradasData(currentSelectedDate);
+                tabela.DataSource = metasFiltradas;
+                btnLimparFiltro.Visible = true;
+            }
+        }
+
+        private void Calendario_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Verifica se o clique foi nos botões de navegação
+            // Isso é uma aproximação, pois não temos HitTest no Krypton
+            ignoreNextChange = true;
+        }
+
+        private void Calendario_MouseUp(object sender, MouseEventArgs e)
+        {
+            ignoreNextChange = false;
+        }
     }
 }

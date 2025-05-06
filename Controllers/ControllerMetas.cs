@@ -64,5 +64,17 @@ namespace ProjetoPI.Controllers
             return metas;
         }
 
+        public List<Metas> ObterMetasFiltradasData(DateTime data)
+        {
+            List<Metas> metas = new List<Metas>();
+            foreach (var meta in _metasRepository.ObterTodasMetas())
+            {
+                if (meta.DataConclusao.ToShortDateString().Equals(data.ToShortDateString()))
+                {
+                    metas.Add(meta);
+                }
+            }
+            return metas;
+        }
     }
 }
