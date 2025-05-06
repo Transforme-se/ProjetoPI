@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
@@ -33,14 +34,14 @@ namespace ProjetoPI.Views
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
         }
 
-        private void btnNovaMeta_Click(object sender, EventArgs e)
+        private void BtnNovaMeta_Click(object sender, EventArgs e)
         {
             AdicionarMeta adicionarMeta = new AdicionarMeta(this);
             adicionarMeta.Show();
         }
 
 
-        private void btnEditarMeta_Click(object sender, EventArgs e)
+        private void BtnEditarMeta_Click(object sender, EventArgs e)
         {
             if (idMetaSelecionada <= 0)
             {
@@ -65,7 +66,7 @@ namespace ProjetoPI.Views
         }
 
         //Editar status da meta
-        private void tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
@@ -95,7 +96,7 @@ namespace ProjetoPI.Views
         }
 
         //Verifica qual é a linha selecionada
-        private void tabela_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Tabela_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idMetaSelecionada = (int)tabela.Rows[e.RowIndex].Cells["id"].Value;
         }

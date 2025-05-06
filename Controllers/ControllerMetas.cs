@@ -202,7 +202,7 @@ namespace ProjetoPI.Controllers
             List<Metas> metas = new List<Metas>();
             foreach (var meta in _metasRepository.ObterTodasMetas())
             {
-                if (meta.DataConclusao.ToShortDateString().Equals(data.ToShortDateString()))
+                if (meta.DataConclusao.ToString().Equals(data.ToShortDateString()))
                 {
                     metas.Add(meta);
                 }
