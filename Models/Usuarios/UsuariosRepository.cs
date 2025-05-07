@@ -136,5 +136,27 @@ namespace ProjetoPI.Models.Usuarios
                 _databaseService.CloseConnection();
             }
         }
+
+        public bool ExcluirUsuario(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM usuarios WHERE IdUsuarios = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@id", id)
+                };
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao excluir usuário: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
     }
 }
