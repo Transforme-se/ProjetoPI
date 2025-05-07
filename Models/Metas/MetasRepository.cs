@@ -135,7 +135,7 @@ namespace ProjetoPI.Models.Metas
                     new MySqlParameter("@titulo", metas.Titulo),
                     new MySqlParameter("@descricao", metas.Descricao),
                     new MySqlParameter("@status", metas.status),
-                    new MySqlParameter("@dataConclusao", metas.DataConclusao.HasValue ? (object)metas.DataConclusao.Value : DBNull.Value),
+                    new MySqlParameter("@dataConclusao", metas.DataConclusao),
                     new MySqlParameter("@Id", metas.Id)
                 };
 
