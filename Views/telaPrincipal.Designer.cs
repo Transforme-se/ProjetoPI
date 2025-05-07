@@ -45,7 +45,7 @@
             this.kryptonDataGridViewTextBoxColumn4 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.PrevConclusao = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.status = new Krypton.Toolkit.KryptonDataGridViewCheckBoxColumn();
-            this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lbBoasVindas = new Krypton.Toolkit.KryptonLabel();
             this.btnNovaMeta = new Krypton.Toolkit.KryptonButton();
             this.txtBusca = new Krypton.Toolkit.KryptonTextBox();
@@ -56,7 +56,7 @@
             this.imgUser = new Krypton.Toolkit.KryptonPictureBox();
             this.btnConta = new Krypton.Toolkit.KryptonButton();
             this.btnPerfil = new Krypton.Toolkit.KryptonButton();
-            this.metasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.metasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
@@ -64,11 +64,11 @@
             this.painalMetaVazia.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).BeginInit();
             this.painelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // painelFundo
@@ -173,6 +173,7 @@
             this.btnEditarMeta.TabIndex = 17;
             this.btnEditarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEditarMeta.Values.Text = "Editar Meta";
+            this.btnEditarMeta.Click += new System.EventHandler(this.BtnEditarMeta_Click);
             // 
             // tabela
             // 
@@ -267,9 +268,9 @@
             this.status.TrueValue = null;
             this.status.Width = 48;
             // 
-            // metasBindingSource
+            // metasBindingSource1
             // 
-            this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
+            this.metasBindingSource1.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
             // 
             // lbBoasVindas
             // 
@@ -422,9 +423,9 @@
             this.btnPerfil.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnPerfil.Values.Text = "Meu Perfil";
             // 
-            // metasBindingSource1
+            // metasBindingSource
             // 
-            this.metasBindingSource1.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
+            this.metasBindingSource.DataSource = typeof(ProjetoPI.Models.Metas.Metas);
             // 
             // TelaPrincipal
             // 
@@ -447,11 +448,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.painelMenu)).EndInit();
             this.painelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
