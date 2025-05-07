@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Arquivos de código -->
+    <Compile Include="Controllers\ControllerFiltro.cs" />
     <Compile Include="Controllers\ControllerLoginCadastro.cs" />
     <Compile Include="Controllers\ControllerMetas.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />
@@ -144,6 +145,12 @@
     <Compile Include="Views\AdicionarMeta.Designer.cs">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\alterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\alterarSenha.Designer.cs">
+      <DependentUpon>alterarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ArredondarPainel.cs" />
     <Compile Include="Views\EditarMeta.cs">
       <SubType>Form</SubType>
@@ -158,6 +165,12 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PainelLogin.cs" />
+    <Compile Include="Views\EditarMeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditarMeta.Designer.cs">
+      <DependentUpon>EditarMeta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdicionarMeta.resx">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\alterarSenha.resx">
+      <DependentUpon>alterarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditarMeta.resx">
       <DependentUpon>EditarMeta.cs</DependentUpon>

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
@@ -11,6 +13,7 @@ namespace ProjetoPI.Views
     {
         private MetasRepository _metasRepository;
         private ControllerMetas _controllerMetas;
+        private ControllerFiltro _controllerFiltro;
         private int idMetaSelecionada;
         public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
@@ -18,6 +21,7 @@ namespace ProjetoPI.Views
             DataBaseService dataBaseService = new DataBaseService();
             _metasRepository = new MetasRepository(dataBaseService);
             _controllerMetas = new ControllerMetas(dataBaseService);
+            _controllerFiltro = new ControllerFiltro(_controllerMetas);
         }
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
@@ -103,28 +107,23 @@ namespace ProjetoPI.Views
 
         private void TxtBusca_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtBusca.Text))
-            {
-                List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradas(txtBusca.Text);
-                if (_controllerMetas.VerificarMetasVazias(metasFiltradas))
-                    painalMetaVazia.Visible = true;
-                else
-                    painalMetaVazia.Visible = false;
-                tabela.DataSource = metasFiltradas;
-                btnLimparFiltro.Visible = true;
-            }
+            
+            List<Metas> metasFiltradas = _controllerFiltro.ObterMetasFiltradasTexto(txtBusca.Text);
+            if (_controllerFiltro.VerificarMetasVazias(metasFiltradas))
+                  painalMetaVazia.Visible = true;
             else
-            {
-                tabela.DataSource = _controllerMetas.ObterTodasMetas();
-                btnLimparFiltro.Visible = false;
-            }
+                painalMetaVazia.Visible = false;
+            tabela.DataSource = metasFiltradas;
+          
+            btnLimparFiltro.Visible = true;
         }
 
         private void BtnLimparFiltro_Click(object sender, EventArgs e)
         {
+            _controllerFiltro.LimparFiltro();
             txtBusca.Text = string.Empty;
             tabela.DataSource = _controllerMetas.ObterTodasMetas();
-            painalMetaVazia.Visible = false;
+            painalMetaVazia.Visible = _controllerFiltro.VerificarMetasVazias(_controllerMetas.ObterTodasMetas());
             btnLimparFiltro.Visible = false;
         }
 
@@ -146,9 +145,10 @@ namespace ProjetoPI.Views
             if (!lastSelectedDate.HasValue || currentSelectedDate != lastSelectedDate.Value)
             {
                 lastSelectedDate = currentSelectedDate;
-                List<Metas> metasFiltradas = _controllerMetas.ObterMetasFiltradasData(currentSelectedDate);
+                txtBusca.Text = string.Empty; // Limpa o campo de busca
+                List<Metas> metasFiltradas = _controllerFiltro.ObterMetasFiltradasData(currentSelectedDate);
                 tabela.DataSource = metasFiltradas;
-                if (_controllerMetas.VerificarMetasVazias(metasFiltradas))
+                if (_controllerFiltro.VerificarMetasVazias(metasFiltradas))
                     painalMetaVazia.Visible = true;
                 else
                     painalMetaVazia.Visible = false;
