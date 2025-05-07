@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Arquivos de código -->
+    <Compile Include="Controllers\ControllerFiltro.cs" />
     <Compile Include="Controllers\ControllerLoginCadastro.cs" />
     <Compile Include="Controllers\ControllerMetas.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />

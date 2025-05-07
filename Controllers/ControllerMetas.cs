@@ -182,39 +182,5 @@ namespace ProjetoPI.Controllers
 
             return numeros;
         }
-
-        public List<Metas> ObterMetasFiltradas(string filtro)
-        {
-            List<Metas> metas = new List<Metas>();
-            
-            foreach (var meta in _metasRepository.ObterTodasMetas())
-            {
-                if (meta.Titulo.ToLower().Contains(filtro.ToLower()) || meta.Descricao.ToLower().Contains(filtro.ToLower()))
-                {
-                    metas.Add(meta);
-                }
-            }
-
-            return metas;
-        }
-        public List<Metas> ObterMetasFiltradasData(DateTime data)
-        {
-            List<Metas> metas = new List<Metas>();
-            foreach (var meta in _metasRepository.ObterTodasMetas())
-            {
-                DateTime date = meta.DataConclusao ?? DateTime.MinValue;
-                if (date.ToShortDateString().Equals(data.ToShortDateString()))
-                {
-                    metas.Add(meta);
-                }
-            }
-            return metas;
-        }
-        public bool VerificarMetasVazias(List<Metas> metas)
-        {
-            if (metas == null || metas.Count == 0)
-                return true;
-            return false;
-        }
     }
 }
