@@ -91,5 +91,27 @@ namespace ProjetoPI.Models.Usuarios
             }
         }
 
+        public bool AlterarSenha(int id, string senha)
+        {
+            try
+            {
+                string query = "UPDATE usuarios SET SenhaHash = @senha WHERE IdUsuarios = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@senha", senha),
+                    new MySqlParameter("@id", id)
+                };
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao alterar senha: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
     }
 }
