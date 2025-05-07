@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;

@@ -26,16 +26,60 @@ namespace ProjetoPI.Views
 
             txtTituloMeta.Text = _meta.Titulo;
             txtDescricaoMeta.Text = _meta.Descricao;
-            txtConclusaoMeta.Text = _controllerMetas.FormatarData(_meta.DataConclusao);
+            txtConclusaoMeta.Text = _meta.DataConclusao.HasValue ? _meta.DataConclusao.Value.ToString("dd/MM/yyyy") : string.Empty;
+        }
+
+        private void ConclusaoEditarMeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite apenas números e teclas de controle (como Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia a entrada de caracteres não permitidos
+            }
         }
 
         private void ConclusaoEditarMeta_TextChanged(object sender, EventArgs e)
         {
-            // Use o método do Controller para formatar o texto
-            txtConclusaoMeta.Text = _controllerMetas.FormatarTextoData(txtConclusaoMeta.Text);
+            // Remove qualquer caractere que não seja número
+            string texto = new string(txtConclusaoMeta.Text.Where(char.IsDigit).ToArray());
+
+            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
+            if (texto.Length >= 2)
+            {
+                texto = texto.Insert(2, "/");
+            }
+            if (texto.Length >= 5)
+            {
+                texto = texto.Insert(5, "/");
+            }
+
+            // Atualiza o texto no KryptonTextBox
+            txtConclusaoMeta.Text = texto;
 
             // Mantém o cursor no final do texto
             txtConclusaoMeta.SelectionStart = txtConclusaoMeta.Text.Length;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            string titulo = txtTituloMeta.Text;
+            string descricao = txtDescricaoMeta.Text;
+            DateTime? dataConclusao = null;
+
+            if (!string.IsNullOrWhiteSpace(txtConclusaoMeta.Text) && DateTime.TryParse(txtConclusaoMeta.Text, out DateTime dataValida))
+            {
+                dataConclusao = dataValida;
+            }
+
+            _meta.Titulo = titulo;
+            _meta.Descricao = descricao;
+            _meta.DataConclusao = dataConclusao;
+
+            // Atualiza a meta no banco de dados
+            _controllerMetas.EditarMeta(_meta.Id, _meta.Titulo, _meta.Descricao, _meta.DataConclusao?.ToString("yyyy-MM-dd"));
+
+            MessageBox.Show("Meta atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void brnExcluirMeta_Click(object sender, EventArgs e)
@@ -46,22 +90,14 @@ namespace ProjetoPI.Views
             this.Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void txtTituloMeta_TextChanged(object sender, EventArgs e)
         {
-            string titulo = txtTituloMeta.Text;
-            string descricao = txtDescricaoMeta.Text;
-            string dataTexto = txtConclusaoMeta.Text;
 
-            // Chama o método do Controller para editar a meta
-            _controllerMetas.EditarMeta(_meta.Id, titulo, descricao, dataTexto);
+        }
 
-            if (!string.IsNullOrEmpty(titulo))
-            {
-                MessageBox.Show("Meta editada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-
+        private void EditarMeta_Load(object sender, EventArgs e)
+        {
             
-        } 
+        }
     }
 }

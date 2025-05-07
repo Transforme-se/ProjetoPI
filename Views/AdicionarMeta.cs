@@ -24,10 +24,32 @@ namespace ProjetoPI.Views
             _telaPrincipal = telaPrincipal;
         }
 
+        private void FormatacaoDataMeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite apenas números e teclas de controle (como Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia a entrada de caracteres não permitidos
+            }
+        }
+
         private void FormatacaoDataMeta_TextChanged(object sender, EventArgs e)
         {
-            // Use o método do Controller para formatar o texto
-            txtDataConclusao.Text = _controllerMetas.FormatarTextoData(txtDataConclusao.Text);
+            // Remove qualquer caractere que não seja número
+            string texto = new string(txtDataConclusao.Text.Where(char.IsDigit).ToArray());
+
+            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
+            if (texto.Length >= 2)
+            {
+                texto = texto.Insert(2, "/");
+            }
+            if (texto.Length >= 5)
+            {
+                texto = texto.Insert(5, "/");
+            }
+
+            // Atualiza o texto no KryptonTextBox
+            txtDataConclusao.Text = texto;
 
             // Mantém o cursor no final do texto
             txtDataConclusao.SelectionStart = txtDataConclusao.Text.Length;
@@ -38,7 +60,19 @@ namespace ProjetoPI.Views
         {
             string titulo = txtTituloMeta.Text;
             string descricao = txtDescricaoMeta.Text;
-            DateTime? dataConclusao = _controllerMetas.ConverterData(txtDataConclusao.Text);
+
+            // Tenta converter a data, mas permite que ela seja nula
+            DateTime? dataConclusao = null;
+            if (DateTime.TryParse(txtDataConclusao.Text, out DateTime dataValida))
+            {
+                dataConclusao = dataValida;
+            }
+
+            if (string.IsNullOrWhiteSpace(titulo))
+            {
+                MessageBox.Show("Por favor, preencha o título da meta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var meta = _controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
             if (meta != null)
@@ -47,8 +81,15 @@ namespace ProjetoPI.Views
                 _telaPrincipal.AtualizarMetas();
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar a meta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-
+        private void AdicionarMeta_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
