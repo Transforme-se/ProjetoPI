@@ -113,5 +113,28 @@ namespace ProjetoPI.Models.Usuarios
                 _databaseService.CloseConnection();
             }
         }
+
+        public bool AlterarNome(int id, string nome)
+        {
+            try
+            {
+                string query = "UPDATE usuarios SET Nome = @nome WHERE IdUsuarios = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@nome", nome),
+                    new MySqlParameter("@id", id)
+                };
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao alterar nome: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
     }
 }
