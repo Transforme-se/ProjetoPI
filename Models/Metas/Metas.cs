@@ -11,7 +11,7 @@ namespace ProjetoPI.Models.Metas
         public bool status { get; set; }
         public int IdUsuario { get; set; }
         public DateTime DataCriacao { get; set; }
-        public DateTime DataConclusao { get; set; }
+        public DateTime? DataConclusao { get; set; }
 
         // Contrutor para pegar os dados que vieram do banco de dados e transformar em um objeto Metas
         public static Metas UserFromDataReade(MySqlDataReader reader)

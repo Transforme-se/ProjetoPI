@@ -91,7 +91,7 @@ namespace ProjetoPI.Controllers
                 {
                     Titulo = titulo,
                     Descricao = descricao,
-                    DataConclusao = (DateTime)dataConclusao
+                    DataConclusao = dataConclusao
                 };
 
                 bool resultado = _metasRepository.AdicionarMetas(metas);
@@ -116,7 +116,7 @@ namespace ProjetoPI.Controllers
             }
 
             // Valida e converte a data
-            DateTime dataConclusao = (DateTime)ConverterData(dataTexto);
+            DateTime? dataConclusao = ConverterData(dataTexto);
 
             // Cria o objeto meta com os dados atualizados
             var meta = new Metas
@@ -124,7 +124,7 @@ namespace ProjetoPI.Controllers
                 Id = idMeta,
                 Titulo = titulo,
                 Descricao = descricao,
-                DataConclusao = (DateTime)dataConclusao
+                DataConclusao = dataConclusao
             };
 
             // Atualiza a meta no repositório
@@ -150,9 +150,9 @@ namespace ProjetoPI.Controllers
         }
 
         // Método para formatar a data no formato desejado
-        public string FormatarData(DateTime data)
+        public string FormatarData(DateTime? data)
         {
-            return data.ToShortDateString();
+            return data?.ToString("dd/MM/yyyy") ?? string.Empty;
         }
 
         // Método para converter uma string para DateTime?
