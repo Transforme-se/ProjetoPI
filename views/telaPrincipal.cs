@@ -122,6 +122,40 @@ namespace ProjetoPI.Views
         private void btnAlterarFoto_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void painelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void imgUser_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fundoFoto_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox1_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void kryptonPictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterarFundo_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
+            
+    
+

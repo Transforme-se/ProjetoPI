@@ -142,6 +142,18 @@
     <Compile Include="Views\AdicionarMeta.Designer.cs">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\alterarAvatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\alterarAvatar.Designer.cs">
+      <DependentUpon>alterarAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\alterarFundo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\alterarFundo.Designer.cs">
+      <DependentUpon>alterarFundo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\alterarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,12 @@
       <DependentUpon>alterarSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ArredondarPainel.cs" />
+    <Compile Include="Views\excluirConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\excluirConta.Designer.cs">
+      <DependentUpon>excluirConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,11 +199,20 @@
     <EmbeddedResource Include="Views\AdicionarMeta.resx">
       <DependentUpon>AdicionarMeta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\alterarAvatar.resx">
+      <DependentUpon>alterarAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\alterarFundo.resx">
+      <DependentUpon>alterarFundo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\alterarSenha.resx">
       <DependentUpon>alterarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditarMeta.resx">
       <DependentUpon>EditarMeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\excluirConta.resx">
+      <DependentUpon>excluirConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaInicio.resx">
       <DependentUpon>TelaInicio.cs</DependentUpon>
@@ -218,6 +245,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconUsuarioLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
