@@ -45,5 +45,51 @@ namespace ProjetoPI.Models.Usuarios
             }
         }
 
+        public bool AlterarFotoPerfil(int id, int fotoPerfil)
+        {
+            try
+            {
+                string query = "UPDATE usuarios SET FotoPerfil = @fotoPerfil WHERE IdUsuarios = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@fotoPerfil", fotoPerfil),
+                    new MySqlParameter("@id", id)
+                };
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao alterar foto de perfil: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
+
+        public bool AlterarFotoFundo(int id, int fotoFundo)
+        {
+            try
+            {
+                string query = "UPDATE usuarios SET FotoFundo = @fotoFundo WHERE IdUsuarios = @id";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@fotoFundo", fotoFundo),
+                    new MySqlParameter("@id", id)
+                };
+                int affectedRows = _databaseService.ExecuteNonQuery(query, parameters);
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao alterar foto de fundo: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
+
     }
 }
