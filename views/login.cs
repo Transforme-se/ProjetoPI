@@ -46,7 +46,6 @@ namespace ProjetoPI.Views
             {
                 MessageBox.Show($"Falha ao conectar ao banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
@@ -54,12 +53,14 @@ namespace ProjetoPI.Views
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 688);
             LimparCamposCadastro();
+            txtNome.Focus();
         }
 
         private void btnVoltarLogin_Click(object sender, EventArgs e)
         {
             var mover = new PainelLogin();
             mover.MoverPainel(painel1, 13);
+            txtUsuario.Focus();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace ProjetoPI.Views
                     LimparCamposCadastro();
                     var mover = new PainelLogin();
                     mover.MoverPainel(painel1, 13);
+                    txtUsuario.Focus();
                 }
             }
             catch (Exception ex)
@@ -122,6 +124,26 @@ namespace ProjetoPI.Views
         private void LimparLogin()
         {
             txtSenha.Clear();
+        }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (sender == txtSenha)
+                    btnEntrar_Click(sender, e);
+                if (sender == txtSenhaConf)
+                    btnSalvar_Click(sender, e);
+
+                if (sender == txtUsuario)
+                    txtSenha.Focus();
+                if (sender == txtNome)
+                    txtUsuarioCad.Focus();
+                if(sender == txtUsuarioCad)
+                    txtSenhaCad.Focus();
+                if (sender == txtSenhaCad)
+                    txtSenhaConf.Focus();
+            }
         }
     }
 }
