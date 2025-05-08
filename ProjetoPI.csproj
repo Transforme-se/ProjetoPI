@@ -128,6 +128,8 @@
     <Compile Include="Controllers\ControllerMetas.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />
     <Compile Include="Controllers\ValidarCadastro.cs" />
+    <Compile Include="Models\Mensagens\Mensagens.cs" />
+    <Compile Include="Models\Mensagens\MensagensRepository.cs" />
     <Compile Include="Models\Metas\Metas.cs" />
     <Compile Include="Models\Metas\MetasRepository.cs" />
     <Compile Include="Models\Usuarios\Usuarios.cs" />
