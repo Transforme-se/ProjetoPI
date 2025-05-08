@@ -152,12 +152,6 @@
       <DependentUpon>alterarSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ArredondarPainel.cs" />
-    <Compile Include="Views\EditarMeta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditarMeta.Designer.cs">
-      <DependentUpon>EditarMeta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
