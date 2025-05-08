@@ -78,7 +78,7 @@ namespace ProjetoPI.Views
             this.painelFundo.Name = "painelFundo";
             this.painelFundo.Size = new System.Drawing.Size(1370, 749);
             this.painelFundo.StateCommon.Color1 = System.Drawing.Color.White;
-            this.painelFundo.TabIndex = 4;
+            this.painelFundo.TabIndex = 0;
             // 
             // painel1
             // 
@@ -86,7 +86,7 @@ namespace ProjetoPI.Views
             this.painel1.Location = new System.Drawing.Point(13, 15);
             this.painel1.Name = "painel1";
             this.painel1.Size = new System.Drawing.Size(667, 719);
-            this.painel1.TabIndex = 5;
+            this.painel1.TabIndex = 0;
             // 
             // painelDivisor
             // 
@@ -104,7 +104,7 @@ namespace ProjetoPI.Views
             this.painelDivisor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.painelDivisor.Size = new System.Drawing.Size(1346, 725);
             this.painelDivisor.StateCommon.Color1 = System.Drawing.Color.White;
-            this.painelDivisor.TabIndex = 0;
+            this.painelDivisor.TabIndex = 1;
             // 
             // painelEsquerdo
             // 
@@ -134,7 +134,7 @@ namespace ProjetoPI.Views
             this.panel2.Location = new System.Drawing.Point(122, 195);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 328);
-            this.panel2.TabIndex = 10;
+            this.panel2.TabIndex = 0;
             // 
             // kryptonButton1
             // 
@@ -146,7 +146,7 @@ namespace ProjetoPI.Views
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Border.Rounding = 40F;
             this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.TabIndex = 12;
+            this.kryptonButton1.TabIndex = 9;
             this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kryptonButton1.Values.Text = "Salvar";
             this.kryptonButton1.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -161,7 +161,7 @@ namespace ProjetoPI.Views
             this.btnVoltarLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnVoltarLogin.StateCommon.Border.Rounding = 40F;
             this.btnVoltarLogin.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnVoltarLogin.TabIndex = 11;
+            this.btnVoltarLogin.TabIndex = 10;
             this.btnVoltarLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnVoltarLogin.Values.Text = "Voltar para Login";
             this.btnVoltarLogin.Click += new System.EventHandler(this.btnVoltarLogin_Click);
@@ -203,7 +203,7 @@ namespace ProjetoPI.Views
             this.txtNome.StateCommon.Border.Draw = Krypton.Toolkit.InheritBool.True;
             this.txtNome.StateCommon.Border.Rounding = 20F;
             this.txtNome.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.TabIndex = 5;
             // 
             // txtSenhaConf
             // 
@@ -220,7 +220,7 @@ namespace ProjetoPI.Views
             this.txtSenhaConf.StateActive.Border.Rounding = 40F;
             this.txtSenhaConf.StateCommon.Border.Rounding = 20F;
             this.txtSenhaConf.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenhaConf.TabIndex = 7;
+            this.txtSenhaConf.TabIndex = 8;
             // 
             // txtUsuarioCad
             // 
@@ -253,7 +253,7 @@ namespace ProjetoPI.Views
             this.txtSenhaCad.StateActive.Border.Rounding = 40F;
             this.txtSenhaCad.StateCommon.Border.Rounding = 20F;
             this.txtSenhaCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenhaCad.TabIndex = 6;
+            this.txtSenhaCad.TabIndex = 7;
             // 
             // painelDireito
             // 
@@ -277,7 +277,7 @@ namespace ProjetoPI.Views
             this.panel1.Location = new System.Drawing.Point(122, 195);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 328);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 0;
             // 
             // btnEntrar
             // 
@@ -346,7 +346,7 @@ namespace ProjetoPI.Views
             this.txtSenha.StateActive.Border.Rounding = 40F;
             this.txtSenha.StateCommon.Border.Rounding = 20F;
             this.txtSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenha.TabIndex = 1;
+            this.txtSenha.TabIndex = 2;
             // 
             // txtUsuario
             // 
@@ -362,7 +362,7 @@ namespace ProjetoPI.Views
             this.txtUsuario.StateActive.Border.Rounding = 40F;
             this.txtUsuario.StateCommon.Border.Rounding = 20F;
             this.txtUsuario.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             // 
             // Login
