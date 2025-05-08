@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
             this.painalMetaVazia = new System.Windows.Forms.Panel();
@@ -52,7 +52,6 @@
             this.btnAlterarFundo = new Krypton.Toolkit.KryptonButton();
             this.imgUser = new Krypton.Toolkit.KryptonPictureBox();
             this.lbUser = new Krypton.Toolkit.KryptonLabel();
-            this.metasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.Titulo = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.Descricao = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
@@ -72,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -313,7 +311,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Location = new System.Drawing.Point(211, 586);
             this.btnSair.Name = "btnSair";
@@ -331,7 +329,7 @@
             // 
             this.btnAlterarSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(72, 381);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(64, 381);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarSenha.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -346,7 +344,7 @@
             // 
             this.btnAlterarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFoto.Location = new System.Drawing.Point(72, 229);
+            this.btnAlterarFoto.Location = new System.Drawing.Point(64, 229);
             this.btnAlterarFoto.Name = "btnAlterarFoto";
             this.btnAlterarFoto.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarFoto.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -361,7 +359,7 @@
             // 
             this.btnExcluirConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExcluirConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirConta.Location = new System.Drawing.Point(72, 460);
+            this.btnExcluirConta.Location = new System.Drawing.Point(64, 460);
             this.btnExcluirConta.Name = "btnExcluirConta";
             this.btnExcluirConta.Size = new System.Drawing.Size(191, 43);
             this.btnExcluirConta.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -376,7 +374,7 @@
             // 
             this.btnAlterarFundo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFundo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFundo.Location = new System.Drawing.Point(72, 306);
+            this.btnAlterarFundo.Location = new System.Drawing.Point(64, 306);
             this.btnAlterarFundo.Name = "btnAlterarFundo";
             this.btnAlterarFundo.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarFundo.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -390,7 +388,7 @@
             // imgUser
             // 
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
-            this.imgUser.Location = new System.Drawing.Point(103, 33);
+            this.imgUser.Location = new System.Drawing.Point(99, 33);
             this.imgUser.Name = "imgUser";
             this.imgUser.Size = new System.Drawing.Size(121, 120);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -463,9 +461,9 @@
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.status.DataPropertyName = "status";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            this.status.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.status.DefaultCellStyle = dataGridViewCellStyle1;
             this.status.FalseValue = null;
             this.status.HeaderText = "status";
             this.status.IndeterminateValue = null;
@@ -503,7 +501,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -538,7 +535,6 @@
         private Krypton.Toolkit.KryptonButton btnLimparFiltro;
         private System.Windows.Forms.Panel painalMetaVazia;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private System.Windows.Forms.BindingSource metasBindingSource1;
         private Krypton.Toolkit.KryptonButton btnSair;
     }
 }

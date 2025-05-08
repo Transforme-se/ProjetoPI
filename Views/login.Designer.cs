@@ -83,7 +83,7 @@ namespace ProjetoPI.Views
             // painel1
             // 
             this.painel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painel1.BackgroundImage")));
-            this.painel1.Location = new System.Drawing.Point(5000, 15);
+            this.painel1.Location = new System.Drawing.Point(13, 15);
             this.painel1.Name = "painel1";
             this.painel1.Size = new System.Drawing.Size(667, 719);
             this.painel1.TabIndex = 5;
