@@ -347,6 +347,7 @@ namespace ProjetoPI.Views
             this.txtSenha.StateCommon.Border.Rounding = 20F;
             this.txtSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtSenha.TabIndex = 2;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter);
             // 
             // txtUsuario
             // 
@@ -364,6 +365,7 @@ namespace ProjetoPI.Views
             this.txtUsuario.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter);
             // 
             // Login
             // 

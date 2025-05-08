@@ -125,5 +125,16 @@ namespace ProjetoPI.Views
         {
             txtSenha.Clear();
         }
+
+        private void Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (sender == txtSenha)
+                    btnEntrar_Click(sender, e);
+                if (sender == txtSenhaConf)
+                    btnSalvar_Click(sender, e); 
+            }
+        }
     }
 }
