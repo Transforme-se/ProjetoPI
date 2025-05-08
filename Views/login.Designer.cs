@@ -52,6 +52,7 @@ namespace ProjetoPI.Views
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSenha = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsuario = new Krypton.Toolkit.KryptonTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             this.painelDivisor.SuspendLayout();
@@ -111,6 +112,7 @@ namespace ProjetoPI.Views
             this.painelEsquerdo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.painelEsquerdo.Controls.Add(this.label1);
             this.painelEsquerdo.Controls.Add(this.panel2);
             this.painelEsquerdo.Location = new System.Drawing.Point(3, 3);
             this.painelEsquerdo.Name = "painelEsquerdo";
@@ -365,6 +367,19 @@ namespace ProjetoPI.Views
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(421, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 55);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "TEXT";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,6 +398,7 @@ namespace ProjetoPI.Views
             this.painelDivisor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.painelEsquerdo)).EndInit();
             this.painelEsquerdo.ResumeLayout(false);
+            this.painelEsquerdo.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -420,5 +436,6 @@ namespace ProjetoPI.Views
         private KryptonButton btnVoltarLogin;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

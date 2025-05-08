@@ -123,5 +123,10 @@ namespace ProjetoPI.Views
         {
             txtSenha.Clear();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
