@@ -204,6 +204,7 @@ namespace ProjetoPI.Views
             this.txtNome.StateCommon.Border.Rounding = 20F;
             this.txtNome.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtNome.TabIndex = 5;
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // txtSenhaConf
             // 
@@ -221,6 +222,7 @@ namespace ProjetoPI.Views
             this.txtSenhaConf.StateCommon.Border.Rounding = 20F;
             this.txtSenhaConf.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtSenhaConf.TabIndex = 8;
+            this.txtSenhaConf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // txtUsuarioCad
             // 
@@ -237,6 +239,7 @@ namespace ProjetoPI.Views
             this.txtUsuarioCad.StateCommon.Border.Rounding = 20F;
             this.txtUsuarioCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtUsuarioCad.TabIndex = 5;
+            this.txtUsuarioCad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // txtSenhaCad
             // 
@@ -254,6 +257,7 @@ namespace ProjetoPI.Views
             this.txtSenhaCad.StateCommon.Border.Rounding = 20F;
             this.txtSenhaCad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtSenhaCad.TabIndex = 7;
+            this.txtSenhaCad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // painelDireito
             // 
@@ -347,7 +351,7 @@ namespace ProjetoPI.Views
             this.txtSenha.StateCommon.Border.Rounding = 20F;
             this.txtSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtSenha.TabIndex = 2;
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // txtUsuario
             // 
@@ -365,7 +369,7 @@ namespace ProjetoPI.Views
             this.txtUsuario.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter);
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyEnter);
             // 
             // Login
             // 
@@ -397,6 +401,11 @@ namespace ProjetoPI.Views
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void TxtUsuarioCad_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
