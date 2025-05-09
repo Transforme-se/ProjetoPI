@@ -19,7 +19,7 @@ namespace ProjetoPI.Models.Mensagens
 
         public Mensagens ObterMensagem(int id ) 
         {
-            string query = "SELECT mensagem FROM mensagens WHERE idMensagens = @id";
+            string query = "SELECT * FROM mensagens WHERE idMensagens = @id";
             MySqlParameter[] parameters = new MySqlParameter[]
             {
                 new MySqlParameter("@id", id)
