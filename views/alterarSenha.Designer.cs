@@ -47,9 +47,10 @@
             this.txtNovaSenha.CueHint.CueHintText = "Insira uma nova senha";
             this.txtNovaSenha.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtNovaSenha.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtNovaSenha.Location = new System.Drawing.Point(0, 110);
+            this.txtNovaSenha.Location = new System.Drawing.Point(3, 120);
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.Size = new System.Drawing.Size(291, 42);
+            this.txtNovaSenha.PasswordChar = '*';
+            this.txtNovaSenha.Size = new System.Drawing.Size(285, 42);
             this.txtNovaSenha.StateActive.Border.Rounding = 40F;
             this.txtNovaSenha.StateCommon.Border.Rounding = 20F;
             this.txtNovaSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
@@ -64,9 +65,10 @@
             this.txtConfirmarSenha.CueHint.CueHintText = "Confirme sua senha";
             this.txtConfirmarSenha.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtConfirmarSenha.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(0, 168);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(3, 185);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(291, 42);
+            this.txtConfirmarSenha.PasswordChar = '*';
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(285, 42);
             this.txtConfirmarSenha.StateActive.Border.Rounding = 40F;
             this.txtConfirmarSenha.StateCommon.Border.Rounding = 20F;
             this.txtConfirmarSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
@@ -76,7 +78,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(170, 279);
+            this.btnSalvar.Location = new System.Drawing.Point(167, 279);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(121, 38);
             this.btnSalvar.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -97,9 +99,10 @@
             this.txtSenhaAtual.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtSenhaAtual.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtSenhaAtual.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtSenhaAtual.Location = new System.Drawing.Point(3, 47);
+            this.txtSenhaAtual.Location = new System.Drawing.Point(2, 57);
             this.txtSenhaAtual.Name = "txtSenhaAtual";
-            this.txtSenhaAtual.Size = new System.Drawing.Size(291, 42);
+            this.txtSenhaAtual.PasswordChar = '*';
+            this.txtSenhaAtual.Size = new System.Drawing.Size(285, 42);
             this.txtSenhaAtual.StateActive.Border.Rounding = 40F;
             this.txtSenhaAtual.StateCommon.Border.Rounding = 20F;
             this.txtSenhaAtual.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
