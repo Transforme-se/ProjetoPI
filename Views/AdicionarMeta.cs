@@ -14,13 +14,16 @@ namespace ProjetoPI.Views
 {
     public partial class AdicionarMeta: Form
     {
+        private readonly DataBaseService _dataBaseService;
         private TelaPrincipal _telaPrincipal;
         private ControllerMetas _controllerMetas;
+        private MensagemController _MensagemController;
         public AdicionarMeta(TelaPrincipal telaPrincipal)
         {
             InitializeComponent();
-            DataBaseService dataBaseService = new DataBaseService();
-            _controllerMetas = new ControllerMetas(dataBaseService);
+            _dataBaseService = new DataBaseService();
+            _controllerMetas = new ControllerMetas(_dataBaseService);
+            _MensagemController = new MensagemController(_dataBaseService);
             _telaPrincipal = telaPrincipal;
         }
 
@@ -55,8 +58,7 @@ namespace ProjetoPI.Views
             txtDataConclusao.SelectionStart = txtDataConclusao.Text.Length;
         }
 
-
-        private void btnSalvarMeta_Click(object sender, EventArgs e)
+        private async void btnSalvarMeta_Click(object sender, EventArgs e)
         {
             string titulo = txtTituloMeta.Text;
             string descricao = txtDescricaoMeta.Text;
@@ -77,19 +79,13 @@ namespace ProjetoPI.Views
             var meta = _controllerMetas.CadastrarMetas(titulo, descricao, dataConclusao);
             if (meta != null)
             {
-                MessageBox.Show("Meta cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                _telaPrincipal.AtualizarMetas();
                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao cadastrar a meta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        private void AdicionarMeta_Load(object sender, EventArgs e)
-        {
-            
+                await _MensagemController.MostrarMensagem(0);
+                _telaPrincipal.AtualizarMetas();
+
+                await Task.Delay(900);
+            }
         }
     }
 }

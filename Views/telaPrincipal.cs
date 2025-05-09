@@ -6,6 +6,7 @@ using Krypton.Toolkit;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
+using System.Threading.Tasks;
 
 namespace ProjetoPI.Views
 {
@@ -14,6 +15,7 @@ namespace ProjetoPI.Views
         private MetasRepository _metasRepository;
         private ControllerMetas _controllerMetas;
         private ControllerFiltro _controllerFiltro;
+        private MensagemController _mensagemController;
         private int idMetaSelecionada;
         public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
@@ -21,6 +23,7 @@ namespace ProjetoPI.Views
             DataBaseService dataBaseService = new DataBaseService();
             _metasRepository = new MetasRepository(dataBaseService);
             _controllerMetas = new ControllerMetas(dataBaseService);
+            _mensagemController = new MensagemController(dataBaseService);
             _controllerFiltro = new ControllerFiltro(_controllerMetas);
         }
 
@@ -75,7 +78,7 @@ namespace ProjetoPI.Views
         }
 
         //Editar status da meta
-        private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
@@ -94,8 +97,11 @@ namespace ProjetoPI.Views
 
                 if (sucesso)
                 {
-                    MessageBox.Show("Status atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AtualizarMetas(); // Atualiza a tabela
+
+                    await _mensagemController.MostrarMensagem(0);
+                    AtualizarMetas();
+
+                    await Task.Delay(900);
                 }
                 else
                 {

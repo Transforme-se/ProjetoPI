@@ -128,7 +128,10 @@
     <Compile Include="Controllers\ControllerLoginCadastro.cs" />
     <Compile Include="Controllers\ControllerMetas.cs" />
     <Compile Include="Controllers\ControllerTxtBox.cs" />
+    <Compile Include="Controllers\MensagemController.cs" />
     <Compile Include="Controllers\ValidarCadastro.cs" />
+    <Compile Include="Models\Mensagens\Mensagens.cs" />
+    <Compile Include="Models\Mensagens\MensagensRepository.cs" />
     <Compile Include="Models\Metas\Metas.cs" />
     <Compile Include="Models\Metas\MetasRepository.cs" />
     <Compile Include="Models\Usuarios\Usuarios.cs" />
@@ -158,6 +161,12 @@
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MostrarMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MostrarMensagem.Designer.cs">
+      <DependentUpon>MostrarMensagem.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PainelLogin.cs" />
     <Compile Include="Views\EditarMeta.cs">
@@ -202,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MostrarMensagem.resx">
+      <DependentUpon>MostrarMensagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
