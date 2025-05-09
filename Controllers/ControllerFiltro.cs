@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Mysqlx.Resultset;
 using ProjetoPI.Models.Metas;
 using Syncfusion.Windows.Shared;
@@ -24,8 +25,8 @@ namespace ProjetoPI.Controllers
 
         public List<Metas> ObterMetasFiltradasTexto(string filtro)
         {
+            _allMetas = _controllerMetas.ObterTodasMetas();
             List<Metas> metas = new List<Metas>();
-
             // Verifica se o txt está vazio
             if (string.IsNullOrEmpty(filtro))
             {
@@ -47,6 +48,7 @@ namespace ProjetoPI.Controllers
         }
         public List<Metas> ObterMetasFiltradasData(DateTime data)
         {
+            _allMetas = _controllerMetas.ObterTodasMetas();
             // Altera o valor da variável _dataSelecionada para true, indicando que uma data foi selecionada
             _dataSelecionada = true;
             List<Metas> metas = new List<Metas>();

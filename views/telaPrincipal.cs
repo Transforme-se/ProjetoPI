@@ -35,7 +35,12 @@ namespace ProjetoPI.Views
 
         public void AtualizarMetas()
         {
-            tabela.DataSource = _controllerMetas.ObterTodasMetas();
+            List<Metas> metas = _controllerMetas.ObterTodasMetas();
+            tabela.DataSource = metas;
+            if (metas == null || metas.Count == 0)
+                painalMetaVazia.Visible = true;
+            else
+                painalMetaVazia.Visible = false;
         }
 
         private void BtnNovaMeta_Click(object sender, EventArgs e)
@@ -166,6 +171,11 @@ namespace ProjetoPI.Views
         private void Calendario_MouseUp(object sender, MouseEventArgs e)
         {
             ignoreNextChange = false;
+        }
+
+        private void btnAlterarSenha_Click(object sender, EventArgs e)
+        {
+            new AlterarSenha().Show();
         }
     }
 }
