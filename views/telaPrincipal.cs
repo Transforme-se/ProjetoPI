@@ -95,17 +95,14 @@ namespace ProjetoPI.Views
                     status = novoStatus
                 });
 
-                if (sucesso)
+                if (meta.status == false)
                 {
-
                     await _mensagemController.MostrarMensagem(0);
                     AtualizarMetas();
-
-                    await Task.Delay(900);
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao atualizar o status.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    AtualizarMetas();
                 }
             }
         }
