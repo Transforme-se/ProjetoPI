@@ -39,7 +39,7 @@
             // 
             this.txtTituloMeta.CueHint.CueHintText = "Título";
             this.txtTituloMeta.Location = new System.Drawing.Point(79, 61);
-            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2);
             this.txtTituloMeta.Name = "txtTituloMeta";
             this.txtTituloMeta.Size = new System.Drawing.Size(168, 35);
             this.txtTituloMeta.StateCommon.Border.Rounding = 20F;
@@ -49,7 +49,7 @@
             // 
             this.txtDescricaoMeta.CueHint.CueHintText = "Descrição (Opcional)";
             this.txtDescricaoMeta.Location = new System.Drawing.Point(79, 131);
-            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricaoMeta.Name = "txtDescricaoMeta";
             this.txtDescricaoMeta.Size = new System.Drawing.Size(168, 35);
             this.txtDescricaoMeta.StateCommon.Border.Rounding = 20F;
@@ -58,7 +58,7 @@
             // btnSalvarMeta
             // 
             this.btnSalvarMeta.Location = new System.Drawing.Point(221, 277);
-            this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvarMeta.Name = "btnSalvarMeta";
             this.btnSalvarMeta.Size = new System.Drawing.Size(89, 36);
             this.btnSalvarMeta.StateCommon.Border.Rounding = 20F;
@@ -71,7 +71,7 @@
             // 
             this.txtDataConclusao.CueHint.CueHintText = "Previsão de Conclusão";
             this.txtDataConclusao.Location = new System.Drawing.Point(79, 208);
-            this.txtDataConclusao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDataConclusao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDataConclusao.Name = "txtDataConclusao";
             this.txtDataConclusao.Size = new System.Drawing.Size(168, 35);
             this.txtDataConclusao.StateCommon.Border.Rounding = 20F;
@@ -89,11 +89,10 @@
             this.Controls.Add(this.txtDescricaoMeta);
             this.Controls.Add(this.txtTituloMeta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdicionarMeta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdicionarMeta";
-            this.Load += new System.EventHandler(this.AdicionarMeta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
