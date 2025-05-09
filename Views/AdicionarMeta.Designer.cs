@@ -33,36 +33,39 @@
             this.txtDescricaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.btnSalvarMeta = new Krypton.Toolkit.KryptonButton();
             this.txtDataConclusao = new Krypton.Toolkit.KryptonTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTituloMeta
             // 
             this.txtTituloMeta.CueHint.CueHintText = "Título";
-            this.txtTituloMeta.Location = new System.Drawing.Point(79, 61);
-            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTituloMeta.Location = new System.Drawing.Point(2, 57);
+            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2);
             this.txtTituloMeta.Name = "txtTituloMeta";
-            this.txtTituloMeta.Size = new System.Drawing.Size(168, 35);
+            this.txtTituloMeta.Size = new System.Drawing.Size(287, 35);
             this.txtTituloMeta.StateCommon.Border.Rounding = 20F;
-            this.txtTituloMeta.TabIndex = 0;
+            this.txtTituloMeta.TabIndex = 1;
             // 
             // txtDescricaoMeta
             // 
             this.txtDescricaoMeta.CueHint.CueHintText = "Descrição (Opcional)";
-            this.txtDescricaoMeta.Location = new System.Drawing.Point(79, 131);
-            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricaoMeta.Location = new System.Drawing.Point(3, 120);
+            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricaoMeta.Name = "txtDescricaoMeta";
-            this.txtDescricaoMeta.Size = new System.Drawing.Size(168, 35);
+            this.txtDescricaoMeta.Size = new System.Drawing.Size(287, 35);
             this.txtDescricaoMeta.StateCommon.Border.Rounding = 20F;
-            this.txtDescricaoMeta.TabIndex = 1;
+            this.txtDescricaoMeta.TabIndex = 2;
             // 
             // btnSalvarMeta
             // 
-            this.btnSalvarMeta.Location = new System.Drawing.Point(221, 277);
-            this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvarMeta.Location = new System.Drawing.Point(168, 277);
+            this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvarMeta.Name = "btnSalvarMeta";
-            this.btnSalvarMeta.Size = new System.Drawing.Size(89, 36);
+            this.btnSalvarMeta.Size = new System.Drawing.Size(121, 38);
             this.btnSalvarMeta.StateCommon.Border.Rounding = 20F;
-            this.btnSalvarMeta.TabIndex = 3;
+            this.btnSalvarMeta.TabIndex = 4;
             this.btnSalvarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvarMeta.Values.Text = "Salvar";
             this.btnSalvarMeta.Click += new System.EventHandler(this.btnSalvarMeta_Click);
@@ -70,32 +73,53 @@
             // txtDataConclusao
             // 
             this.txtDataConclusao.CueHint.CueHintText = "Previsão de Conclusão";
-            this.txtDataConclusao.Location = new System.Drawing.Point(79, 208);
-            this.txtDataConclusao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDataConclusao.Location = new System.Drawing.Point(3, 185);
+            this.txtDataConclusao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDataConclusao.Name = "txtDataConclusao";
-            this.txtDataConclusao.Size = new System.Drawing.Size(168, 35);
+            this.txtDataConclusao.Size = new System.Drawing.Size(287, 35);
             this.txtDataConclusao.StateCommon.Border.Rounding = 20F;
-            this.txtDataConclusao.TabIndex = 4;
+            this.txtDataConclusao.TabIndex = 3;
             this.txtDataConclusao.TextChanged += new System.EventHandler(this.FormatacaoDataMeta_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbAlterarSenha);
+            this.panel1.Controls.Add(this.txtTituloMeta);
+            this.panel1.Controls.Add(this.btnSalvarMeta);
+            this.panel1.Controls.Add(this.txtDataConclusao);
+            this.panel1.Controls.Add(this.txtDescricaoMeta);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(35, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 317);
+            this.panel1.TabIndex = 5;
+            // 
+            // lbAlterarSenha
+            // 
+            this.lbAlterarSenha.Location = new System.Drawing.Point(75, 3);
+            this.lbAlterarSenha.Name = "lbAlterarSenha";
+            this.lbAlterarSenha.Size = new System.Drawing.Size(143, 26);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.TabIndex = 0;
+            this.lbAlterarSenha.Values.Text = "Adicionar Meta";
             // 
             // AdicionarMeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(358, 350);
-            this.Controls.Add(this.txtDataConclusao);
-            this.Controls.Add(this.btnSalvarMeta);
-            this.Controls.Add(this.txtDescricaoMeta);
-            this.Controls.Add(this.txtTituloMeta);
+            this.ClientSize = new System.Drawing.Size(361, 387);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdicionarMeta";
+            this.Padding = new System.Windows.Forms.Padding(35);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdicionarMeta";
             this.Load += new System.EventHandler(this.AdicionarMeta_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -105,5 +129,7 @@
         private Krypton.Toolkit.KryptonTextBox txtDescricaoMeta;
         private Krypton.Toolkit.KryptonButton btnSalvarMeta;
         private Krypton.Toolkit.KryptonTextBox txtDataConclusao;
+        private System.Windows.Forms.Panel panel1;
+        private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
     }
 }
