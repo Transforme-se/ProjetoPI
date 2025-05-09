@@ -53,7 +53,7 @@
             this.txtNovaSenha.StateActive.Border.Rounding = 40F;
             this.txtNovaSenha.StateCommon.Border.Rounding = 20F;
             this.txtNovaSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtNovaSenha.TabIndex = 1;
+            this.txtNovaSenha.TabIndex = 2;
             this.txtNovaSenha.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             // 
             // txtConfirmarSenha
@@ -70,7 +70,7 @@
             this.txtConfirmarSenha.StateActive.Border.Rounding = 40F;
             this.txtConfirmarSenha.StateCommon.Border.Rounding = 20F;
             this.txtConfirmarSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtConfirmarSenha.TabIndex = 2;
+            this.txtConfirmarSenha.TabIndex = 3;
             this.txtConfirmarSenha.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             // 
             // btnSalvar
@@ -103,19 +103,19 @@
             this.txtSenhaAtual.StateActive.Border.Rounding = 40F;
             this.txtSenhaAtual.StateCommon.Border.Rounding = 20F;
             this.txtSenhaAtual.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtSenhaAtual.TabIndex = 5;
+            this.txtSenhaAtual.TabIndex = 1;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(0, 279);
+            this.btnCancelar.Location = new System.Drawing.Point(3, 279);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 38);
             this.btnCancelar.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnCancelar.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCancelar.StateCommon.Border.Rounding = 40F;
             this.btnCancelar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnCancelar.Values.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -132,7 +132,7 @@
             this.panel1.Location = new System.Drawing.Point(35, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 317);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 0;
             // 
             // lbAlterarSenha
             // 
