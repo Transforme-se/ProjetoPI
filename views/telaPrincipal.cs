@@ -167,5 +167,10 @@ namespace ProjetoPI.Views
         {
             ignoreNextChange = false;
         }
+
+        private void btnAlterarSenha_Click(object sender, EventArgs e)
+        {
+            new AlterarSenha().Show();
+        }
     }
 }

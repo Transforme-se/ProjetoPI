@@ -1,6 +1,6 @@
 ﻿namespace ProjetoPI.Views
 {
-    partial class alterarSenha
+    partial class AlterarSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(alterarSenha));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarSenha));
             this.txtNovaSenha = new Krypton.Toolkit.KryptonTextBox();
             this.txtConfirmarSenha = new Krypton.Toolkit.KryptonTextBox();
             this.btnSalvar = new Krypton.Toolkit.KryptonButton();
-            this.btnSenhaAtual = new Krypton.Toolkit.KryptonTextBox();
+            this.txtSenhaAtual = new Krypton.Toolkit.KryptonTextBox();
+            this.btnCancelar = new Krypton.Toolkit.KryptonButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNovaSenha
@@ -43,16 +47,14 @@
             this.txtNovaSenha.CueHint.CueHintText = "Insira uma nova senha";
             this.txtNovaSenha.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtNovaSenha.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtNovaSenha.Enabled = false;
-            this.txtNovaSenha.Location = new System.Drawing.Point(42, 153);
+            this.txtNovaSenha.Location = new System.Drawing.Point(0, 110);
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.Size = new System.Drawing.Size(229, 42);
+            this.txtNovaSenha.Size = new System.Drawing.Size(291, 42);
             this.txtNovaSenha.StateActive.Border.Rounding = 40F;
             this.txtNovaSenha.StateCommon.Border.Rounding = 20F;
             this.txtNovaSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtNovaSenha.TabIndex = 1;
             this.txtNovaSenha.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.txtNovaSenha.UseWaitCursor = true;
             // 
             // txtConfirmarSenha
             // 
@@ -62,21 +64,19 @@
             this.txtConfirmarSenha.CueHint.CueHintText = "Confirme sua senha";
             this.txtConfirmarSenha.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtConfirmarSenha.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtConfirmarSenha.Enabled = false;
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(42, 234);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(0, 168);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(229, 42);
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(291, 42);
             this.txtConfirmarSenha.StateActive.Border.Rounding = 40F;
             this.txtConfirmarSenha.StateCommon.Border.Rounding = 20F;
             this.txtConfirmarSenha.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
             this.txtConfirmarSenha.TabIndex = 2;
             this.txtConfirmarSenha.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.txtConfirmarSenha.UseWaitCursor = true;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(228, 313);
+            this.btnSalvar.Location = new System.Drawing.Point(170, 279);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(121, 38);
             this.btnSalvar.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -86,39 +86,76 @@
             this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvar.Values.Text = "Salvar";
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // btnSenhaAtual
+            // txtSenhaAtual
             // 
-            this.btnSenhaAtual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtSenhaAtual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSenhaAtual.CueHint.CueHintText = "Insira sua senha atual ";
-            this.btnSenhaAtual.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnSenhaAtual.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnSenhaAtual.Enabled = false;
-            this.btnSenhaAtual.Location = new System.Drawing.Point(42, 74);
-            this.btnSenhaAtual.Name = "btnSenhaAtual";
-            this.btnSenhaAtual.Size = new System.Drawing.Size(229, 42);
-            this.btnSenhaAtual.StateActive.Border.Rounding = 40F;
-            this.btnSenhaAtual.StateCommon.Border.Rounding = 20F;
-            this.btnSenhaAtual.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.btnSenhaAtual.TabIndex = 5;
-            this.btnSenhaAtual.ToolTipValues.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btnSenhaAtual.UseWaitCursor = true;
+            this.txtSenhaAtual.CueHint.CueHintText = "Insira sua senha atual ";
+            this.txtSenhaAtual.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaAtual.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.txtSenhaAtual.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtSenhaAtual.Location = new System.Drawing.Point(3, 47);
+            this.txtSenhaAtual.Name = "txtSenhaAtual";
+            this.txtSenhaAtual.Size = new System.Drawing.Size(291, 42);
+            this.txtSenhaAtual.StateActive.Border.Rounding = 40F;
+            this.txtSenhaAtual.StateCommon.Border.Rounding = 20F;
+            this.txtSenhaAtual.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
+            this.txtSenhaAtual.TabIndex = 5;
             // 
-            // alterarSenha
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(0, 279);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(121, 38);
+            this.btnCancelar.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnCancelar.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnCancelar.StateCommon.Border.Rounding = 40F;
+            this.btnCancelar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Values.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbAlterarSenha);
+            this.panel1.Controls.Add(this.txtSenhaAtual);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.txtNovaSenha);
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.txtConfirmarSenha);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(35, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 317);
+            this.panel1.TabIndex = 6;
+            // 
+            // lbAlterarSenha
+            // 
+            this.lbAlterarSenha.Location = new System.Drawing.Point(79, 3);
+            this.lbAlterarSenha.Name = "lbAlterarSenha";
+            this.lbAlterarSenha.Size = new System.Drawing.Size(132, 26);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Values.Text = "Alterar Senha";
+            // 
+            // AlterarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(361, 387);
-            this.Controls.Add(this.btnSenhaAtual);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtConfirmarSenha);
-            this.Controls.Add(this.txtNovaSenha);
-            this.Name = "alterarSenha";
-            this.Text = "alterarSenha";
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Name = "AlterarSenha";
+            this.Padding = new System.Windows.Forms.Padding(35);
+            this.Text = "Alterar Senha";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -127,6 +164,9 @@
         private Krypton.Toolkit.KryptonTextBox txtNovaSenha;
         private Krypton.Toolkit.KryptonTextBox txtConfirmarSenha;
         private Krypton.Toolkit.KryptonButton btnSalvar;
-        private Krypton.Toolkit.KryptonTextBox btnSenhaAtual;
+        private Krypton.Toolkit.KryptonTextBox txtSenhaAtual;
+        private Krypton.Toolkit.KryptonButton btnCancelar;
+        private System.Windows.Forms.Panel panel1;
+        private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
     }
 }
