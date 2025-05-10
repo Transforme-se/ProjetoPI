@@ -38,24 +38,35 @@ namespace ProjetoPI.Views
 
         private void FormatacaoDataMeta_TextChanged(object sender, EventArgs e)
         {
+            // Salva a posição atual do cursor
+            int posicaoCursor = txtDataConclusao.SelectionStart;
+
             // Remove qualquer caractere que não seja número
-            string texto = new string(txtDataConclusao.Text.Where(char.IsDigit).ToArray());
+            string textoOriginal = txtDataConclusao.Text;
+            string textoFormatado = _controllerMetas.FormatarTextoData(textoOriginal);
 
-            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
-            if (texto.Length >= 2)
+            // Verifica se o texto foi alterado
+            if (textoOriginal != textoFormatado)
             {
-                texto = texto.Insert(2, "/");
-            }
-            if (texto.Length >= 5)
-            {
-                texto = texto.Insert(5, "/");
-            }
+                // Atualiza o texto no campo
+                txtDataConclusao.Text = textoFormatado;
 
-            // Atualiza o texto no KryptonTextBox
-            txtDataConclusao.Text = texto;
+                // Ajusta a posição do cursor
+                if (posicaoCursor > 0 && textoOriginal.Length > textoFormatado.Length)
+                {
+                    // Caso o backspace tenha sido pressionado, move o cursor para trás
+                    posicaoCursor--;
+                }
+                else
+                {
+                    // Caso contrário, ajusta a posição do cursor com base na diferença de tamanho
+                    int diferenca = textoFormatado.Length - textoOriginal.Length;
+                    posicaoCursor += diferenca;
+                }
 
-            // Mantém o cursor no final do texto
-            txtDataConclusao.SelectionStart = txtDataConclusao.Text.Length;
+                // Garante que a posição do cursor esteja dentro dos limites do texto
+                txtDataConclusao.SelectionStart = Math.Max(0, Math.Min(posicaoCursor, textoFormatado.Length));
+            }
         }
 
         private async void btnSalvarMeta_Click(object sender, EventArgs e)

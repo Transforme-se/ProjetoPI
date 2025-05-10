@@ -40,21 +40,11 @@ namespace ProjetoPI.Views
 
         private void ConclusaoEditarMeta_TextChanged(object sender, EventArgs e)
         {
-            // Remove qualquer caractere que não seja número
-            string texto = new string(txtConclusaoMeta.Text.Where(char.IsDigit).ToArray());
-
-            // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
-            if (texto.Length >= 2)
-            {
-                texto = texto.Insert(2, "/");
-            }
-            if (texto.Length >= 5)
-            {
-                texto = texto.Insert(5, "/");
-            }
+            // Usa o método FormatarTextoData do ControllerMetas
+            string textoFormatado = _controllerMetas.FormatarTextoData(txtConclusaoMeta.Text);
 
             // Atualiza o texto no KryptonTextBox
-            txtConclusaoMeta.Text = texto;
+            txtConclusaoMeta.Text = textoFormatado;
 
             // Mantém o cursor no final do texto
             txtConclusaoMeta.SelectionStart = txtConclusaoMeta.Text.Length;
