@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
@@ -59,6 +59,7 @@
             this.btnAlterarFundo = new Krypton.Toolkit.KryptonButton();
             this.imgUser = new Krypton.Toolkit.KryptonPictureBox();
             this.lbUser = new Krypton.Toolkit.KryptonLabel();
+            this.btnAlterarNome = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.painelFundo)).BeginInit();
             this.painelFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.painelMetas)).BeginInit();
@@ -80,7 +81,7 @@
             this.painelFundo.Controls.Add(this.painelMenu);
             this.painelFundo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelFundo.Location = new System.Drawing.Point(0, 0);
-            this.painelFundo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.painelFundo.Margin = new System.Windows.Forms.Padding(5);
             this.painelFundo.Name = "painelFundo";
             this.painelFundo.Padding = new System.Windows.Forms.Padding(47, 43, 47, 43);
             this.painelFundo.Size = new System.Drawing.Size(1827, 922);
@@ -110,7 +111,7 @@
             this.painalMetaVazia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.painalMetaVazia.Controls.Add(this.kryptonLabel1);
             this.painalMetaVazia.Location = new System.Drawing.Point(67, 199);
-            this.painalMetaVazia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painalMetaVazia.Margin = new System.Windows.Forms.Padding(4);
             this.painalMetaVazia.Name = "painalMetaVazia";
             this.painalMetaVazia.Size = new System.Drawing.Size(783, 213);
             this.painalMetaVazia.TabIndex = 19;
@@ -123,7 +124,7 @@
             this.kryptonLabel1.AutoSize = false;
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(0, 4);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.kryptonLabel1.Size = new System.Drawing.Size(783, 76);
@@ -146,7 +147,7 @@
             this.panel1.Controls.Add(this.calendario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(67, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1135, 718);
             this.panel1.TabIndex = 17;
@@ -156,7 +157,7 @@
             this.btnLimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimparFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparFiltro.Location = new System.Drawing.Point(820, 665);
-            this.btnLimparFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimparFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimparFiltro.Name = "btnLimparFiltro";
             this.btnLimparFiltro.Size = new System.Drawing.Size(315, 53);
             this.btnLimparFiltro.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -174,7 +175,7 @@
             this.btnEditarMeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditarMeta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarMeta.Location = new System.Drawing.Point(820, 521);
-            this.btnEditarMeta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarMeta.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarMeta.Name = "btnEditarMeta";
             this.btnEditarMeta.Size = new System.Drawing.Size(315, 53);
             this.btnEditarMeta.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -205,7 +206,7 @@
             this.status});
             this.tabela.DataSource = this.metasBindingSource;
             this.tabela.Location = new System.Drawing.Point(0, 108);
-            this.tabela.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabela.Margin = new System.Windows.Forms.Padding(4);
             this.tabela.Name = "tabela";
             this.tabela.RowHeadersVisible = false;
             this.tabela.RowHeadersWidth = 51;
@@ -276,9 +277,9 @@
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.status.DataPropertyName = "status";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            this.status.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.status.DefaultCellStyle = dataGridViewCellStyle1;
             this.status.FalseValue = null;
             this.status.HeaderText = "status";
             this.status.IndeterminateValue = null;
@@ -298,7 +299,7 @@
             this.lbBoasVindas.AutoSize = false;
             this.lbBoasVindas.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.lbBoasVindas.Location = new System.Drawing.Point(4, 4);
-            this.lbBoasVindas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbBoasVindas.Margin = new System.Windows.Forms.Padding(4);
             this.lbBoasVindas.Name = "lbBoasVindas";
             this.lbBoasVindas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbBoasVindas.Size = new System.Drawing.Size(1127, 64);
@@ -314,7 +315,7 @@
             this.btnNovaMeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovaMeta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovaMeta.Location = new System.Drawing.Point(820, 443);
-            this.btnNovaMeta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNovaMeta.Margin = new System.Windows.Forms.Padding(4);
             this.btnNovaMeta.Name = "btnNovaMeta";
             this.btnNovaMeta.Size = new System.Drawing.Size(315, 53);
             this.btnNovaMeta.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -332,7 +333,7 @@
             this.txtBusca.CueHint.CueHintText = "Buscar metas";
             this.txtBusca.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.txtBusca.Location = new System.Drawing.Point(820, 108);
-            this.txtBusca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBusca.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(315, 46);
             this.txtBusca.StateActive.Border.Rounding = 40F;
@@ -345,7 +346,7 @@
             // 
             this.calendario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.calendario.Location = new System.Drawing.Point(820, 180);
-            this.calendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calendario.Margin = new System.Windows.Forms.Padding(4);
             this.calendario.MaxSelectionCount = 1;
             this.calendario.Name = "calendario";
             this.calendario.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007White;
@@ -367,7 +368,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.painelMenu.Controls.Add(this.kryptonPanel1);
             this.painelMenu.Location = new System.Drawing.Point(41, 34);
-            this.painelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.painelMenu.Name = "painelMenu";
             this.painelMenu.Size = new System.Drawing.Size(427, 842);
             this.painelMenu.StateCommon.Color1 = System.Drawing.Color.WhiteSmoke;
@@ -375,6 +376,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.btnAlterarNome);
             this.kryptonPanel1.Controls.Add(this.btnSair);
             this.kryptonPanel1.Controls.Add(this.btnAlterarSenha);
             this.kryptonPanel1.Controls.Add(this.btnAlterarFoto);
@@ -384,7 +386,7 @@
             this.kryptonPanel1.Controls.Add(this.lbUser);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(427, 842);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.Transparent;
@@ -395,7 +397,7 @@
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Location = new System.Drawing.Point(281, 721);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(69, 59);
             this.btnSair.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -413,7 +415,7 @@
             this.btnAlterarSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterarSenha.Location = new System.Drawing.Point(85, 469);
-            this.btnAlterarSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarSenha.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(255, 53);
             this.btnAlterarSenha.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -430,7 +432,7 @@
             this.btnAlterarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterarFoto.Location = new System.Drawing.Point(85, 282);
-            this.btnAlterarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarFoto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterarFoto.Name = "btnAlterarFoto";
             this.btnAlterarFoto.Size = new System.Drawing.Size(255, 53);
             this.btnAlterarFoto.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -446,8 +448,8 @@
             // 
             this.btnExcluirConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExcluirConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirConta.Location = new System.Drawing.Point(85, 566);
-            this.btnExcluirConta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirConta.Location = new System.Drawing.Point(85, 660);
+            this.btnExcluirConta.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluirConta.Name = "btnExcluirConta";
             this.btnExcluirConta.Size = new System.Drawing.Size(255, 53);
             this.btnExcluirConta.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -464,7 +466,7 @@
             this.btnAlterarFundo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFundo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterarFundo.Location = new System.Drawing.Point(85, 377);
-            this.btnAlterarFundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarFundo.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterarFundo.Name = "btnAlterarFundo";
             this.btnAlterarFundo.Size = new System.Drawing.Size(255, 53);
             this.btnAlterarFundo.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -479,7 +481,7 @@
             // 
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
             this.imgUser.Location = new System.Drawing.Point(132, 41);
-            this.imgUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgUser.Margin = new System.Windows.Forms.Padding(4);
             this.imgUser.Name = "imgUser";
             this.imgUser.Size = new System.Drawing.Size(161, 148);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -493,7 +495,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUser.AutoSize = false;
             this.lbUser.Location = new System.Drawing.Point(0, 219);
-            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbUser.Margin = new System.Windows.Forms.Padding(4);
             this.lbUser.MaximumSize = new System.Drawing.Size(425, 44);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(425, 44);
@@ -502,6 +504,23 @@
             this.lbUser.TabIndex = 0;
             this.lbUser.Values.Text = "Batman";
             // 
+            // btnAlterarNome
+            // 
+            this.btnAlterarNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlterarNome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarNome.Location = new System.Drawing.Point(85, 566);
+            this.btnAlterarNome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlterarNome.Name = "btnAlterarNome";
+            this.btnAlterarNome.Size = new System.Drawing.Size(255, 53);
+            this.btnAlterarNome.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnAlterarNome.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnAlterarNome.StateCommon.Border.Rounding = 20F;
+            this.btnAlterarNome.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnAlterarNome.TabIndex = 13;
+            this.btnAlterarNome.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnAlterarNome.Values.Text = "Alterar Nome";
+            this.btnAlterarNome.Click += new System.EventHandler(this.btnAlterarNome_Click);
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -509,7 +528,7 @@
             this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.painelFundo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -564,5 +583,6 @@
         private System.Windows.Forms.Panel painalMetaVazia;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private Krypton.Toolkit.KryptonButton btnSair;
+        private Krypton.Toolkit.KryptonButton btnAlterarNome;
     }
 }

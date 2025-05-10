@@ -200,6 +200,14 @@ namespace ProjetoPI.Views
             }
         }
 
+        private void btnAlterarNome_Click(object sender, EventArgs e)
+        {
+            AlterarNome alterarNome = new AlterarNome();
+            alterarNome.ShowDialog();
+            lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
+
+        }
+
         private void btnExcluirConta_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
