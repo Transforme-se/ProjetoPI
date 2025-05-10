@@ -33,7 +33,14 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
             lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
+            AtualizarImagemUsuario();
             AtualizarMetas();
+        }
+
+        public void AtualizarImagemUsuario()
+        {
+            // Lógica para atualizar a imagem do usuário
+            ControllerAlterarFoto.AtualizarFoto(imgUser, SessaoUsuario.usuarioLogado.FotoPerfil);
         }
 
         public void AtualizarMetas()
@@ -179,6 +186,15 @@ namespace ProjetoPI.Views
         private void btnAlterarSenha_Click(object sender, EventArgs e)
         {
             new AlterarSenha().Show();
+        }
+
+        private void BtnAlterarFoto_Click(object sender, EventArgs e)
+        {
+            using (AlterarFotoPerfil alterarFoto = new AlterarFotoPerfil())
+            {
+                alterarFoto.ShowDialog(); // Isso faz a execução esperar até o form fechar
+                AtualizarImagemUsuario(); // Chama a atualização diretamente após o fechamento
+            }
         }
     }
 }

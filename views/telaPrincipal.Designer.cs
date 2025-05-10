@@ -420,6 +420,7 @@
             this.btnAlterarFoto.TabIndex = 10;
             this.btnAlterarFoto.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnAlterarFoto.Values.Text = "Alterar  Foto";
+            this.btnAlterarFoto.Click += new System.EventHandler(this.BtnAlterarFoto_Click);
             // 
             // btnExcluirConta
             // 
