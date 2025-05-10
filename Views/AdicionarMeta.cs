@@ -18,6 +18,7 @@ namespace ProjetoPI.Views
         private TelaPrincipal _telaPrincipal;
         private ControllerMetas _controllerMetas;
         private MensagemController _MensagemController;
+        private bool _backspacePressionado = false;
         public AdicionarMeta(TelaPrincipal telaPrincipal)
         {
             InitializeComponent();
@@ -36,6 +37,24 @@ namespace ProjetoPI.Views
             }
         }
 
+        private void txtDataConclusao_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Detecta se o backspace foi pressionado
+            if (e.KeyCode == Keys.Back)
+            {
+                _backspacePressionado = true;
+            }
+        }
+
+        private void txtDataConclusao_KeyUp(object sender, KeyEventArgs e)
+        {
+            // Reseta o estado do backspace após a tecla ser liberada
+            if (e.KeyCode == Keys.Back)
+            {
+                _backspacePressionado = false;
+            }
+        }
+
         private void FormatacaoDataMeta_TextChanged(object sender, EventArgs e)
         {
             // Salva a posição atual do cursor
@@ -48,18 +67,20 @@ namespace ProjetoPI.Views
             // Verifica se o texto foi alterado
             if (textoOriginal != textoFormatado)
             {
-                // Atualiza o texto no campo
                 txtDataConclusao.Text = textoFormatado;
 
                 // Ajusta a posição do cursor
-                if (posicaoCursor > 0 && textoOriginal.Length > textoFormatado.Length)
+                if (_backspacePressionado && posicaoCursor > 0)
                 {
-                    // Caso o backspace tenha sido pressionado, move o cursor para trás
-                    posicaoCursor--;
+                    // Verifica se o cursor está em uma posição válida antes de acessar o índice
+                    if (posicaoCursor > 1 && posicaoCursor <= textoFormatado.Length && textoFormatado[posicaoCursor - 1] == '/')
+                    {
+                        posicaoCursor--;
+                    }
+                    posicaoCursor--; // Move o cursor para trás
                 }
                 else
                 {
-                    // Caso contrário, ajusta a posição do cursor com base na diferença de tamanho
                     int diferenca = textoFormatado.Length - textoOriginal.Length;
                     posicaoCursor += diferenca;
                 }

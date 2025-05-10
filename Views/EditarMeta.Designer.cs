@@ -68,6 +68,8 @@
             this.txtConclusaoMeta.StateCommon.Border.Rounding = 20F;
             this.txtConclusaoMeta.TabIndex = 3;
             this.txtConclusaoMeta.TextChanged += new System.EventHandler(this.ConclusaoEditarMeta_TextChanged);
+            this.txtConclusaoMeta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConclusaoMeta_KeyDown);
+            this.txtConclusaoMeta.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConclusaoMeta_KeyUp);
             // 
             // btnSalvar
             // 

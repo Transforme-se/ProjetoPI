@@ -17,6 +17,7 @@ namespace ProjetoPI.Views
     {
         private Metas _meta;
         private ControllerMetas _controllerMetas;
+        private bool _backspacePressionado = false;
         public EditarMeta(ControllerMetas controllerMetas, Metas meta)
         {
             InitializeComponent();
@@ -38,16 +39,57 @@ namespace ProjetoPI.Views
             }
         }
 
+        private void txtConclusaoMeta_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Detecta se o backspace foi pressionado
+            if (e.KeyCode == Keys.Back)
+            {
+                _backspacePressionado = true;
+            }
+        }
+
+        private void txtConclusaoMeta_KeyUp(object sender, KeyEventArgs e)
+        {
+            // Reseta o estado do backspace após a tecla ser liberada
+            if (e.KeyCode == Keys.Back)
+            {
+                _backspacePressionado = false;
+            }
+        }
+
         private void ConclusaoEditarMeta_TextChanged(object sender, EventArgs e)
         {
-            // Usa o método FormatarTextoData do ControllerMetas
-            string textoFormatado = _controllerMetas.FormatarTextoData(txtConclusaoMeta.Text);
+            // Salva a posição atual do cursor
+            int posicaoCursor = txtConclusaoMeta.SelectionStart;
 
-            // Atualiza o texto no KryptonTextBox
-            txtConclusaoMeta.Text = textoFormatado;
+            // Remove qualquer caractere que não seja número
+            string textoOriginal = txtConclusaoMeta.Text;
+            string textoFormatado = _controllerMetas.FormatarTextoData(textoOriginal);
 
-            // Mantém o cursor no final do texto
-            txtConclusaoMeta.SelectionStart = txtConclusaoMeta.Text.Length;
+            // Verifica se o texto foi alterado
+            if (textoOriginal != textoFormatado)
+            {
+                txtConclusaoMeta.Text = textoFormatado;
+
+                // Ajusta a posição do cursor
+                if (_backspacePressionado && posicaoCursor > 0)
+                {
+                    // Verifica se o cursor está em uma posição válida antes de acessar o índice
+                    if (posicaoCursor > 1 && posicaoCursor <= textoFormatado.Length && textoFormatado[posicaoCursor - 1] == '/')
+                    {
+                        posicaoCursor--;
+                    }
+                    posicaoCursor--; // Move o cursor para trás
+                }
+                else
+                {
+                    int diferenca = textoFormatado.Length - textoOriginal.Length;
+                    posicaoCursor += diferenca;
+                }
+
+                // Garante que a posição do cursor esteja dentro dos limites do texto
+                txtConclusaoMeta.SelectionStart = Math.Max(0, Math.Min(posicaoCursor, textoFormatado.Length));
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

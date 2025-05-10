@@ -170,22 +170,23 @@ namespace ProjetoPI.Controllers
             // Remove qualquer caractere que não seja número
             string numeros = new string(texto.Where(char.IsDigit).ToArray());
 
-            if(string.IsNullOrEmpty(numeros))
+            if (string.IsNullOrEmpty(numeros))
             {
                 return string.Empty;
             }
 
             // Aplica a formatação "dd/MM/yyyy" conforme o comprimento do texto
-            if (numeros.Length >= 2)
+            if (numeros.Length > 2 && numeros.Length <= 4)
             {
                 numeros = numeros.Insert(2, "/");
             }
-            if (numeros.Length >= 5)
+            else if (numeros.Length > 4)
             {
-                numeros = numeros.Insert(5, "/");
+                numeros = numeros.Insert(2, "/").Insert(5, "/");
             }
 
-            if(numeros.Length > 10)
+            // Limita o texto ao formato "dd/MM/yyyy"
+            if (numeros.Length > 10)
             {
                 numeros = numeros.Substring(0, 10);
             }

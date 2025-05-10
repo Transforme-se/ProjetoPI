@@ -80,6 +80,8 @@
             this.txtDataConclusao.StateCommon.Border.Rounding = 20F;
             this.txtDataConclusao.TabIndex = 3;
             this.txtDataConclusao.TextChanged += new System.EventHandler(this.FormatacaoDataMeta_TextChanged);
+            this.txtDataConclusao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDataConclusao_KeyDown);
+            this.txtDataConclusao.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDataConclusao_KeyUp);
             // 
             // panel1
             // 
