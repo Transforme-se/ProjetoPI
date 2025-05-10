@@ -72,7 +72,8 @@ namespace ProjetoPI.Views
                 {
                     SessaoUsuario.Login(user);
                     MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    new TelaPrincipal(user).Show();
+                    this.DialogResult = DialogResult.OK; // Indica que o login foi bem-sucedido
+                    this.Close();
                 }
                 else
                 {
