@@ -6,6 +6,7 @@ using Krypton.Toolkit;
 using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
+using System.Threading.Tasks;
 
 namespace ProjetoPI.Views
 {
@@ -14,6 +15,7 @@ namespace ProjetoPI.Views
         private MetasRepository _metasRepository;
         private ControllerMetas _controllerMetas;
         private ControllerFiltro _controllerFiltro;
+        private MensagemController _mensagemController;
         private int idMetaSelecionada;
         public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
@@ -21,6 +23,7 @@ namespace ProjetoPI.Views
             DataBaseService dataBaseService = new DataBaseService();
             _metasRepository = new MetasRepository(dataBaseService);
             _controllerMetas = new ControllerMetas(dataBaseService);
+            _mensagemController = new MensagemController(dataBaseService);
             _controllerFiltro = new ControllerFiltro(_controllerMetas);
         }
 
@@ -30,12 +33,24 @@ namespace ProjetoPI.Views
             ArredondarPainel.Arredondar(painelMenu, 30);
             ArredondarPainel.Arredondar(painelMetas, 30);
             lbUser.Text = SessaoUsuario.usuarioLogado.Nome;
+            AtualizarImagemUsuario();
             AtualizarMetas();
+        }
+
+        public void AtualizarImagemUsuario()
+        {
+            // Lógica para atualizar a imagem do usuário
+            ControllerAlterarFoto.AtualizarFoto(imgUser, SessaoUsuario.usuarioLogado.FotoPerfil);
         }
 
         public void AtualizarMetas()
         {
-            tabela.DataSource = _controllerMetas.ObterTodasMetas();
+            List<Metas> metas = _controllerMetas.ObterTodasMetas();
+            tabela.DataSource = metas;
+            if (metas == null || metas.Count == 0)
+                painalMetaVazia.Visible = true;
+            else
+                painalMetaVazia.Visible = false;
         }
 
         private void BtnNovaMeta_Click(object sender, EventArgs e)
@@ -70,7 +85,7 @@ namespace ProjetoPI.Views
         }
 
         //Editar status da meta
-        private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica se a célula clicada é da coluna "status"
             if (tabela.Columns[e.ColumnIndex].Name == "status" && e.RowIndex >= 0)
@@ -89,8 +104,11 @@ namespace ProjetoPI.Views
 
                 if (sucesso)
                 {
-                    MessageBox.Show("Status atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AtualizarMetas(); // Atualiza a tabela
+
+                    await _mensagemController.MostrarMensagem(0);
+                    AtualizarMetas();
+
+                    await Task.Delay(900);
                 }
                 else
                 {
@@ -166,6 +184,20 @@ namespace ProjetoPI.Views
         private void Calendario_MouseUp(object sender, MouseEventArgs e)
         {
             ignoreNextChange = false;
+        }
+
+        private void btnAlterarSenha_Click(object sender, EventArgs e)
+        {
+            new AlterarSenha().Show();
+        }
+
+        private void BtnAlterarFoto_Click(object sender, EventArgs e)
+        {
+            using (AlterarFotoPerfil alterarFoto = new AlterarFotoPerfil())
+            {
+                alterarFoto.ShowDialog(); // Isso faz a execução esperar até o form fechar
+                AtualizarImagemUsuario(); // Chama a atualização diretamente após o fechamento
+            }
         }
     }
 }
