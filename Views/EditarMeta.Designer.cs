@@ -41,32 +41,32 @@
             // 
             // txtTituloMeta
             // 
-            this.txtTituloMeta.Location = new System.Drawing.Point(2, 57);
-            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTituloMeta.Location = new System.Drawing.Point(72, 54);
+            this.txtTituloMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTituloMeta.Name = "txtTituloMeta";
-            this.txtTituloMeta.Size = new System.Drawing.Size(287, 35);
+            this.txtTituloMeta.Size = new System.Drawing.Size(208, 35);
             this.txtTituloMeta.StateCommon.Border.Rounding = 20F;
-            this.txtTituloMeta.TabIndex = 1;
+            this.txtTituloMeta.TabIndex = 0;
             this.txtTituloMeta.TextChanged += new System.EventHandler(this.txtTituloMeta_TextChanged);
             // 
             // txtDescricaoMeta
             // 
-            this.txtDescricaoMeta.Location = new System.Drawing.Point(3, 120);
-            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescricaoMeta.Location = new System.Drawing.Point(72, 114);
+            this.txtDescricaoMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescricaoMeta.Multiline = true;
             this.txtDescricaoMeta.Name = "txtDescricaoMeta";
-            this.txtDescricaoMeta.Size = new System.Drawing.Size(287, 37);
+            this.txtDescricaoMeta.Size = new System.Drawing.Size(207, 37);
             this.txtDescricaoMeta.StateCommon.Border.Rounding = 20F;
-            this.txtDescricaoMeta.TabIndex = 2;
+            this.txtDescricaoMeta.TabIndex = 1;
             // 
             // txtConclusaoMeta
             // 
-            this.txtConclusaoMeta.Location = new System.Drawing.Point(3, 185);
-            this.txtConclusaoMeta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConclusaoMeta.Location = new System.Drawing.Point(72, 176);
+            this.txtConclusaoMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConclusaoMeta.Name = "txtConclusaoMeta";
-            this.txtConclusaoMeta.Size = new System.Drawing.Size(287, 35);
+            this.txtConclusaoMeta.Size = new System.Drawing.Size(208, 35);
             this.txtConclusaoMeta.StateCommon.Border.Rounding = 20F;
-            this.txtConclusaoMeta.TabIndex = 3;
+            this.txtConclusaoMeta.TabIndex = 2;
             this.txtConclusaoMeta.TextChanged += new System.EventHandler(this.ConclusaoEditarMeta_TextChanged);
             // 
             // btnSalvar
@@ -83,34 +83,12 @@
             // 
             // brnExcluirMeta
             // 
-            this.brnExcluirMeta.Location = new System.Drawing.Point(2, 279);
-            this.brnExcluirMeta.Margin = new System.Windows.Forms.Padding(2);
+            this.brnExcluirMeta.Location = new System.Drawing.Point(72, 261);
+            this.brnExcluirMeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.brnExcluirMeta.Name = "brnExcluirMeta";
-            this.brnExcluirMeta.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
-            this.brnExcluirMeta.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(11)))), ((int)(((byte)(12)))));
-            this.brnExcluirMeta.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.brnExcluirMeta.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.brnExcluirMeta.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnExcluirMeta.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.brnExcluirMeta.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
-            this.brnExcluirMeta.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.brnExcluirMeta.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.brnExcluirMeta.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.Size = new System.Drawing.Size(121, 38);
-            this.brnExcluirMeta.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
-            this.brnExcluirMeta.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(11)))), ((int)(((byte)(12)))));
-            this.brnExcluirMeta.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.brnExcluirMeta.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
+            this.brnExcluirMeta.Size = new System.Drawing.Size(91, 32);
             this.brnExcluirMeta.StateCommon.Border.Rounding = 20F;
-            this.brnExcluirMeta.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.brnExcluirMeta.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnExcluirMeta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.brnExcluirMeta.TabIndex = 5;
-            this.brnExcluirMeta.TabStop = false;
+            this.brnExcluirMeta.TabIndex = 4;
             this.brnExcluirMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.brnExcluirMeta.Values.Text = "Excluir Meta";
             this.brnExcluirMeta.Click += new System.EventHandler(this.brnExcluirMeta_Click);
@@ -143,17 +121,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(361, 387);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(349, 333);
+            this.Controls.Add(this.brnExcluirMeta);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txtConclusaoMeta);
+            this.Controls.Add(this.txtDescricaoMeta);
+            this.Controls.Add(this.txtTituloMeta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditarMeta";
-            this.Padding = new System.Windows.Forms.Padding(35);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.EditarMeta_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
