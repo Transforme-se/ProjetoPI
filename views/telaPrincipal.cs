@@ -7,6 +7,7 @@ using ProjetoPI.Controllers;
 using ProjetoPI.Models.Metas;
 using ProjetoPI.Services;
 using System.Threading.Tasks;
+using ProjetoPI.Models.Usuarios;
 
 namespace ProjetoPI.Views
 {
@@ -16,6 +17,7 @@ namespace ProjetoPI.Views
         private ControllerMetas _controllerMetas;
         private ControllerFiltro _controllerFiltro;
         private MensagemController _mensagemController;
+        private ExcluirContaController _excluirContaController;
         private int idMetaSelecionada;
         public TelaPrincipal(Models.Usuarios.Usuarios user)
         {
@@ -25,6 +27,7 @@ namespace ProjetoPI.Views
             _controllerMetas = new ControllerMetas(dataBaseService);
             _mensagemController = new MensagemController(dataBaseService);
             _controllerFiltro = new ControllerFiltro(_controllerMetas);
+            _excluirContaController = new ExcluirContaController(dataBaseService);
         }
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
@@ -199,6 +202,13 @@ namespace ProjetoPI.Views
 
         private void btnExcluirConta_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.Yes)
+            {
+                _excluirContaController.ExcluirConta(SessaoUsuario.usuarioLogado.Id);
+                MessageBox.Show("Conta excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Restart();
+            }
 
         }
 
@@ -207,7 +217,7 @@ namespace ProjetoPI.Views
             DialogResult resultado = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
-                this.Close(); // Esconde a tela principal
+                this.Close();
                 Application.Restart();
             }
 
@@ -216,7 +226,7 @@ namespace ProjetoPI.Views
         {
             base.OnFormClosing(e);
             
-            Application.Exit(); // Encerra a aplicação completamente
+            Application.Exit();
         }
     }
 }
