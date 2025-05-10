@@ -32,7 +32,6 @@
             this.txtTituloMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtDescricaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtConclusaoMeta = new Krypton.Toolkit.KryptonTextBox();
-            this.btnSalvar = new Krypton.Toolkit.KryptonButton();
             this.brnExcluirMeta = new Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
@@ -73,12 +72,12 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(168, 277);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalvar.Location = new System.Drawing.Point(186, 261);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(121, 38);
+            this.btnSalvar.Size = new System.Drawing.Size(93, 32);
             this.btnSalvar.StateCommon.Border.Rounding = 20F;
-            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSalvar.Values.Text = "Salvar";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -164,9 +163,9 @@
         private Krypton.Toolkit.KryptonTextBox txtTituloMeta;
         private Krypton.Toolkit.KryptonTextBox txtDescricaoMeta;
         private Krypton.Toolkit.KryptonTextBox txtConclusaoMeta;
-        private Krypton.Toolkit.KryptonButton btnSalvar;
         private Krypton.Toolkit.KryptonButton brnExcluirMeta;
         private System.Windows.Forms.Panel panel1;
         private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
+        private Krypton.Toolkit.KryptonButton btnSalvar;
     }
 }
