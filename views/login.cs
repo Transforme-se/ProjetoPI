@@ -39,7 +39,6 @@ namespace ProjetoPI.Views
                 using (var dbService = new DataBaseService())
                 {
                     dbService.OpenConnection();
-                    MessageBox.Show("Conexão com o banco de dados bem-sucedida!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
