@@ -196,5 +196,27 @@ namespace ProjetoPI.Views
                 AtualizarImagemUsuario(); // Chama a atualização diretamente após o fechamento
             }
         }
+
+        private void btnExcluirConta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close(); // Esconde a tela principal
+                Application.Restart();
+            }
+
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            
+            Application.Exit(); // Encerra a aplicação completamente
+        }
     }
 }
