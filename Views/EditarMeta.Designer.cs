@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarMeta));
             this.txtTituloMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtDescricaoMeta = new Krypton.Toolkit.KryptonTextBox();
             this.txtConclusaoMeta = new Krypton.Toolkit.KryptonTextBox();
@@ -135,8 +134,8 @@
             // 
             this.lbAlterarSenha.Location = new System.Drawing.Point(89, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(113, 26);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(99, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAlterarSenha.TabIndex = 5;
             this.lbAlterarSenha.Values.Text = "Editar Meta";
             // 
@@ -146,12 +145,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(361, 387);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditarMeta";
             this.Padding = new System.Windows.Forms.Padding(35);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editar Meta";
             this.Load += new System.EventHandler(this.EditarMeta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

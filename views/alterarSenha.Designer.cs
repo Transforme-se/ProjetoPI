@@ -141,8 +141,8 @@
             // 
             this.lbAlterarSenha.Location = new System.Drawing.Point(79, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(132, 26);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(114, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAlterarSenha.TabIndex = 0;
             this.lbAlterarSenha.Values.Text = "Alterar Senha";
             // 

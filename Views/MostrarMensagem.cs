@@ -15,14 +15,7 @@ namespace ProjetoPI.Views
         public MostrarMensagem(string mensagem)
         {
             InitializeComponent();
-            lblMensagem.Text = mensagem;
+            txtMensagem.Text = mensagem;
         }
-
-        private void lblMensagem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
