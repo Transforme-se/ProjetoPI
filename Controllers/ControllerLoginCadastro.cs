@@ -27,9 +27,28 @@ namespace ProjetoPI.Controllers
             var usuario = autenticacaoService.Autenticacao(login, senha);
             if (usuario == null)
             {
-                MessageBox.Show("Login ou senha inválidos");
+                if (VerificaLogin(login) == true)
+                {
+                    MessageBox.Show("Usuário ou Senha inválida");
+                }
+                else
+                {
+                    MessageBox.Show("Login não encontrado");
+                }
             }
             return autenticacaoService.Autenticacao(login, senha);
+        }
+
+        public bool VerificaLogin(string login)
+        {
+            UsuariosRepository usuariosRepository = new UsuariosRepository(new DataBaseService());
+            if (usuariosRepository.VerificaLogin(login))
+            {
+
+                return true;
+            }
+
+            return false;
         }
 
         public bool Cadastrar(string nome, string login, string senha, string senhaConf)

@@ -18,6 +18,28 @@ namespace ProjetoPI.Models.Usuarios
             _databaseService = databaseService;
         }
 
+        public bool VerificaLogin(string login)
+        {
+            try
+            {
+                string query = "SELECT COUNT(*) FROM usuarios WHERE login = @login";
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+                    new MySqlParameter("@login", login)
+                };
+                int count = Convert.ToInt32(_databaseService.ExecuteScalar(query, parameters));
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar login: " + ex.Message);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+        }
+
         public bool RegistrarUsuarios(Usuarios usuario, string senha)
         {
             try
