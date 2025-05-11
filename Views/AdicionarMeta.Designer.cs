@@ -100,8 +100,8 @@
             // 
             this.lbAlterarSenha.Location = new System.Drawing.Point(75, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(143, 26);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(125, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAlterarSenha.TabIndex = 0;
             this.lbAlterarSenha.Values.Text = "Adicionar Meta";
             // 
@@ -111,13 +111,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(361, 387);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdicionarMeta";
             this.Padding = new System.Windows.Forms.Padding(35);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdicionarMeta";
+            this.Text = "Adicionar Meta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

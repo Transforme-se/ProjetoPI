@@ -50,5 +50,10 @@ namespace ProjetoPI.Views
         {
             this.Close();
         }
+
+        private void lbAlterarNome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

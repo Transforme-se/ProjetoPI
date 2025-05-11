@@ -76,8 +76,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAlterarSenha.Location = new System.Drawing.Point(262, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(192, 26);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(163, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAlterarSenha.TabIndex = 7;
             this.lbAlterarSenha.Values.Text = "Alterar Foto de Perfil";
             // 
@@ -257,11 +257,12 @@
             this.Controls.Add(this.painelAvatares);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlterarFotoPerfil";
             this.Padding = new System.Windows.Forms.Padding(35);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alterar Foto de Perfil";
+            this.Text = "Editar Foto de Perfil";
             this.Load += new System.EventHandler(this.AlterarFotoPerfil_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();

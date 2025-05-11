@@ -46,10 +46,9 @@
             this.txtNovoNome.CueHint.CueHintText = "Insira o novo nome";
             this.txtNovoNome.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.txtNovoNome.CueHint.TextV = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.txtNovoNome.Location = new System.Drawing.Point(4, 199);
-            this.txtNovoNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNovoNome.Location = new System.Drawing.Point(3, 130);
             this.txtNovoNome.Name = "txtNovoNome";
-            this.txtNovoNome.Size = new System.Drawing.Size(379, 46);
+            this.txtNovoNome.Size = new System.Drawing.Size(285, 42);
             this.txtNovoNome.StateActive.Border.Rounding = 40F;
             this.txtNovoNome.StateCommon.Border.Rounding = 20F;
             this.txtNovoNome.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
@@ -59,10 +58,9 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(222, 343);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalvar.Location = new System.Drawing.Point(167, 260);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(161, 47);
+            this.btnSalvar.Size = new System.Drawing.Size(121, 38);
             this.btnSalvar.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnSalvar.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnSalvar.StateCommon.Border.Rounding = 40F;
@@ -75,10 +73,9 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(3, 343);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(3, 260);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(161, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(121, 38);
             this.btnCancelar.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnCancelar.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCancelar.StateCommon.Border.Rounding = 40F;
@@ -96,45 +93,43 @@
             this.panelNome.Controls.Add(this.txtNovoNome);
             this.panelNome.Controls.Add(this.btnSalvar);
             this.panelNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNome.Location = new System.Drawing.Point(47, 43);
-            this.panelNome.Margin = new System.Windows.Forms.Padding(4);
+            this.panelNome.Location = new System.Drawing.Point(35, 35);
             this.panelNome.Name = "panelNome";
-            this.panelNome.Size = new System.Drawing.Size(387, 390);
+            this.panelNome.Size = new System.Drawing.Size(291, 317);
             this.panelNome.TabIndex = 0;
             // 
             // lblNomeAtual
             // 
-            this.lblNomeAtual.Location = new System.Drawing.Point(121, 113);
-            this.lblNomeAtual.Margin = new System.Windows.Forms.Padding(4);
+            this.lblNomeAtual.Location = new System.Drawing.Point(91, 67);
             this.lblNomeAtual.Name = "lblNomeAtual";
-            this.lblNomeAtual.Size = new System.Drawing.Size(142, 32);
-            this.lblNomeAtual.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAtual.Size = new System.Drawing.Size(102, 28);
+            this.lblNomeAtual.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeAtual.TabIndex = 6;
             this.lblNomeAtual.Values.Text = "Nome Atual";
             // 
             // lbAlterarNome
             // 
-            this.lbAlterarNome.Location = new System.Drawing.Point(105, 4);
-            this.lbAlterarNome.Margin = new System.Windows.Forms.Padding(4);
+            this.lbAlterarNome.Location = new System.Drawing.Point(91, 3);
             this.lbAlterarNome.Name = "lbAlterarNome";
-            this.lbAlterarNome.Size = new System.Drawing.Size(158, 32);
-            this.lbAlterarNome.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarNome.Size = new System.Drawing.Size(112, 28);
+            this.lbAlterarNome.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic);
             this.lbAlterarNome.TabIndex = 0;
             this.lbAlterarNome.Values.Text = "Alterar Nome";
+            this.lbAlterarNome.Click += new System.EventHandler(this.lbAlterarNome_Click);
             // 
             // AlterarNome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(481, 476);
+            this.ClientSize = new System.Drawing.Size(361, 387);
             this.ControlBox = false;
             this.Controls.Add(this.panelNome);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlterarNome";
-            this.Padding = new System.Windows.Forms.Padding(47, 43, 47, 43);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alterar Senha";
+            this.Padding = new System.Windows.Forms.Padding(35, 35, 35, 35);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Editar Nome";
             this.Load += new System.EventHandler(this.AlterarNome_Load);
             this.panelNome.ResumeLayout(false);
             this.panelNome.PerformLayout();
