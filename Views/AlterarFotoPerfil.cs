@@ -63,41 +63,26 @@ namespace ProjetoPI.Views
 
         private void SelecionarAvatar(int avatarAtivo)
         {
+            painelAvatar0.BackColor = Color.Transparent;
+            painelAvatar1.BackColor = Color.Transparent;
+            painelAvatar2.BackColor = Color.Transparent;
+            painelAvatar3.BackColor = Color.Transparent;
+            painelAvatar4.BackColor = Color.Transparent;
             switch (avatarAtivo)
             {
                 case 0:
                     painelAvatar0.BackColor = Color.White;
-                    painelAvatar1.BackColor = Color.Transparent;
-                    painelAvatar2.BackColor = Color.Transparent;
-                    painelAvatar3.BackColor = Color.Transparent;
-                    painelAvatar4.BackColor = Color.Transparent;
                     break;
                 case 1:
-                    painelAvatar0.BackColor = Color.Transparent;
                     painelAvatar1.BackColor = Color.White;
-                    painelAvatar2.BackColor = Color.Transparent;
-                    painelAvatar3.BackColor = Color.Transparent;
-                    painelAvatar4.BackColor = Color.Transparent;
                     break;
                 case 2:
-                    painelAvatar0.BackColor = Color.Transparent;
                     painelAvatar2.BackColor = Color.White;
-                    painelAvatar1.BackColor = Color.Transparent;
-                    painelAvatar3.BackColor = Color.Transparent;
-                    painelAvatar4.BackColor = Color.Transparent;
                     break;
                 case 3:
-                    painelAvatar0.BackColor = Color.Transparent;
-                    painelAvatar1.BackColor = Color.Transparent;
-                    painelAvatar2.BackColor = Color.Transparent;
                     painelAvatar3.BackColor = Color.White;
-                    painelAvatar4.BackColor = Color.Transparent;
                     break;
                 case 4:
-                    painelAvatar0.BackColor = Color.Transparent;
-                    painelAvatar1.BackColor = Color.Transparent;
-                    painelAvatar2.BackColor = Color.Transparent;
-                    painelAvatar3.BackColor = Color.Transparent;
                     painelAvatar4.BackColor = Color.White;
                     break;
             }
