@@ -43,7 +43,8 @@ namespace ProjetoPI.Views
         public void AtualizarImagemUsuario()
         {
             // Lógica para atualizar a imagem do usuário
-            ControllerAlterarFoto.AtualizarFoto(imgUser, SessaoUsuario.usuarioLogado.FotoPerfil);
+            ControllerAlterarFoto.AtualizarPerfil(imgUser, SessaoUsuario.usuarioLogado.FotoPerfil);
+            ControllerAlterarFoto.AtualizarPapelDeParede(painelFundo, SessaoUsuario.usuarioLogado.FotoFundo);
         }
 
         public void AtualizarMetas()
@@ -235,6 +236,15 @@ namespace ProjetoPI.Views
             base.OnFormClosing(e);
             
             Application.Exit();
+        }
+
+        private void BtnAlterarFundo_Click(object sender, EventArgs e)
+        {
+            using (AlterarFotoFundo alterarFundo = new AlterarFotoFundo())
+            {
+                alterarFundo.ShowDialog(); // Isso faz a execução esperar até o form fechar
+                AtualizarImagemUsuario(); // Chama a atualização diretamente após o fechamento
+            }
         }
     }
 }
