@@ -70,7 +70,7 @@ namespace ProjetoPI.Views
                 if (user != null)
                 {
                     SessaoUsuario.Login(user);
-                    MessageBox.Show($"Bem-vindo, {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Bem-vindo(a), {user.Nome}!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK; // Indica que o login foi bem-sucedido
                     this.Close();
                 }
