@@ -14,7 +14,7 @@ Sistema desenvolvido para o programa **Transforme-se da Serasa Experian**, permi
 ✅ **Autenticação**  
 - Cadastro e login de usuários
 - Regras para login com apenas letras
-- Regas para senha com letras maiúsculas, minúsculas, caracteres especiais e números
+- Regas para senha criptografada com letras maiúsculas, minúsculas, caracteres especiais e números
 - Autenticação de usuário para exibir suas respectivas metas!  
 - Exclusão de conta  
 
