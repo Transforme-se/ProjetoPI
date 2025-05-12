@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoPI
+namespace ProjetoPI.Views
 {
-    public partial class Form1: Form
+    public partial class TelaInicio: Form
     {
-        public Form1()
+        public TelaInicio()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
