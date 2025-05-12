@@ -244,12 +244,14 @@
   <ItemGroup>
     <!-- Arquivos diversos -->
     <None Include="App.config" />
+    <None Include="Assets\docs\documentacao-MyMetas.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoPI.Models.Metas.Metas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
     <None Include="Resources\iconUsuarioLogin.png" />
     <None Include="Resources\iconePerfil0.png" />
     <None Include="Resources\iconePerfil1.png" />
