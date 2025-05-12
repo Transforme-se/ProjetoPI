@@ -78,7 +78,8 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(167, 279);
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Location = new System.Drawing.Point(170, 279);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(121, 38);
             this.btnSalvar.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -102,7 +103,7 @@
             this.txtSenhaAtual.Location = new System.Drawing.Point(2, 57);
             this.txtSenhaAtual.Name = "txtSenhaAtual";
             this.txtSenhaAtual.PasswordChar = '*';
-            this.txtSenhaAtual.Size = new System.Drawing.Size(285, 42);
+            this.txtSenhaAtual.Size = new System.Drawing.Size(286, 42);
             this.txtSenhaAtual.StateActive.Border.Rounding = 40F;
             this.txtSenhaAtual.StateCommon.Border.Rounding = 20F;
             this.txtSenhaAtual.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
@@ -111,7 +112,8 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(3, 279);
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Location = new System.Drawing.Point(0, 279);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 38);
             this.btnCancelar.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -139,10 +141,13 @@
             // 
             // lbAlterarSenha
             // 
-            this.lbAlterarSenha.Location = new System.Drawing.Point(79, 3);
+            this.lbAlterarSenha.AutoSize = false;
+            this.lbAlterarSenha.Location = new System.Drawing.Point(3, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(114, 28);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(285, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarSenha.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbAlterarSenha.TabIndex = 0;
             this.lbAlterarSenha.Values.Text = "Alterar Senha";
             // 
@@ -154,6 +159,7 @@
             this.ClientSize = new System.Drawing.Size(361, 387);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "AlterarSenha";
             this.Padding = new System.Windows.Forms.Padding(35);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
