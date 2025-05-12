@@ -26,7 +26,6 @@ namespace ProjetoPI.Controllers
 
             if (metas == null)
             {
-                MessageBox.Show("AAAAAAAA 2");
                 return null;
             }
             return metas;

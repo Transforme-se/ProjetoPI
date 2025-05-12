@@ -53,7 +53,6 @@ namespace ProjetoPI.Controllers
 
         public bool Cadastrar(string nome, string login, string senha, string senhaConf)
         {
-            MessageBox.Show("Inicio de Controller Cadastro");
             ValidarCadastro valida = new ValidarCadastro();
             nome = nome.Trim();
             if (!valida.ValidarNome(nome))

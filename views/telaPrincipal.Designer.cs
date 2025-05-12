@@ -31,7 +31,7 @@ namespace ProjetoPI.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
@@ -274,9 +274,9 @@ namespace ProjetoPI.Views
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.status.DataPropertyName = "status";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = false;
-            this.status.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = false;
+            this.status.DefaultCellStyle = dataGridViewCellStyle1;
             this.status.FalseValue = null;
             this.status.HeaderText = "status";
             this.status.IndeterminateValue = null;
@@ -420,7 +420,7 @@ namespace ProjetoPI.Views
             // 
             this.btnAlterarSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(64, 381);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(64, 457);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarSenha.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -468,7 +468,7 @@ namespace ProjetoPI.Views
             // 
             this.btnAlterarFundo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFundo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFundo.Location = new System.Drawing.Point(64, 457);
+            this.btnAlterarFundo.Location = new System.Drawing.Point(64, 381);
             this.btnAlterarFundo.Name = "btnAlterarFundo";
             this.btnAlterarFundo.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarFundo.StateCommon.Back.Color1 = System.Drawing.Color.White;

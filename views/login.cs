@@ -105,10 +105,6 @@ namespace ProjetoPI.Views
             {
                 MessageBox.Show($"Erro ao cadastrar: {ex.Message}","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                Console.WriteLine("Finalizando cadastro de usuário...");
-            }
         }
 
         private void LimparCamposCadastro()
