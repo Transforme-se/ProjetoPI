@@ -58,6 +58,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Location = new System.Drawing.Point(167, 260);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(121, 38);
@@ -73,6 +74,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(3, 260);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 38);
@@ -100,19 +102,24 @@
             // 
             // lblNomeAtual
             // 
-            this.lblNomeAtual.Location = new System.Drawing.Point(91, 67);
+            this.lblNomeAtual.AutoSize = false;
+            this.lblNomeAtual.Location = new System.Drawing.Point(3, 67);
             this.lblNomeAtual.Name = "lblNomeAtual";
-            this.lblNomeAtual.Size = new System.Drawing.Size(102, 28);
+            this.lblNomeAtual.Size = new System.Drawing.Size(285, 28);
             this.lblNomeAtual.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAtual.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lblNomeAtual.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lblNomeAtual.TabIndex = 6;
             this.lblNomeAtual.Values.Text = "Nome Atual";
             // 
             // lbAlterarNome
             // 
-            this.lbAlterarNome.Location = new System.Drawing.Point(91, 3);
+            this.lbAlterarNome.AutoSize = false;
+            this.lbAlterarNome.Location = new System.Drawing.Point(3, 3);
             this.lbAlterarNome.Name = "lbAlterarNome";
-            this.lbAlterarNome.Size = new System.Drawing.Size(112, 28);
-            this.lbAlterarNome.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic);
+            this.lbAlterarNome.Size = new System.Drawing.Size(285, 28);
+            this.lbAlterarNome.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarNome.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbAlterarNome.TabIndex = 0;
             this.lbAlterarNome.Values.Text = "Alterar Nome";
             this.lbAlterarNome.Click += new System.EventHandler(this.lbAlterarNome_Click);
@@ -126,9 +133,11 @@
             this.ControlBox = false;
             this.Controls.Add(this.panelNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AlterarNome";
-            this.Padding = new System.Windows.Forms.Padding(35, 35, 35, 35);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Padding = new System.Windows.Forms.Padding(35);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Nome";
             this.Load += new System.EventHandler(this.AlterarNome_Load);
             this.panelNome.ResumeLayout(false);

@@ -34,6 +34,7 @@
             this.btnSalvarMeta = new Krypton.Toolkit.KryptonButton();
             this.txtDataConclusao = new Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new Krypton.Toolkit.KryptonButton();
             this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,8 @@
             // 
             // btnSalvarMeta
             // 
-            this.btnSalvarMeta.Location = new System.Drawing.Point(168, 277);
+            this.btnSalvarMeta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarMeta.Location = new System.Drawing.Point(170, 279);
             this.btnSalvarMeta.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvarMeta.Name = "btnSalvarMeta";
             this.btnSalvarMeta.Size = new System.Drawing.Size(121, 38);
@@ -85,6 +87,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.lbAlterarSenha);
             this.panel1.Controls.Add(this.txtTituloMeta);
             this.panel1.Controls.Add(this.btnSalvarMeta);
@@ -96,12 +99,31 @@
             this.panel1.Size = new System.Drawing.Size(291, 317);
             this.panel1.TabIndex = 5;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Location = new System.Drawing.Point(0, 279);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(121, 38);
+            this.btnCancelar.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnCancelar.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnCancelar.StateCommon.Border.Rounding = 40F;
+            this.btnCancelar.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Values.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
             // lbAlterarSenha
             // 
-            this.lbAlterarSenha.Location = new System.Drawing.Point(75, 3);
+            this.lbAlterarSenha.AutoSize = false;
+            this.lbAlterarSenha.Location = new System.Drawing.Point(3, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(125, 28);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(285, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarSenha.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbAlterarSenha.TabIndex = 0;
             this.lbAlterarSenha.Values.Text = "Adicionar Meta";
             // 
@@ -138,5 +160,6 @@
         private Krypton.Toolkit.KryptonTextBox txtDataConclusao;
         private System.Windows.Forms.Panel panel1;
         private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
+        private Krypton.Toolkit.KryptonButton btnCancelar;
     }
 }

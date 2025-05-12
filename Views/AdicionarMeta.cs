@@ -119,5 +119,10 @@ namespace ProjetoPI.Views
                 await Task.Delay(900);
             }
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

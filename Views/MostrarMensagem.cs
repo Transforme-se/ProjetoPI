@@ -15,7 +15,7 @@ namespace ProjetoPI.Views
         public MostrarMensagem(string mensagem)
         {
             InitializeComponent();
-            txtMensagem.Text = mensagem;
+            lbMensagem.Text = mensagem;
         }
     }
 }

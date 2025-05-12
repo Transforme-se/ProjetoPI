@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelFundo = new System.Windows.Forms.Panel();
-            this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
+            this.lbAlterarFundo = new Krypton.Toolkit.KryptonLabel();
             this.panelFotos = new System.Windows.Forms.Panel();
             this.fundo3 = new System.Windows.Forms.PictureBox();
             this.fundo5 = new System.Windows.Forms.PictureBox();
@@ -57,7 +57,7 @@
             // 
             // panelFundo
             // 
-            this.panelFundo.Controls.Add(this.lbAlterarSenha);
+            this.panelFundo.Controls.Add(this.lbAlterarFundo);
             this.panelFundo.Controls.Add(this.panelFotos);
             this.panelFundo.Controls.Add(this.btnCancelar);
             this.panelFundo.Controls.Add(this.btnSalvar);
@@ -67,16 +67,19 @@
             this.panelFundo.Size = new System.Drawing.Size(730, 380);
             this.panelFundo.TabIndex = 0;
             // 
-            // lbAlterarSenha
+            // lbAlterarFundo
             // 
-            this.lbAlterarSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbAlterarFundo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbAlterarSenha.Location = new System.Drawing.Point(255, 3);
-            this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(221, 26);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAlterarSenha.TabIndex = 15;
-            this.lbAlterarSenha.Values.Text = "Alterar Papel de Parede";
+            this.lbAlterarFundo.AutoSize = false;
+            this.lbAlterarFundo.Location = new System.Drawing.Point(39, 3);
+            this.lbAlterarFundo.Name = "lbAlterarFundo";
+            this.lbAlterarFundo.Size = new System.Drawing.Size(653, 26);
+            this.lbAlterarFundo.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarFundo.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarFundo.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarFundo.TabIndex = 15;
+            this.lbAlterarFundo.Values.Text = "Alterar Papel de Parede";
             // 
             // panelFotos
             // 
@@ -260,7 +263,6 @@
             this.Text = "Alterar Papel de Parede";
             this.Load += new System.EventHandler(this.AlterarFotoFundo_Load);
             this.panelFundo.ResumeLayout(false);
-            this.panelFundo.PerformLayout();
             this.panelFotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fundo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundo5)).EndInit();
@@ -290,6 +292,6 @@
         private System.Windows.Forms.Panel panelFoto3;
         private System.Windows.Forms.PictureBox fundo4;
         private System.Windows.Forms.Panel panelFoto4;
-        private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
+        private Krypton.Toolkit.KryptonLabel lbAlterarFundo;
     }
 }

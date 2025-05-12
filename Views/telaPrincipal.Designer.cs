@@ -31,7 +31,7 @@ namespace ProjetoPI.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.painelFundo = new Krypton.Toolkit.KryptonPanel();
             this.painelMetas = new Krypton.Toolkit.KryptonPanel();
@@ -104,7 +104,7 @@ namespace ProjetoPI.Views
             this.painelMetas.Padding = new System.Windows.Forms.Padding(50);
             this.painelMetas.Size = new System.Drawing.Size(952, 684);
             this.painelMetas.StateCommon.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.painelMetas.TabIndex = 1;
+            this.painelMetas.TabIndex = 0;
             // 
             // painalMetaVazia
             // 
@@ -116,7 +116,7 @@ namespace ProjetoPI.Views
             this.painalMetaVazia.Location = new System.Drawing.Point(50, 162);
             this.painalMetaVazia.Name = "painalMetaVazia";
             this.painalMetaVazia.Size = new System.Drawing.Size(587, 173);
-            this.painalMetaVazia.TabIndex = 19;
+            this.painalMetaVazia.TabIndex = 0;
             this.painalMetaVazia.Visible = false;
             // 
             // kryptonLabel1
@@ -133,7 +133,7 @@ namespace ProjetoPI.Views
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 18.75F, System.Drawing.FontStyle.Italic);
             this.kryptonLabel1.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonLabel1.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonLabel1.TabIndex = 19;
+            this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Nenhuma meta encontrada";
             // 
             // panel1
@@ -163,7 +163,7 @@ namespace ProjetoPI.Views
             this.btnLimparFiltro.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnLimparFiltro.StateCommon.Border.Rounding = 10F;
             this.btnLimparFiltro.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnLimparFiltro.TabIndex = 18;
+            this.btnLimparFiltro.TabIndex = 0;
             this.btnLimparFiltro.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnLimparFiltro.Values.Text = "Limpar Filtro";
             this.btnLimparFiltro.Visible = false;
@@ -180,7 +180,7 @@ namespace ProjetoPI.Views
             this.btnEditarMeta.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnEditarMeta.StateCommon.Border.Rounding = 20F;
             this.btnEditarMeta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnEditarMeta.TabIndex = 17;
+            this.btnEditarMeta.TabIndex = 0;
             this.btnEditarMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnEditarMeta.Values.Text = "Editar Meta";
             this.btnEditarMeta.Click += new System.EventHandler(this.BtnEditarMeta_Click);
@@ -216,7 +216,7 @@ namespace ProjetoPI.Views
             this.tabela.StateSelected.HeaderRow.Border.Rounding = 10F;
             this.tabela.StateTracking.HeaderColumn.Border.Rounding = 10F;
             this.tabela.StateTracking.HeaderRow.Border.Rounding = 10F;
-            this.tabela.TabIndex = 9;
+            this.tabela.TabIndex = 0;
             this.tabela.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tabela_CellClick);
             this.tabela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tabela_CellContentClick);
             // 
@@ -274,9 +274,9 @@ namespace ProjetoPI.Views
             // 
             this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.status.DataPropertyName = "status";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = false;
-            this.status.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = false;
+            this.status.DefaultCellStyle = dataGridViewCellStyle2;
             this.status.FalseValue = null;
             this.status.HeaderText = "status";
             this.status.IndeterminateValue = null;
@@ -303,7 +303,7 @@ namespace ProjetoPI.Views
             this.lbBoasVindas.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 27.75F, System.Drawing.FontStyle.Italic);
             this.lbBoasVindas.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbBoasVindas.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.lbBoasVindas.TabIndex = 16;
+            this.lbBoasVindas.TabIndex = 0;
             this.lbBoasVindas.Values.Text = "Olá, qual a meta de hoje ?  ";
             // 
             // btnNovaMeta
@@ -317,7 +317,7 @@ namespace ProjetoPI.Views
             this.btnNovaMeta.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnNovaMeta.StateCommon.Border.Rounding = 20F;
             this.btnNovaMeta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnNovaMeta.TabIndex = 4;
+            this.btnNovaMeta.TabIndex = 0;
             this.btnNovaMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnNovaMeta.Values.Text = "Adicionar Nova Meta";
             this.btnNovaMeta.Click += new System.EventHandler(this.BtnNovaMeta_Click);
@@ -333,7 +333,7 @@ namespace ProjetoPI.Views
             this.txtBusca.StateActive.Border.Rounding = 40F;
             this.txtBusca.StateCommon.Border.Rounding = 20F;
             this.txtBusca.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, -1, -1, -1);
-            this.txtBusca.TabIndex = 5;
+            this.txtBusca.TabIndex = 0;
             this.txtBusca.TextChanged += new System.EventHandler(this.TxtBusca_TextChanged);
             // 
             // calendario
@@ -350,7 +350,7 @@ namespace ProjetoPI.Views
             this.calendario.StateCommon.Border.Rounding = 10F;
             this.calendario.StateCommon.Day.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.calendario.StateDisabled.Border.Rounding = 20F;
-            this.calendario.TabIndex = 12;
+            this.calendario.TabIndex = 0;
             this.calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
             this.calendario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Calendario_MouseDown);
             this.calendario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Calendario_MouseUp);
@@ -381,20 +381,20 @@ namespace ProjetoPI.Views
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(320, 684);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonPanel1.TabIndex = 4;
+            this.kryptonPanel1.TabIndex = 0;
             // 
             // btnAlterarNome
             // 
             this.btnAlterarNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarNome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarNome.Location = new System.Drawing.Point(64, 460);
+            this.btnAlterarNome.Location = new System.Drawing.Point(64, 229);
             this.btnAlterarNome.Name = "btnAlterarNome";
             this.btnAlterarNome.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarNome.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnAlterarNome.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnAlterarNome.StateCommon.Border.Rounding = 20F;
             this.btnAlterarNome.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAlterarNome.TabIndex = 13;
+            this.btnAlterarNome.TabIndex = 0;
             this.btnAlterarNome.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnAlterarNome.Values.Text = "Alterar Nome";
             this.btnAlterarNome.Click += new System.EventHandler(this.btnAlterarNome_Click);
@@ -410,7 +410,7 @@ namespace ProjetoPI.Views
             this.btnSair.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnSair.StateCommon.Border.Rounding = 20F;
             this.btnSair.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 0;
             this.btnSair.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnSair.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Values.Image")));
             this.btnSair.Values.Text = "Sair";
@@ -427,7 +427,7 @@ namespace ProjetoPI.Views
             this.btnAlterarSenha.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnAlterarSenha.StateCommon.Border.Rounding = 20F;
             this.btnAlterarSenha.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAlterarSenha.TabIndex = 11;
+            this.btnAlterarSenha.TabIndex = 0;
             this.btnAlterarSenha.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnAlterarSenha.Values.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -436,30 +436,30 @@ namespace ProjetoPI.Views
             // 
             this.btnAlterarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFoto.Location = new System.Drawing.Point(64, 229);
+            this.btnAlterarFoto.Location = new System.Drawing.Point(64, 305);
             this.btnAlterarFoto.Name = "btnAlterarFoto";
             this.btnAlterarFoto.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarFoto.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnAlterarFoto.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnAlterarFoto.StateCommon.Border.Rounding = 20F;
             this.btnAlterarFoto.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAlterarFoto.TabIndex = 10;
+            this.btnAlterarFoto.TabIndex = 0;
             this.btnAlterarFoto.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnAlterarFoto.Values.Text = "Alterar  Foto";
+            this.btnAlterarFoto.Values.Text = "Alterar  Foto de Perfil";
             this.btnAlterarFoto.Click += new System.EventHandler(this.BtnAlterarFoto_Click);
             // 
             // btnExcluirConta
             // 
             this.btnExcluirConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExcluirConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirConta.Location = new System.Drawing.Point(64, 536);
+            this.btnExcluirConta.Location = new System.Drawing.Point(64, 533);
             this.btnExcluirConta.Name = "btnExcluirConta";
             this.btnExcluirConta.Size = new System.Drawing.Size(191, 43);
             this.btnExcluirConta.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnExcluirConta.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnExcluirConta.StateCommon.Border.Rounding = 20F;
             this.btnExcluirConta.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnExcluirConta.TabIndex = 9;
+            this.btnExcluirConta.TabIndex = 0;
             this.btnExcluirConta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btnExcluirConta.Values.Text = "Excluir conta";
             this.btnExcluirConta.Click += new System.EventHandler(this.btnExcluirConta_Click);
@@ -468,16 +468,16 @@ namespace ProjetoPI.Views
             // 
             this.btnAlterarFundo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAlterarFundo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFundo.Location = new System.Drawing.Point(64, 306);
+            this.btnAlterarFundo.Location = new System.Drawing.Point(64, 457);
             this.btnAlterarFundo.Name = "btnAlterarFundo";
             this.btnAlterarFundo.Size = new System.Drawing.Size(191, 43);
             this.btnAlterarFundo.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnAlterarFundo.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnAlterarFundo.StateCommon.Border.Rounding = 20F;
             this.btnAlterarFundo.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
-            this.btnAlterarFundo.TabIndex = 8;
+            this.btnAlterarFundo.TabIndex = 0;
             this.btnAlterarFundo.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnAlterarFundo.Values.Text = "Alterar Fundo";
+            this.btnAlterarFundo.Values.Text = "Alterar Papel de Parede";
             this.btnAlterarFundo.Click += new System.EventHandler(this.BtnAlterarFundo_Click);
             // 
             // imgUser
@@ -512,7 +512,6 @@ namespace ProjetoPI.Views
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.painelFundo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Metas - Seu software de gerenciamento de metas!";

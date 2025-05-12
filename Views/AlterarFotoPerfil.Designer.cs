@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarFotoPerfil));
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.lbAlterarSenha = new Krypton.Toolkit.KryptonLabel();
+            this.lbAlterarFotodePerfil = new Krypton.Toolkit.KryptonLabel();
             this.btnCancelar = new Krypton.Toolkit.KryptonButton();
             this.btnSalvar = new Krypton.Toolkit.KryptonButton();
             this.painelAvatares = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Controls.Add(this.lbAlterarSenha);
+            this.panelPrincipal.Controls.Add(this.lbAlterarFotodePerfil);
             this.panelPrincipal.Controls.Add(this.btnCancelar);
             this.panelPrincipal.Controls.Add(this.btnSalvar);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,20 +70,24 @@
             this.panelPrincipal.Size = new System.Drawing.Size(724, 254);
             this.panelPrincipal.TabIndex = 0;
             // 
-            // lbAlterarSenha
+            // lbAlterarFotodePerfil
             // 
-            this.lbAlterarSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbAlterarFotodePerfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbAlterarSenha.Location = new System.Drawing.Point(262, 3);
-            this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(163, 28);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAlterarSenha.TabIndex = 7;
-            this.lbAlterarSenha.Values.Text = "Alterar Foto de Perfil";
+            this.lbAlterarFotodePerfil.AutoSize = false;
+            this.lbAlterarFotodePerfil.Location = new System.Drawing.Point(7, 3);
+            this.lbAlterarFotodePerfil.Name = "lbAlterarFotodePerfil";
+            this.lbAlterarFotodePerfil.Size = new System.Drawing.Size(709, 28);
+            this.lbAlterarFotodePerfil.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarFotodePerfil.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarFotodePerfil.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarFotodePerfil.TabIndex = 7;
+            this.lbAlterarFotodePerfil.Values.Text = "Alterar Foto de Perfil";
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(0, 216);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(186, 38);
@@ -99,6 +103,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Location = new System.Drawing.Point(538, 216);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(186, 38);
@@ -265,7 +270,6 @@
             this.Text = "Editar Foto de Perfil";
             this.Load += new System.EventHandler(this.AlterarFotoPerfil_Load);
             this.panelPrincipal.ResumeLayout(false);
-            this.panelPrincipal.PerformLayout();
             this.painelAvatares.ResumeLayout(false);
             this.painelAvatar3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar3)).EndInit();
@@ -286,7 +290,7 @@
         private System.Windows.Forms.Panel panelPrincipal;
         private Krypton.Toolkit.KryptonButton btnSalvar;
         private Krypton.Toolkit.KryptonButton btnCancelar;
-        private Krypton.Toolkit.KryptonLabel lbAlterarSenha;
+        private Krypton.Toolkit.KryptonLabel lbAlterarFotodePerfil;
         private System.Windows.Forms.Button button1;
         private Krypton.Toolkit.KryptonPictureBox Avatar1;
         private System.Windows.Forms.Panel painelAvatar1;

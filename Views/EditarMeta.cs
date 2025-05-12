@@ -114,22 +114,15 @@ namespace ProjetoPI.Views
             this.Close();
         }
 
-        private void brnExcluirMeta_Click(object sender, EventArgs e)
+        private void BrnExcluirMeta_Click(object sender, EventArgs e)
         {
-            _controllerMetas.ExcluirMeta(_meta.Id);
-
-            MessageBox.Show("Meta excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-
-        private void txtTituloMeta_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EditarMeta_Load(object sender, EventArgs e)
-        {
-            
+            DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja excluir esta meta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                _controllerMetas.ExcluirMeta(_meta.Id);
+                MessageBox.Show("Meta excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
     }
 }

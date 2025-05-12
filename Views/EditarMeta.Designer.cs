@@ -46,7 +46,6 @@
             this.txtTituloMeta.Size = new System.Drawing.Size(287, 35);
             this.txtTituloMeta.StateCommon.Border.Rounding = 20F;
             this.txtTituloMeta.TabIndex = 1;
-            this.txtTituloMeta.TextChanged += new System.EventHandler(this.txtTituloMeta_TextChanged);
             // 
             // txtDescricaoMeta
             // 
@@ -72,6 +71,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Location = new System.Drawing.Point(168, 277);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
@@ -84,6 +84,7 @@
             // 
             // brnExcluirMeta
             // 
+            this.brnExcluirMeta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.brnExcluirMeta.Location = new System.Drawing.Point(2, 279);
             this.brnExcluirMeta.Margin = new System.Windows.Forms.Padding(2);
             this.brnExcluirMeta.Name = "brnExcluirMeta";
@@ -114,7 +115,7 @@
             this.brnExcluirMeta.TabStop = false;
             this.brnExcluirMeta.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.brnExcluirMeta.Values.Text = "Excluir Meta";
-            this.brnExcluirMeta.Click += new System.EventHandler(this.brnExcluirMeta_Click);
+            this.brnExcluirMeta.Click += new System.EventHandler(this.BrnExcluirMeta_Click);
             // 
             // panel1
             // 
@@ -132,10 +133,13 @@
             // 
             // lbAlterarSenha
             // 
-            this.lbAlterarSenha.Location = new System.Drawing.Point(89, 3);
+            this.lbAlterarSenha.AutoSize = false;
+            this.lbAlterarSenha.Location = new System.Drawing.Point(3, 3);
             this.lbAlterarSenha.Name = "lbAlterarSenha";
-            this.lbAlterarSenha.Size = new System.Drawing.Size(99, 28);
-            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.Size = new System.Drawing.Size(285, 28);
+            this.lbAlterarSenha.StateCommon.ShortText.Font = new System.Drawing.Font("Corbel Light", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAlterarSenha.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.lbAlterarSenha.StateCommon.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.lbAlterarSenha.TabIndex = 5;
             this.lbAlterarSenha.Values.Text = "Editar Meta";
             // 
@@ -145,16 +149,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(361, 387);
-            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditarMeta";
             this.Padding = new System.Windows.Forms.Padding(35);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Meta";
-            this.Load += new System.EventHandler(this.EditarMeta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
