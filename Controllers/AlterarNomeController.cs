@@ -20,7 +20,7 @@ namespace ProjetoPI.Controllers
 
         public bool AlterarNome(string novoNome)
         {
-            if (string.IsNullOrWhiteSpace(novoNome))
+            if (!new ValidarCadastro().ValidarNome(novoNome))
             {
                 return false;
             }
